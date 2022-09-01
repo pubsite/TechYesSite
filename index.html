@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考倒计时</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <h1>高考倒计时</h1>
+            <div>
+                <select id="grades" onchange="setYear(+this.value)//将value转换为数字"></select>
+                <a id="fullscreen" onclick="fullscreen()">全屏</a>
+            </div>
+        </nav>
+
+        <div class="cdMajor">
+            <div>距离<span id="ceeYear">----</span>年高考还有</div>
+            <span class="cdDetail">--</span>天
+            <span class="cdDetail">--</span>时
+            <span class="cdDetail">--</span>分
+            <span class="cdDetail">--</span>秒
+        </div>
+
+        <footer>
+            © Zhilu
+        </footer>
+    </div>
+</body>
+
+<script src="./ceecountdown.js"></script>
+<script>
+    function fullscreen() {
+        var eleFullscreen = document.getElementById("fullscreen");
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+            eleFullscreen.innerHTML = "全屏";
+        } else {
+            document.documentElement.requestFullscreen();
+            eleFullscreen.innerHTML = "退出";
+        }
+    }
+</script>
+
+</html>
