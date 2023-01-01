@@ -4,8 +4,8 @@
 }
 
 a {
+    display: inline-block;
     padding: .2em;
-
     cursor: pointer;
     transition: background .2s;
     text-decoration: none;
@@ -35,9 +35,21 @@ body {
 }
 
 nav {
-    font-size: 1.5em;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+header,
+footer {
+    font-size: .8rem;
+    margin: 1rem .4rem;
+    color: #3375;
 }
 
 .card {
@@ -60,15 +72,9 @@ nav {
 .card>.list {
     display: flex;
     flex-wrap: wrap;
+    color: #556;
 }
 
 .card>.list>* {
-    margin: .4rem;
-    padding: .2rem;
-}
-
-footer {
-    margin: 1rem 0;
-    font-size: .8rem;
-    opacity: .5;
+    margin: .2em .4em;
 }

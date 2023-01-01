@@ -1,10 +1,18 @@
 @font-face {
-    font-family: sht;
+    font-family: "阿里妈妈数黑体 Bold";
     font-weight: 700;
     src: url("/font/AliSHT.woff2") format("woff2");
     font-display: swap;
 }
 
 .font-sht {
-    font-family: sht, "苹方", sans-serif;
+    font-family: "阿里妈妈数黑体 Bold", "苹方", sans-serif;
+}
+
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa-width {
+  min-width: 1.2em;
+  text-align: center;
 }
