@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background .2s;
+    padding: .2em;
+    border-radius: .5em;
+}
+
+a:hover {
+    color: #fff;
+    background: #37f;
+}
+
+::selection{
+    background: #37f3;
+}
+
+html {
+    font-family: "苹方", sans-serif;
+    color: #334;
+    background: #f7faff;
+}
+
+body {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    padding: 1rem 0;
+}
+
+.card {
+    margin: 1rem 0;
+    padding: .5rem;
+    transition: .5s;
+    border: 1px solid #eef;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 0 1rem #dde;
+}
+
+.card>p {
+    margin: .6rem;
+}
+
+.card>.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card>.list>* {
+    margin: .4rem;
+    padding: .2rem;
+}

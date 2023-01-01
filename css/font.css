@@ -1,0 +1,10 @@
+@font-face {
+    font-family: sht;
+    font-weight: 700;
+    src: url("/font/AliSHT.woff2") format("woff2");
+    font-display: swap;
+}
+
+.font-sht {
+    font-family: sht, "苹方", sans-serif;
+}

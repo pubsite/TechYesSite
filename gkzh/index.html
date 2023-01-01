@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>陕西高考成绩字符串解析工具</title>
+</head>
+
+<body>
+    <h1>理综各科成绩计算器</h1>
+    <h2>2022陕西高考理综成绩字符串解析</h2>
+    <p>如果你还没有以下两项信息，请打开陕西招生考试信息网，进入“2022年高考成绩各科各题得分查询入口”查询，或者
+        <a href="https://www.sneac.edu.cn/pzcjweb/cjcx/zfcindex.jsp">懒的话点这里也能打开官方查分网站</a> 。
+    </p>
+    <br>
+    <h3>理综选择题作答字符串</h3>
+    <p>示例：A,B,C,D,A,B,C,D,A,B,C,D<br>是你的选择题选项序列！别把题号/总分放进来！</p>
+    <textarea id="str1"></textarea>
+    <br>
+    <h3>理综非选择题各题得分字符串</h3>
+
+    <p>示例：10.0,9.0,8.0,7.0,6.0,5.0<br>是你的非选择题得分序列！别把题号/总分放进来！</p>
+    <textarea id="str2"></textarea>
+    <br>
+    <button onclick="resolve()">点击计算各科得分</button>
+    <p id="result" style="color: red;"></p>
+    <div style="height: 10em;"></div>
+    <p>我们不会储存任何信息。</p>
+    <a href="https://github.com/L33Z22L11/StrRsv-SNCEE">Github L33Z22L11/StrRsv-SNCEE</a>
+    <p>野生技协QQ交流群：894656456</p>
+    <small style="color: grey;">© 纸鹿 （QQ 2399052066）</small>
+</body>
+
+<script src="./main.js"></script>
+
+</html>

@@ -5,46 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高考倒计时</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>野生技协导航</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <base target="_blank">
 </head>
 
 <body>
-    <div id="main">
-        <nav>
-            <h1>高考倒计时</h1>
-            <div>
-                <select id="grades" onchange="setRelYear(+this.value)//将value转换为数字"></select>
-                <a id="fullscreen" onclick="fullscreen()">全屏</a>
-            </div>
-        </nav>
+    <nav>
+        <a class="font-sht">野生技协导航</a>
 
-        <div class="cdMajor">
-            <div>距离<span id="ceeYear">----</span>年高考还有</div>
-            <span class="cdDetail">--</span>天
-            <span class="cdDetail">--</span>时
-            <span class="cdDetail">--</span>分
-            <span class="cdDetail">--</span>秒
+    </nav>
+
+    <div class="card font-sht">
+        <p><b>野生技协</b></p>
+        <div class="list">
+            <a href="https://hi.thisis.host">野生技协官网</a>
+            <a href="https://exam.cooo.site">考试时钟</a>
+            <a href="https://ace.cooo.site">考试时钟时光局(历史版本)</a>
+            <a href="https://book.thisis.host/">电子课本站</a>
         </div>
+    </div>
 
-        <footer>
-            © Zhilu
-        </footer>
+    <div class="card">
+        <p><b>小工具</b></p>
+        <div class="list">
+            <a href="/slide/">一键PPT</a>
+            <a href="/gkdjs/">高考倒计时(纸鹿)</a>
+            <a href="https://gaokao.thisis.host/">高考倒计时(FZZ)</a>
+            <a href="https://11.thisis.host/">23届11班官网(高考倒计时)</a>
+            <a href="/gkzh/">高考综合各科得分计算</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><b>宝中特色</b></p>
+        <div class="list">
+            <a href="http://www.baozhong.com.cn/">宝鸡中学官网</a>
+            <a href="http://b23.tv/av971208498">健身操：鳌拜的夜空虫儿飞</a>
+            <a href="http://b23.tv/av91802643">健身操：明日中国说</a>
+            <a href="http://b23.tv/av463225141">群舞：荡起双桨(抖音DJ版)</a>
+            <a onclick="this.innerText='▶ 正在播放静音跑操音乐……'">跑操音乐(静音版)</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><b>GitHub</b></p>
+        <div class="list">
+            <a href="https://github.com/L33Z22L11">纸鹿</a>
+            <a class="font-sht" href="https://github.com/pubsite">野生技协(免费网站发布)</a>
+            <a href="https://github.com/jiduoo">加零</a>
+            <a href="https://github.com/tengkongJS-MC">腾空</a>
+        </div>
     </div>
 </body>
-
-<script src="./ceecountdown.js"></script>
-<script>
-    function fullscreen() {
-        var eleFullscreen = document.getElementById("fullscreen");
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
-            eleFullscreen.innerHTML = "全屏";
-        } else {
-            document.documentElement.requestFullscreen();
-            eleFullscreen.innerHTML = "退出";
-        }
-    }
-</script>
 
 </html>
