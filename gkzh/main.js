@@ -16,12 +16,12 @@ function resolve() {
     }
     console.log("选择题得分", phy + che + bio);
     for (i = 0; i < 19; i++) {
-        if (i < 4) { phy -= -arr2[i]; }
-        else if (i < 7) { che -= -arr2[i]; }
-        else if (i < 11) { bio -= -arr2[i]; }
-        else if (i < 15) { phy -= -arr2[i]; }
-        else if (i < 17) { che -= -arr2[i]; }
-        else { bio -= -arr2[i]; }
+        if (i < 4) { phy += +arr2[i]; }
+        else if (i < 7) { che += +arr2[i]; }
+        else if (i < 11) { bio += +arr2[i]; }
+        else if (i < 15) { phy += +arr2[i]; }
+        else if (i < 17) { che += +arr2[i]; }
+        else { bio += +arr2[i]; }
         console.log(i + 1, phy, che, bio);
     }
     document.getElementById("result").innerHTML = isNaN(phy) ? "你一定填错了什么信息，仔细阅读一下要求。" : "物理：" + phy + "，化学：" + che + "，生物：" + bio + "，理综总分：" + (phy + che + bio) + "。<br>请核对总分，多打空格/回车都会导致结果不准确！";

@@ -4,11 +4,12 @@
 }
 
 a {
+    padding: .2em;
+
     cursor: pointer;
+    transition: background .2s;
     text-decoration: none;
     color: inherit;
-    transition: background .2s;
-    padding: .2em;
     border-radius: .5em;
 }
 
@@ -17,13 +18,13 @@ a:hover {
     background: #37f;
 }
 
-::selection{
-    background: #37f3;
+::selection {
+    background: #39f3;
 }
 
 html {
-    font-family: "苹方", sans-serif;
-    color: #444;
+    font-family: '苹方', sans-serif;
+    color: #334;
     background: #f7faff;
 }
 
@@ -36,7 +37,7 @@ body {
 nav {
     font-size: 1.5em;
     display: flex;
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 .card {
@@ -64,4 +65,10 @@ nav {
 .card>.list>* {
     margin: .4rem;
     padding: .2rem;
+}
+
+footer {
+    margin: 1rem 0;
+    font-size: .8rem;
+    opacity: .5;
 }
