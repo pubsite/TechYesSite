@@ -8,7 +8,7 @@ a {
     margin: 0 -.2rem;
     padding: .1rem .2rem;
     cursor: pointer;
-    transition: background .2s;
+    transition: .2s;
     text-decoration: none;
     color: inherit;
     border-radius: .5em;
@@ -17,6 +17,8 @@ a {
 a:hover {
     color: #fff;
     background: #37f;
+    box-shadow: .1em .2em 1em #37f3;
+    transform: scale(1.08);
 }
 
 ::selection {
