@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 
     color: #fff;
     background: #37f;
@@ -97,7 +97,7 @@ footer {
 }
 
 .card:hover {
-    box-shadow: 0 0 1rem #dde;
+    box-shadow: 0 0 1em #dde;
 }
 
 .card>* {
