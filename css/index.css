@@ -15,10 +15,11 @@ a {
 }
 
 a:hover {
+    transform: scale(1.08);
+
     color: #fff;
     background: #37f;
-    box-shadow: .1em .2em 1em #37f3;
-    transform: scale(1.08);
+    box-shadow: .1em .2em 1em #ddf;
 }
 
 ::selection {
@@ -67,7 +68,7 @@ nav {
 footer {
     font-size: .8rem;
     margin: 1rem 0;
-    color: #3375;
+    color: #bbd;
 }
 
 
@@ -86,6 +87,7 @@ footer {
 
 .card {
     overflow: auto;
+    height: 100%;
     margin: 0 -.6rem 1rem;
     padding: .6rem;
     transition: .5s;
@@ -103,9 +105,10 @@ footer {
 }
 
 .card>.list {
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0;
     color: #556;
 }
 
