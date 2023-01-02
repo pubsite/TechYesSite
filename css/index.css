@@ -52,8 +52,17 @@ footer {
     color: #3375;
 }
 
+
+@media(min-width:60rem) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
 .card {
-    margin: 1rem 0;
+    overflow: auto;
+
+    margin: 0 0 1rem;
     padding: .5rem;
     transition: .5s;
     border: 1px solid #eef;
