@@ -6,17 +6,18 @@
 html {
     font-family: sans-serif;
     font-size: 3vw;
+    color: #334;
+    background: #f7faff;
 }
 
 #main {
     display: flex;
-
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 }
 
-#main>*{
+#main>* {
     margin: 2vh 1rem;
 }
 
@@ -30,7 +31,7 @@ select {
     font-size: inherit;
 }
 
-.cdMajor{
+.cdMajor {
     font-size: 1.5em;
     text-align: center;
 }
@@ -40,18 +41,21 @@ select {
     font-size: 2em;
 }
 
-footer{
-    font-size: 0.8rem;
-    opacity: 0.5;
+footer {
+    font-size: .8rem;
+    opacity: .5;
 }
 
 @media (prefers-color-scheme: dark) {
     html {
-      background: black;
-      color: white;
+        color: #fff;
+        background: #000;
     }
-    select{
-        background: #333;
-        color: white;
+
+    select {
+        color: #acf;
+        background: #024;
+        border-radius: .2em;
     }
-  }
+
+}

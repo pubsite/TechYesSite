@@ -22,7 +22,7 @@ function setRelYear(relYear) {
     // 先假定高考日期的年份为初始年份，即假定高考日期为当年高考日期
     ceeDate = new Date(initDate.getFullYear(), 5, 7);
     // 高考年份再增加年级内部值，如果本年高考过期则高考年份再加一
-    ceeDate.setFullYear(ceeDate.getFullYear() + relYear + (ceeDate < initDate ? 1 : 0));
+    ceeDate.setFullYear(ceeDate.getFullYear() + relYear + !(ceeDate > initDate));
     // 在年级列表内选中本年级
     eleGrades.options[relYear].selected = true;
     // 在网页内更新高考年份

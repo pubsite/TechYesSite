@@ -5,7 +5,8 @@
 
 a {
     display: inline-block;
-    padding: .2em;
+    margin: 0 -.2rem;
+    padding: .1rem .2rem;
     cursor: pointer;
     transition: background .2s;
     text-decoration: none;
@@ -29,41 +30,62 @@ html {
 }
 
 body {
-    width: 90%;
+    width: 90vw;
     max-width: 1080px;
     margin: 0 auto;
+}
+
+@font-face {
+    font-family: '阿里妈妈数黑体 Bold';
+    font-weight: 700;
+    src: url('/font/AliSHT.woff2') format('woff2');
+    font-display: swap;
+}
+
+.font-sht {
+    font-family: '阿里妈妈数黑体 Bold', '苹方', sans-serif;
+}
+
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa-width {
+    min-width: 1.2em;
+    text-align: center;
 }
 
 nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 1rem 0;
 }
 
-.logo {
-    font-size: 1.5em;
-}
-
-header,
 footer {
     font-size: .8rem;
-    margin: 1rem .4rem;
+    margin: 1rem 0;
     color: #3375;
 }
 
 
-@media(min-width:60rem) {
-    .masonry {
+@media(min-width: 720px) {
+    .bicol {
         column-count: 2;
+        column-gap: 2rem;
+    }
+}
+
+@media(min-width: 960px) {
+    html {
+        font-size: 18px;
     }
 }
 
 .card {
     overflow: auto;
-
-    margin: 0 0 1rem;
-    padding: .5rem;
+    margin: 0 -.6rem 1rem;
+    padding: .6rem;
     transition: .5s;
     border: 1px solid #eef;
     border-radius: 1rem;
@@ -74,16 +96,17 @@ footer {
     box-shadow: 0 0 1rem #dde;
 }
 
-.card>p {
-    margin: .6rem;
+.card>* {
+    margin: .5rem;
 }
 
 .card>.list {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     color: #556;
 }
 
 .card>.list>* {
-    margin: .2em .4em;
+    margin: .2em .25em;
 }
