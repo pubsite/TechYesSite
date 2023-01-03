@@ -41,7 +41,7 @@ body {
 @font-face {
     font-family: '阿里妈妈数黑体 Bold';
     font-weight: 700;
-    src: url('/font/AliSHT.woff2') format('woff2');
+    src: url('./ALMMSHT.woff2') format('woff2');
     font-display: swap;
 }
 
