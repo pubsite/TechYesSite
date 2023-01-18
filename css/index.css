@@ -30,7 +30,7 @@ strong {
 }
 
 html {
-    font-family: '苹方', sans-serif;
+    font-family: PingFang SC, Helvetica, sans-serif;
     color: #334;
     background: #f7faff;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 .font-sht {
-    font-family: '阿里妈妈数黑体 Bold', '苹方', sans-serif;
+    font-family: '阿里妈妈数黑体 Bold', PingFang SC, Helvetica, sans-serif;
 }
 
 .fa-solid,
