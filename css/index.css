@@ -4,8 +4,8 @@
 }
 
 a {
-    margin: 0 -.2rem;
-    padding: .1rem .2rem;
+    /* margin: 0 -.2em; */
+    padding: .1em .2em;
     cursor: pointer;
     transition: .2s;
     text-decoration: none;
@@ -31,13 +31,13 @@ strong {
 
 html {
     font-family: PingFang SC, Helvetica, sans-serif;
-    color: #334;
+    color: #333;
     background: #f7faff;
 }
 
 body {
     width: 90vw;
-    max-width: 1080px;
+    /* max-width: 1080px; */
     margin: 0 auto;
 }
 
@@ -60,6 +60,18 @@ body {
     text-align: center;
 }
 
+[data-sub] {
+    /* display: inline-block; */
+    text-align: center;
+    /* vertical-align: middle; */
+  }
+  
+  [data-sub]::after {
+    font-size: .6em;
+    display: block;
+    content: attr(data-sub);
+  }
+  
 nav {
     display: flex;
     align-items: center;
@@ -68,11 +80,15 @@ nav {
     margin: 1rem 0;
 }
 
-.ref,
+.dim,
 footer {
     font-size: .8rem;
-    margin: 1rem 0;
     color: #aac;
+}
+
+footer {
+    line-height: 1.5rem;
+    margin: 1rem 0;
 }
 
 
@@ -92,8 +108,8 @@ footer {
 .card {
     overflow: auto;
     height: 100%;
-    margin: 0 -.6rem 1rem;
-    padding: .6rem;
+    margin: 0 -.5rem 1rem;
+    padding: .5rem;
     transition: .5s;
     border: 1px solid #eef;
     border-radius: 1rem;
@@ -111,7 +127,7 @@ footer {
 .card>.list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
 
     margin: 0;
     color: #556;
