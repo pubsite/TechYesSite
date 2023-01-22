@@ -51,8 +51,8 @@ MG.setRandBg = (alpha = 1) => {
     return MG.setBg(index);
 };
 
-MG.setBgByPicId = id => {
-    let index = MG.pic.map(each => each.id).indexOf(+id);
+MG.setBgByPicId = yyMMNN => {
+    let index = MG.pic.map(each => each.id).indexOf(+yyMMNN);
     if (index == -1) throw "Invaild picId";
     return MG.setBg(index);
 }
