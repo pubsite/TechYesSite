@@ -2,15 +2,66 @@
 <html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一卷图库</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css">
+  <title>一卷图库使用文档</title>
 </head>
 
-<body style="height: 100vh;">
-    一卷图库测试
-    <script src="load.js"></script>
+<body>
+  <nav>
+    <h2><a><i class="fa-solid fa-file-lines"></i> 一卷图库使用文档</a></h2>
+    <a href=".."><i class="fa-solid fa-house-chimney"></i></a>
+  </nav>
+  <footer>
+    <p></p>
+  </footer>
+
+  <script src="./load.js"></script>
+
+  <div class="bicol">
+    <div class="card">
+      <h4><i class="fa-solid fa-images"></i> 图库</h4>
+      <p><a href="https://imgtg.com/album/54wL" target="_blank">访问由Imgtg托管的在线版本</a></p>
+    </div>
+    <div class="card">
+      <h4><i class="fa-solid fa-file-import"></i> 引入</h4>
+      <p>在HTML中插入如下代码,随后便可以执行图库相关功能。</p>
+      <pre>&lt;script src="https://thisis.host/monoroll/load.js"&gt;&lt;/script&gt;</pre>
+      <p>尝试：在控制台使用<code>console.log(MG)</code>。</p>
+    </div>
+
+    <div class="card">
+      <h4><i class="fa-solid fa-anchor"></i> 绑定背景元素</h4>
+      <pre>bg.bind(<em>ele</em>)</pre>
+      <p>
+        <code><em>ele</em></code>为DOM元素，常见的元素有<code>document.documentElement</code>、<code>document.getElementById("main")</code>等。
+      </p>
+      <p>绑定背景元素时，会自动给该元素的背景设置<code>居中</code>、<code>自适应缩放</code>属性，如果不需要，请传入非真的值作为第二个参数，例如：</p>
+      <pre>MG.bgBind(<em>ele</em>, false)</pre>
+    </div>
+
+    <div class="card">
+      <h4><i class="fa-solid fa-gears"></i> 设置背景的几种方式</h4>
+      <p>使用<code>MG.bgBind(<em>ele</em>)</code>绑定背景元素后，就可以使用函数给元素设置背景图片。</p>
+      <h5>根据索引位置（数组下标）设置</h5>
+      <pre>MG.setBg(<em>index</em>)</pre>
+      <p>特别地，<code><em>index</em></code>为负时，索引会从末端倒数。</p>
+      <h5>随机设置</h5>
+      <pre>MG.setRandBg()</pre>
+      <p>函数的唯一参数<code><em>alpha</em></code>默认为<code>1</code>，表示随机是均匀的。</p>
+    </div>
+
+    <div class="card">
+      <h4><i class="fa-solid fa-circle-info"></i> 技术细节</h4>
+    </div>
+  </div>
+
+  <footer>
+    <p class="font-sht">© 2019-2023 野生技协(TECHYES). All rights reserved.</p>
+  </footer>
 </body>
 
 </html>

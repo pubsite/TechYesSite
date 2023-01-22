@@ -38,8 +38,8 @@ MG.bgBind = (ele, needFit = true) => {
 
 MG.setBg = index => {
     if (!MG.eleBgBind) throw "Use MG.bgBind(ele) first";
-    MG.eleBgBind.style.backgroundImage = `url(${MG.pic[index].src})`;
-    return MG.pic[index];
+    MG.eleBgBind.style.backgroundImage = `url(${MG.pic.at(index).src})`;
+    return MG.pic.at(index);
 };
 
 // alpha -> 0.1(+): tend to be newer

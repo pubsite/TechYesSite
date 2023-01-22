@@ -15,7 +15,6 @@ a {
 
 a:hover {
     transform: scale(1.05);
-
     color: #fff;
     background: #37f;
     box-shadow: .1em .2em 1em #dde;
@@ -25,20 +24,32 @@ strong {
     color: #37f;
 }
 
+code,
+pre {
+    font-size: 13px;
+    overflow: auto;
+    padding: .1em .2em;
+    color: #37f;
+    border-radius: .5em;
+    background: #def;
+}
+
+pre {
+    padding: .5em;
+    color: #aac;
+    background: #f7f9ff;
+}
+
 ::selection {
-    background: rgba(63, 159, 255, 0.2);
+    background: rgba(63, 159, 255, .2);
 }
 
 html {
     font-family: PingFang SC, Helvetica, sans-serif;
-    color: #333;
-    background: #f7faff;
-}
-
-body {
     width: 90vw;
-    /* max-width: 1080px; */
     margin: 0 auto;
+    color: #333;
+    background: #f7f9ff;
 }
 
 @font-face {
@@ -64,14 +75,14 @@ body {
     /* display: inline-block; */
     text-align: center;
     /* vertical-align: middle; */
-  }
-  
-  [data-sub]::after {
+}
+
+[data-sub]::after {
     font-size: .6em;
     display: block;
     content: attr(data-sub);
-  }
-  
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -102,6 +113,7 @@ footer {
 @media(min-width: 960px) {
     html {
         font-size: 18px;
+        width: 85vw;
     }
 }
 
@@ -126,9 +138,8 @@ footer {
 
 .card>.list {
     display: flex;
-    flex-wrap: wrap;
     align-items: baseline;
-
+    flex-wrap: wrap;
     margin: 0;
     color: #556;
 }
