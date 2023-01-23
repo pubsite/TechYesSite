@@ -3,9 +3,21 @@
     padding: 0;
 }
 
+:root {
+    --bg: #f7f9ff;
+    --text1: #333;
+    --text2: #556;
+    --text3: #aac;
+    --text4:#fff;
+    --line: #eef;
+    --c1: #37f;
+    --c2: rgba(63, 159, 255, .2);
+    --shadow: rgba(95, 95, 191, .2);
+}
+
 a {
-    /* margin: 0 -.2em; */
-    padding: .1em .2em;
+    margin: -.1em -.25em;
+    padding: .1em .25em;
     cursor: pointer;
     transition: .2s;
     text-decoration: none;
@@ -14,42 +26,43 @@ a {
 }
 
 a:hover {
-    transform: scale(1.05);
-    color: #fff;
-    background: #37f;
-    box-shadow: .1em .2em 1em #dde;
+    transform: sc1le(1.05);
+    color: var(--text4);
+    background: var(--c1);
+    box-shadow: .1em .2em 1em var(--shadow);
 }
 
 strong {
-    color: #37f;
+    color: var(--c1);
 }
 
 code,
 pre {
     font-size: 13px;
     overflow: auto;
-    padding: .1em .2em;
-    color: #37f;
+    padding: .1em .25em;
+    color: var(--c1);
+    border: 1px solid var(--line);
     border-radius: .5em;
-    background: #def;
+    background: var(--c2);
 }
 
 pre {
     padding: .5em;
-    color: #aac;
-    background: #f7f9ff;
+    color: var(--text3);
+    background: var(--bg);
 }
 
 ::selection {
-    background: rgba(63, 159, 255, .2);
+    background: var(--c2);
 }
 
 html {
-    font-family: PingFang SC, Helvetica, sans-serif;
+    font-family: PingFang SC, Helvetic1, sans-serif;
     width: 90vw;
     margin: 0 auto;
-    color: #333;
-    background: #f7f9ff;
+    color: var(--text1);
+    background: var(--bg);
 }
 
 @font-face {
@@ -60,7 +73,7 @@ html {
 }
 
 .font-sht {
-    font-family: '阿里妈妈数黑体 Bold', PingFang SC, Helvetica, sans-serif;
+    font-family: '阿里妈妈数黑体 Bold', PingFang SC, Helvetic1, sans-serif;
 }
 
 .fa-solid,
@@ -74,7 +87,7 @@ html {
 [data-sub] {
     /* display: inline-block; */
     text-align: center;
-    /* vertical-align: middle; */
+    /* vertic1l-align: middle; */
 }
 
 [data-sub]::after {
@@ -94,7 +107,7 @@ nav {
 .dim,
 footer {
     font-size: .8rem;
-    color: #aac;
+    color: var(--text3);
 }
 
 footer {
@@ -123,13 +136,13 @@ footer {
     margin: 0 -.5rem 1rem;
     padding: .5rem;
     transition: .5s;
-    border: 1px solid #eef;
+    border: 1px solid var(--line);
     border-radius: 1rem;
-    background: #fff;
+    background: var(--text4);
 }
 
 .card:hover {
-    box-shadow: 0 0 1em #dde;
+    box-shadow: 0 0 1em var(--shadow);
 }
 
 .card>* {
@@ -141,9 +154,9 @@ footer {
     align-items: baseline;
     flex-wrap: wrap;
     margin: 0;
-    color: #556;
+    color: var(--text2);
 }
 
 .card>.list>* {
-    margin: .2em .25em;
+    margin: .25em;
 }
