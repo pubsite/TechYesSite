@@ -24,6 +24,8 @@
   <div class="bicol">
     <div class="card">
       <h4><i class="fa-solid fa-images"></i> 图库</h4>
+      <pre id="MGInfo"></pre>
+      <script>document.getElementById("MGInfo").textContent = `name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}`</script>
       <p><a href="https://imgtg.com/album/54wL" target="_blank">点击访问由Imgtg托管的在线版本</a></p>
     </div>
     <div class="card">
@@ -34,18 +36,28 @@
     </div>
 
     <div class="card">
-      <h4><i class="fa-solid fa-anchor"></i> 绑定背景元素</h4>
+      <h4><i class="fa-solid fa-anchor"></i> 绑定要应用背景的元素</h4>
       <pre>MG.bgBind(<em>ele</em>)</pre>
       <p>
-        <code><em>ele</em></code>为DOM元素，常见的元素有<code>document.documentElement</code>、<code>document.getElementById("main")</code>等。
+        <code><em>ele</em></code>为DOM元素，如<code>document.documentElement</code>、<code>document.getElementById("main")</code>等。
       </p>
-      <p>绑定背景元素时，会自动给该元素的背景设置<code>居中</code>、<code>自适应缩放</code>属性，如果不需要，请传入一个非真的值作为第二个参数，例如：</p>
+      <p>绑定要应用背景的元素时，会自动给该元素设置<code>背景居中</code>、<code>背景自适应缩放</code>属性，如果不需要，请传入一个非真的值作为第二个参数，例如：</p>
       <pre>MG.bgBind(<em>ele</em>, false)</pre>
     </div>
 
     <div class="card">
+      <h4><i class="fa-solid fa-anchor"></i> 绑定要输出图片信息的元素</h4>
+      <pre>MG.infoBind(<em>ele</em>)</pre>
+      <p>
+        <code><em>ele</em></code>为DOM元素，如<code>document.getElementById("bgInfo")</code>等。使用一卷图库须遵守
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>
+        许可。被绑定的元素用于输出图片信息。
+      </p>
+    </div>
+
+    <div class="card">
       <h4><i class="fa-solid fa-gears"></i> 设置背景的几种方式</h4>
-      <p>使用<code>MG.bgBind(<em>ele</em>)</code>绑定背景元素后，就可以使用函数给元素设置背景图片。</p>
+      <p>绑定应用背景的元素、要输出图片信息的元素后，就可以设置背景了。</p>
       <h5>1 根据索引位置（数组下标）设置</h5>
       <pre>MG.setBg(<em>index</em>)</pre>
       <p>特别地，<code><em>index</em></code>为负时，索引会从末端倒数。</p>
@@ -64,9 +76,11 @@
       <p>参数<code><em>yyMM</em></code>是格式为<code>yyMM</code>的图片期数（即图片ID前四位，格式参见上一项），这样会随机设置此期内的一张图片作为背景。</p>
     </div>
 
-    <!-- <div class="card">
+    <div class="card">
       <h4><i class="fa-solid fa-circle-info"></i> 技术细节</h4>
-    </div> -->
+      <pre
+        id="MGTechDetails"><a onclick="this.parentElement.textContent=`\/\/ 压缩的gallery.json源文件索引0样例\n${JSON.stringify(Object.values(MG.pic[0]))}\n\/\/ load.js引入后MG.pic[0]样例\n${JSON.stringify(MG.pic[0])}`">点击加载样例</a></pre>
+    </div>
   </div>
 
   <footer>

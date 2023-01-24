@@ -28,7 +28,7 @@ fetch("gallery.json").then(res => res.json()).then(arr => {
 });
 
 MG.bgBind = (ele, needFit = true) => {
-    MG.eleBgBind = ele;
+    MG.eleBg = ele;
     if (needFit) {
         ele.style.backgroundPosition = "center";
         ele.style.backgroundSize = "cover";
@@ -36,9 +36,14 @@ MG.bgBind = (ele, needFit = true) => {
     return ele;
 }
 
+MG.infoBind = ele => MG.eleInfo = ele;
+
 MG.setBg = index => {
-    if (!MG.eleBgBind) throw "Use MG.bgBind(ele) first";
-    MG.eleBgBind.style.backgroundImage = `url(${MG.pic.at(index).src})`;
+    if (!MG.eleBg) throw "Use MG.bgBind(ele) first";
+    if (!MG.eleInfo) throw "Use MG.infoBind(ele) first";
+    let objPic = MG.pic.at(index);
+    MG.eleBg.style.backgroundImage = `url(${objPic.src})`;
+    MG.eleInfo.textContent = `${objPic.id}_${objPic.author}_${objPic.name}`;
     return MG.pic.at(index);
 };
 
