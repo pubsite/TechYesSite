@@ -8,7 +8,7 @@
     --text1: #333;
     --text2: #556;
     --text3: #aac;
-    --text4:#fff;
+    --text4: #fff;
     --line: #eef;
     --c1: #37f;
     --c2: rgba(63, 159, 255, .2);
@@ -94,6 +94,7 @@ html {
     font-size: .6em;
     display: block;
     content: attr(data-sub);
+    opacity: .6;
 }
 
 nav {
