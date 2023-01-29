@@ -4,15 +4,28 @@
 }
 
 :root {
-    --bg: #f7f9ff;
+    --bg1: #f7f9ff;
+    --bg2: #fff;
     --text1: #333;
     --text2: #556;
-    --text3: #aac;
-    --text4: #fff;
-    --line: #eef;
-    --c1: #37f;
-    --c2: rgba(63, 159, 255, .2);
-    --shadow: rgba(95, 95, 191, .2);
+    --text3: #99a;
+    --line: rgba(127, 127, 191, .2);
+    --ac1: #37f;
+    --ac2: rgba(0, 127, 255, .2);
+    --ac3: rgba(0, 127, 255, .1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg1: #111;
+        --bg2: #222;
+        --text1: #eee;
+        --text2: #ccc;
+        --text3: #777;
+        --ac1: #7db;
+        --ac2: rgba(127, 255, 191, .5);
+        --ac3: rgba(127, 255, 191, .2);
+        }
 }
 
 a {
@@ -26,14 +39,18 @@ a {
 }
 
 a:hover {
-    transform: sc1le(1.05);
-    color: var(--text4);
-    background: var(--c1);
-    box-shadow: .1em .2em 1em var(--shadow);
+    transform: scale(1.05);
+    color: var(--bg2);
+    background: var(--ac1);
+    box-shadow: .1em .2em 1em var(--ac3);
+}
+
+p {
+    line-height: 1.5em;
 }
 
 strong {
-    color: var(--c1);
+    color: var(--ac1);
 }
 
 code,
@@ -41,20 +58,21 @@ pre {
     font-size: 13px;
     overflow: auto;
     padding: .1em .25em;
-    color: var(--c1);
-    border: 1px solid var(--line);
+    color: var(--ac1);
     border-radius: .5em;
-    background: var(--c2);
+    background: var(--ac2);
 }
 
 pre {
     padding: .5em;
     color: var(--text3);
-    background: var(--bg);
+    border: 1px solid var(--line);
+    background: var(--bg1);
 }
 
 ::selection {
-    background: var(--c2);
+    color: var(--text1);
+    background: var(--ac2);
 }
 
 html {
@@ -62,7 +80,7 @@ html {
     width: 90vw;
     margin: 0 auto;
     color: var(--text1);
-    background: var(--bg);
+    background: var(--bg1);
 }
 
 @font-face {
@@ -112,7 +130,6 @@ footer {
 }
 
 footer {
-    line-height: 1.5rem;
     margin: 1rem 0;
 }
 
@@ -139,11 +156,12 @@ footer {
     transition: .5s;
     border: 1px solid var(--line);
     border-radius: 1rem;
-    background: var(--text4);
+    background: var(--bg2);
 }
 
 .card:hover {
-    box-shadow: 0 0 1em var(--shadow);
+    border-color: var(--ac1);
+    box-shadow: .1em .2em 1em var(--ac3);
 }
 
 .card>* {
