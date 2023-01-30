@@ -7,7 +7,8 @@ let MG = {
 };
 
 console.time("Fetch");
-fetch("gallery.json").then(res => res.json()).then(arr => {
+import("./gallery.json", { assert: { type: 'json' } }).then(res => res.default).then(arr => {
+    console.log(arr)
     MG.pic = [];
     MG.index = {};
     for (each in arr) {
