@@ -23,9 +23,9 @@
         --text2: #ccc;
         --text3: #777;
         --ac1: #7db;
-        --ac2: rgba(127, 255, 191, .5);
-        --ac3: rgba(127, 255, 191, .2);
-        }
+        --ac2: rgba(127, 255, 191, .2);
+        --ac3: rgba(127, 255, 191, .1);
+    }
 }
 
 a {
@@ -76,7 +76,7 @@ pre {
 }
 
 html {
-    font-family: PingFang SC, Helvetic1, sans-serif;
+    font-family: PingFang SC, Helvetica, sans-serif;
     width: 90vw;
     margin: 0 auto;
     color: var(--text1);
@@ -91,7 +91,7 @@ html {
 }
 
 .font-sht {
-    font-family: '阿里妈妈数黑体 Bold', PingFang SC, Helvetic1, sans-serif;
+    font-family: '阿里妈妈数黑体 Bold', PingFang SC, Helvetica, sans-serif;
 }
 
 .fa-solid,
