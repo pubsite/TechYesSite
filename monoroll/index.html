@@ -12,11 +12,14 @@
 
 <body>
   <nav>
-    <h2><a><i class="fa-solid fa-file-lines"></i> 一卷图库使用文档</a></h2>
+    <h2><a><i class="fa-solid fa-file-lines"></i> 一卷图库手册</a></h2>
     <a href=".."><i class="fa-solid fa-house-chimney"></i></a>
   </nav>
   <footer>
-    <p></p>
+    <p>这是一卷图库的开发者文档/教程。一卷图库内的图片均采用
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>
+      许可进行授权。
+    </p>
   </footer>
 
   <script src="./load.js"></script>
@@ -26,13 +29,16 @@
       <h4><i class="fa-solid fa-images"></i> 图库</h4>
       <pre id="MGInfo"></pre>
       <script>document.getElementById("MGInfo").textContent = `name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}`</script>
-      <p><a href="https://imgtg.com/album/54wL" target="_blank">点击访问由Imgtg托管的在线版本</a></p>
+      <div class="list">
+        <a><i class="fa-brands fa-qq"></i>投稿QQ: 2399052066 (纸鹿)</a>
+        <a href="https://imgtg.com/album/54wL" target="_blank">在线预览(由Imgtg托管)</a>
+      </div>
     </div>
     <div class="card">
       <h4><i class="fa-solid fa-file-import"></i> 引入</h4>
       <p>在HTML中插入如下代码,随后便可以执行图库相关功能。</p>
-      <pre>&lt;script src="https://thisis.host/monoroll/load.js"&gt;&lt;/script&gt;</pre>
-      <p>尝试：在控制台输入<code>MG</code>并回车。</p>
+      <pre>&lt;script&gt;function MGLoad(){ //在此放入你的图库函数 }&lt;/script&gt;<br>&lt;script src="https://thisis.host/monoroll/load.js"&gt;&lt;/script&gt;</pre>
+      <p>将需要执行的函数声明在<code>MGLoad()</code>中。</p>
     </div>
 
     <div class="card">
@@ -49,9 +55,7 @@
       <h4><i class="fa-solid fa-anchor"></i> 绑定要输出图片信息的元素</h4>
       <pre>MG.infoBind(<em>ele</em>)</pre>
       <p>
-        <code><em>ele</em></code>为DOM元素，如<code>document.getElementById("bgInfo")</code>等。使用一卷图库须遵守
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>
-        许可。被绑定的元素用于输出图片信息。
+        <code><em>ele</em></code>为DOM元素，如<code>document.getElementById("bgInfo")</code>等。被绑定的元素用于输出图片信息。
       </p>
     </div>
 

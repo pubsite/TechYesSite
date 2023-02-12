@@ -8,7 +8,6 @@ let MG = {
 
 console.time("Fetch");
 import("./gallery.json", { assert: { type: 'json' } }).then(res => res.default).then(arr => {
-    console.log(arr)
     MG.pic = [];
     MG.index = {};
     for (each in arr) {
@@ -26,6 +25,8 @@ import("./gallery.json", { assert: { type: 'json' } }).then(res => res.default).
     console.timeEnd("Fetch");
     console.log(MG.pic.length + " pics loaded.");
     console.groupEnd();
+    if (typeof MGLoad == "undefined") MGLoad = () => { }
+    MGLoad();
 });
 
 MG.bgBind = (ele, needFit = true) => {
