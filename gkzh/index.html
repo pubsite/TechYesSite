@@ -11,48 +11,53 @@
     textarea {
       display: block;
       width: 90%;
-      max-width: 90vw;
       height: 4em;
       word-break: break-all;
     }
   </style>
-  <title>高考政史地/理化生计算</title>
+  <title>高考政史地/理化生计算器</title>
 </head>
 
 <body>
   <nav>
-    <h2><a><i class="fa-solid fa-file-invoice"></i> 高考政史地/理化生计算</a></h2>
+    <h2><a><i class="fa-solid fa-file-invoice"></i> 高考政史地/理化生计算器</a></h2>
     <a href=".."><i class="fa-solid fa-house-chimney"></i></a>
   </nav>
   <footer>
-    <strong>暂仅适用于2022陕西理科高考</strong>,
-    有需求请联系<i class="fa-brands fa-qq"></i>2399052066(纸鹿)。
-    <p>我们不会储存任何信息。</p>
+    <strong>仅适用于2023年陕西文科/理科高考，请仔细核对信息。</strong>
+    <p>我们不会存储任何个人信息，如有需要请联系 <i class="fa-brands fa-qq"></i> 2399052066（纸鹿）。 </p>
   </footer>
 
   <div class="bicol">
     <div class="card">
-      <p>如果你还没有以下两项信息，请打开陕西招生考试信息网，进入“2022年高考成绩各科各题得分查询入口”查询，或者
-        <a href="https://www.sneac.edu.cn/pzcjweb/cjcx/zfcindex.jsp">点击此处进入官方查分网站</a> 。
-      </p>
+      <p>请先到<a href="http://sneac.com/ksfw/lqcx.htm"><u>陕西招生考试信息网</u></a>查询你的高考各科各题得分，然后填写以下信息：</p>
+      <select id="subjectType" onchange="setType(+this.value)" style="font-size:1em">
+        <option value="0">文科</option>
+        <option value="1">理科</option>
+      </select>
     </div>
 
     <div class="card">
-      <h4>理综选择题作答字符串</h4>
-      <p>示例：A,B,C,D,A,B,C,D,A,B,C,D<br>是你的选择题选项序列！别把题号/总分放进来！</p>
+      <h4>选择题答案序列</h4>
+      <p>请在下面的文本框中输入你的选择题答案序列，使用英文逗号分隔各选项，例如：A,B,C,D,A,B,C,D,A,B,C,D。</p>
       <textarea id="str1"></textarea>
     </div>
 
     <div class="card">
-      <h4>理综非选择题各题得分字符串</h4>
-      <p>示例：10.0,9.0,8.0,7.0,6.0,5.0<br>是你的非选择题得分序列！别把题号/总分放进来！</p>
+      <h4>非选择题得分序列</h4>
+      <p>请在下面的文本框中输入你的非选择题得分序列，使用英文逗号分隔各题得分，例如：10.0,9.0,8.0,7.0,6.0,5.0。</p>
       <textarea id="str2"></textarea>
     </div>
 
     <div class="card">
-      <h4>结果</h4>
+      <h4>计算结果</h4>
       <a onclick="resolve()"><i class="fa-solid fa-calculator"></i> 点击计算各科得分</a>
       <p><strong id="result"></strong></p>
+    </div>
+
+    <div class="card">
+      <h4>相关信息</h4>
+      <p class="dim" id="typeInfo"></p>
     </div>
   </div>
 
