@@ -6,31 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/index.css">
-  <link href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    textarea {
-      display: block;
-      width: 90%;
-      height: 4em;
-      word-break: break-all;
-    }
-  </style>
+  <link href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <title>高考政史地/理化生计算器</title>
 </head>
 
 <body>
-  <nav>
-    <h2><a><i class="fa-solid fa-file-invoice"></i> 高考政史地/理化生计算器</a></h2>
+  <nav class="between">
+    <h2><a><i class="fa-solid fa-file-invoice fa-space fa-space"></i>高考政史地/理化生计算器</a></h2>
     <a href=".."><i class="fa-solid fa-house-chimney"></i></a>
   </nav>
   <footer>
-    <strong>仅适用于2023年陕西文科/理科高考，请仔细核对信息。</strong>
-    <p>我们不会存储任何个人信息，如有需要请联系 <i class="fa-brands fa-qq"></i> 2399052066（纸鹿）。 </p>
+    <strong>本页面维护中，无法使用。</strong>
+    <!-- <strong>仅适用于2023年陕西文科/理科高考，请仔细核对信息。</strong> -->
+    <p>我们不会存储任何个人信息，如有需要请联系 <i class="fa-brands fa-qq fa-space"></i>2399052066（纸鹿）。 </p>
   </footer>
 
   <div class="bicol">
     <div class="card">
-      <p>请先到<a href="http://sneac.com/ksfw/lqcx.htm"><u>陕西招生考试信息网</u></a>查询你的高考各科各题得分，然后填写以下信息：</p>
+      <p>请先到<strong><a href="http://sneac.com/ksfw/lqcx.htm">
+            陕西招生考试信息网</a></strong>
+        查询你的高考各科各题得分，然后填写以下信息：</p>
       <select id="subjectType" onchange="setType(+this.value)" style="font-size:1em">
         <option value="0">文科</option>
         <option value="1">理科</option>
@@ -40,19 +35,22 @@
     <div class="card">
       <h4>选择题答案序列</h4>
       <p>请在下面的文本框中输入你的选择题答案序列，使用英文逗号分隔各选项，例如：A,B,C,D,A,B,C,D,A,B,C,D。</p>
-      <textarea id="str1"></textarea>
+      <p contenteditable id="str1" style="background:var(--ac3);border-radius:.5em"></p>
+
     </div>
 
     <div class="card">
       <h4>非选择题得分序列</h4>
       <p>请在下面的文本框中输入你的非选择题得分序列，使用英文逗号分隔各题得分，例如：10.0,9.0,8.0,7.0,6.0,5.0。</p>
-      <textarea id="str2"></textarea>
+      <p contenteditable id="str2" style="background:var(--ac3);border-radius:.5em"></p>
     </div>
 
     <div class="card">
       <h4>计算结果</h4>
-      <a onclick="resolve()"><i class="fa-solid fa-calculator"></i> 点击计算各科得分</a>
-      <p><strong id="result"></strong></p>
+      <p><a onclick="resolve()">
+          <i class="fa-solid fa-calculator fa-space fa-space"></i>点击计算各科得分</a>
+        <br><strong id="result"></strong>
+      </p>
     </div>
 
     <div class="card">
@@ -62,7 +60,7 @@
   </div>
 
   <footer>
-    <p class="font-sht">© 2019-2023 野生技协(TECHYES). All rights reserved.</p>
+    <p class="font-sht">© 2020-2023 野生技协(TECHYES). All rights reserved.</p>
   </footer>
 </body>
 

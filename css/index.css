@@ -29,6 +29,7 @@
 }
 
 a {
+    display: inline-block;
     margin: -.1em -.25em;
     padding: .1em .25em;
     cursor: pointer;
@@ -42,11 +43,15 @@ a:hover {
     transform: scale(1.05);
     color: var(--bg2);
     background: var(--ac1);
-    box-shadow: .1em .2em 1em var(--ac3);
+    box-shadow: .1em .2em .5em var(--ac3);
 }
 
 p {
     line-height: 1.5em;
+}
+
+b {
+    font-weight: bolder;
 }
 
 strong {
@@ -60,7 +65,7 @@ pre {
     padding: .1em .25em;
     color: var(--ac1);
     border-radius: .5em;
-    background: var(--ac2);
+    background: var(--ac3);
 }
 
 pre {
@@ -71,16 +76,21 @@ pre {
 }
 
 ::selection {
-    color: var(--text1);
-    background: var(--ac2);
+    /* color: var(--ac1); */
+    background: var(--ac3);
 }
 
 html {
     font-family: PingFang SC, Helvetica, sans-serif;
     width: 90vw;
+    min-height: 100vh;
     margin: 0 auto;
     color: var(--text1);
     background: var(--bg1);
+}
+
+body>* {
+    margin: 1rem 0;
 }
 
 @font-face {
@@ -96,10 +106,13 @@ html {
 
 .fa-solid,
 .fa-regular,
-.fa-brands,
-.fa-width {
+.fa-brands {
     min-width: 1.2em;
     text-align: center;
+}
+
+.fa-space::after {
+    content: ' ';
 }
 
 [data-sub] {
@@ -112,32 +125,37 @@ html {
     font-size: .6em;
     display: block;
     content: attr(data-sub);
-    opacity: .6;
+    opacity: .5;
 }
 
-nav {
+.between {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1rem 0;
+    gap: .5em;
 }
 
 .dim,
 footer {
     font-size: .8rem;
+    line-height: 1.5em;
     color: var(--text3);
 }
 
-footer {
-    margin: 1rem 0;
+.bicol {
+    column-count: 2;
+    column-gap: 1rem;
 }
 
-
-@media(min-width: 720px) {
+@media(max-width: 720px) {
     .bicol {
-        column-count: 2;
-        column-gap: 2rem;
+        column-count: 1;
+    }
+
+    footer.between {
+        align-items: stretch;
+        flex-direction: column;
     }
 }
 
@@ -151,8 +169,7 @@ footer {
 .card {
     overflow: auto;
     height: 100%;
-    margin: 0 -.5rem 1rem;
-    padding: .5rem;
+    margin: 0 0 1rem;
     transition: .5s;
     border: 1px solid var(--line);
     border-radius: 1rem;
@@ -165,17 +182,16 @@ footer {
 }
 
 .card>* {
-    margin: .5rem;
+    margin: .8rem 1rem;
 }
 
 .card>.list {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin: 0;
     color: var(--text2);
 }
 
-.card>.list>* {
-    margin: .25em;
+.list {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .5em 1em;
 }
