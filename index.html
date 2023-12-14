@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>野生技协导航</title>
   <meta name="author" content="纸鹿(L33Z22L11@Github)">
@@ -11,7 +10,7 @@
   <meta name="keywords" content="野生技协,宝中,技协导航">
   <meta name="baidu-site-verification" content="codeva-l87IsEotIs">
   <link rel="stylesheet" href="./css/index.css">
-  <link href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <base target="_blank">
 </head>
 
@@ -20,7 +19,7 @@
     <a>
       <h1><i class="fa-solid fa-compass"></i> 导航</h1>
     </a>
-    <a href="https://hi.thisis.host"><i class="fa-solid fa-globe"></i>技协官网</a>
+    <a href="./about.html"><i class="fa-solid fa-circle-question"></i>了解技协</a>
   </nav>
 
   <footer>
@@ -43,13 +42,15 @@
           <i class="fa-solid fa-paper-plane"></i>起始页</a>
         <a href="https://bjsbjzx.jyyun.com/" data-sub="教育云/智学网">
           <i class="fa-solid fa-mobile-screen"></i>班牌管理</a>
+        <a href="http://little-star.ys168.com/" data-sub="智学网生成报表">
+          <i class="fa-solid fa-table-list"></i>成绩分析</a>
       </div>
     </div>
 
     <div class="card">
       <h4><i class="fa-solid fa-photo-film"></i> 校园视频/图片</h4>
       <div class="list">
-        <a href="https://imgtg.com/album/54wL" data-sub="考试时钟背景">
+        <a href="https://img.tg/album/54wL" data-sub="考试时钟背景">
           <i class="fa-solid fa-images"></i>一卷图库</a>
         <a href="./monoroll/" data-sub="开发者文档/教程"><i class="fa-solid fa-file-lines"></i>一卷图库手册</a>
         <a href="https://space.bilibili.com/11002395/channel/collectiondetail?sid=83933" data-sub="运动会/艺术节/宣传片">
@@ -111,20 +112,24 @@
     </div> -->
 
     <div class="card">
-      <h4><i class="fa-solid fa-user-group"></i> 合作伙伴
+      <h4><i class="fa-solid fa-medal"></i> 合作伙伴
         <span class="dim">点击可复制内容</span>
       </h4>
-      <script>function copyDS(ele) { // 复制传入元素的data-sub属性
-          navigator.clipboard.writeText(ele.dataset.sub);
-          setTimeout(alert, 0, ele.dataset.sub + " 已复制到剪贴板。")
-        }</script>
       <div class="list">
-        <a onclick="copyDS(this)" data-sub="频道号:qxL848k6r0">宝中频道</a>
-        <!-- <a onclick="copyDS(this)" data-sub="群:458878393">宝中志愿帮</a> -->
         <a onclick="copyDS(this)" data-sub="群:1142349003">方块茶话会</a>
-        <a onclick="copyDS(this)" data-sub="QQ:2017584253">音幻宝中</a>
         <a onclick="copyDS(this)" data-sub="群:1004048547">冒险家协会</a>
+        <!-- <a onclick="copyDS(this)" data-sub="群:458878393">宝中志愿帮</a> -->
+        <a onclick="copyDS(this)" data-sub="频道号:qxL848k6r0">宝中频道</a>
         <a onclick="copyDS(this)" data-sub="QQ:2124089415">宝中万能墙</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4><i class="fa-solid fa-user-group"></i> 友好社团
+        <span class="dim">点击可复制内容</span>
+      </h4>
+      <div class="list">
+        <a onclick="copyDS(this)" data-sub="QQ:2017584253">音幻宝中</a>
         <a>朗诵社</a><a>排球社</a><a>合唱团</a><a>街舞社</a><a>汉服社</a><a>航模社</a>
         <a>民乐社</a><a>心理社</a><a>书画社</a><a>动漫社</a><a>舞蹈队</a><a>日语社</a>
         <a>Instreet社</a><a>机器人社</a><a>推理社</a><a>篮裁社</a><a>魔术社</a>
@@ -168,5 +173,6 @@
     <p class="font-sht">© 2019-2023 野生技协(TECHYES). All rights reserved.</p>
   </footer>
 </body>
+<script src="./js/clipboard.js"></script>
 
 </html>
