@@ -1,0 +1,38 @@
+@font-face {
+  font-family: AlimamaShuHeiTi;
+  font-weight: 700;
+  src: url('/css/AlimamaShuHeiTi.woff2') format('woff2');
+  font-display: swap;
+}
+
+.font-sht {
+  font-family: AlimamaShuHeiTi, HarmonyOS_Regular, PingFang SC, Helvetica, sans-serif;
+}
+
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  font-size: 1em;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+[data-sub] {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+[data-sub]::after {
+  font-size: .8em;
+  display: block;
+  content: attr(data-sub);
+  opacity: .6;
+}
+
+.alist {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5em 1em;
+}
