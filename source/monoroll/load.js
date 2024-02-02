@@ -25,8 +25,6 @@ import("./gallery.json", { assert: { type: 'json' } }).then(res => res.default).
     console.timeEnd("Fetch");
     console.log(MG.pic.length + " pics loaded.");
     console.groupEnd();
-    if (typeof MGLoad == "undefined") MGLoad = () => { }
-    MGLoad();
 });
 
 MG.bgBind = (ele, needFit = true) => {
