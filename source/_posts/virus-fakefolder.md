@@ -1,6 +1,6 @@
 ---
 title: 宝中惊现病毒删除资料，潜伏十年进入发作高峰
-categories: 技术
+categories: [公告]
 date: 2021-05-08
 ---
 

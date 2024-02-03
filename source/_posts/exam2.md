@@ -1,6 +1,6 @@
 ---
 title: 考试时钟的升级打怪攻略
-categories: [项目]
+categories: [日常]
 date: 2021-10-01
 ---
 

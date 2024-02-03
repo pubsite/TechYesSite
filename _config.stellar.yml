@@ -10,19 +10,36 @@ menubar:
     - id: post
       title: 博客
       url: /blog/
-    - id: link
-      title: 合作
-      url: /link/
+    - id: project
+      title: 项目
+      url: /project/
+    # - id: link
+    #   title: 合作
+    #   url: /link/
     - id: about
       title: 关于
       url: /about/
 
 footer:
+  sitemap:
+    探索:
+      - "[<i class='fa-solid fa-compass'></i><span class='font-sht'>导航</span>](/)"
+      - "[<i class='fa-solid fa-newspaper'></i>博客](/blog)"
+      - "[<i class='fa-solid fa-diagram-project'></i>项目](/project)"
+      - "[<i class='fa-solid fa-circle-info'></i>关于](/about)"
+    加入:
+      - "[<i class='fa-solid fa-medal'></i><span class='font-sht'>技协</span>伙伴](/friend)"
+      - "[<i class='fa-solid fa-sitemap'></i>域名公示](/site)"
+      - "[<i class='fa-brands fa-qq'></i>群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
+      - "[<i class='fa-brands fa-telegram'></i>群: YesTech](https://t.me/yestech)"
+    信息:
+      - "[<i class='fa-regular fa-calendar-check'></i><span class='font-sht'>野生技协</span>已成立<span id='uptime'></span>](/about#大事记)"
+      - "[<i class='fa-brands fa-github'></i>pubsite/TechYesSite](https://github.com/pubsite/TechYesSite)"
+      - "[<i class='fa-solid fa-palette'></i>Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
+      - "[<i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
   content: |
     © 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.
     如果你想部署网站/提交链接/对本页面提出建议，请联系QQ: 2399052066(纸鹿)。
-    <i class="fa-brands fa-qq"></i>[QQ群: 89 4656 456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)　<i class="fa-brands fa-telegram"></i>[TG群: YesTech](https://t.me/yestech)　<i class="fa-brands fa-github"></i>[L33Z22L11/TechyesNav](https://github.com/L33Z22L11/TechyesNav)
-    <i class='fa-solid fa-palette'></i>[Stellar](https://github.com/xaoxuu/hexo-theme-stellar)　<i class='fa-brands fa-creative-commons'></i>[BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 inject:
   head:
@@ -30,6 +47,8 @@ inject:
     - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="/css/font.css">
+  script:
+    - <script src="/js/uptime.js"></script>
 
 style:
   font-family:

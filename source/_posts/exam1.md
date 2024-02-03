@@ -1,6 +1,6 @@
 ---
 title: 考试时钟信息公示
-categories: [项目]
+categories: [公告]
 date: 2021-07-24
 ---
 
