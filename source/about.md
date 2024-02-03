@@ -29,7 +29,7 @@ GitHub：[L33Z22L11](https://github.com/L33Z22L11)
 
 ## 大事记
 {% timeline %}
-<!-- node 2022~2023年 -->
+<!-- node 2022~2024年 -->
 <span class="font-sht">野生技协</span>持续活动并不断壮大，交流群活跃天数占比超过93%。
 <!-- node 2021年12月26日 -->
 <span class="font-sht">野生技协</span>人数接近二百，发布了[<span class="font-sht">野生技协</span>2021总结海报](/202112/2021summary)，社群负责人由纸鹿更换为氢化脱氰氰酸。
