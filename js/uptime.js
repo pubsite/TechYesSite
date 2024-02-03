@@ -1,0 +1,1 @@
+document.getElementById("uptime").textContent = `${~~((new Date() - new Date("2020-02-02")) / 864E5)}天`
