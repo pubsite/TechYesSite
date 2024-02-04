@@ -1,7 +1,7 @@
 ---
 menu_id: nav
 title: 野生技协导航
-h1: <i class="fa-solid fa-compass"></i><span class="font-sht">导航</span>
+h1: <i class="fa-solid fa-compass"></i> <span class="font-sht">导航</span>
 description: 野生技协导航是野生技协(宝鸡中学)为宝中学子提供的网址导航服务，内有考试时钟、一卷图库、高考倒计时等实用服务。
 breadcrumb: false
 ---
@@ -40,7 +40,7 @@ breadcrumb: false
 <a href="https://fzz.thisis.host/" data-sub="高三 byFZZ"><i class="fa-regular fa-hourglass"></i>高考倒计时</a>
 <a href="https://examined.thisis.host" data-sub="历史版本回顾"><i class="fa-regular fa-file-zipper"></i>考试时钟时光局</a>
 <a href="https://e.thisis.host/" data-sub="全新架构 by加零"><i class="fa-regular fa-clock"></i>新考试时钟</a>
-<a href="/ebook" data-sub="2020网课专用"><i class="fa-solid fa-book"></i>电子课本</a>
+<a href="/ebook/" data-sub="2020网课专用"><i class="fa-solid fa-book"></i>电子课本</a>
 <a href="/gkzh/" data-sub="2022政史地/理化生"><i class="fa-solid fa-calculator"></i>高考科目计算</a>
-<a href="/2020wk" data-sub="2020高一平行班"><i class="fa-solid fa-file-video"></i>网课回放</a>
+<a href="/2020wk/" data-sub="2020高一平行班"><i class="fa-solid fa-file-video"></i>网课回放</a>
 </div>

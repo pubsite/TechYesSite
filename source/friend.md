@@ -1,9 +1,16 @@
 ---
 menu_id: friend
 title: 合作
-h1: <i class="fa-solid fa-medal"></i><span class="font-sht">技协</span>伙伴
+h1: <i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴
 breadcrumb: false
 ---
+
+### 加入我们
+{% hashtag QQ群:894656456 https://jq.qq.com/?_wv=1027&k=CRVRq4sD %}
+{% hashtag TG群:YesTech https://t.me/yestech %}
+
+### 合作联系
+{% hashtag 纸鹿 (QQ:2399052066) %}
 
 ### <i class="fa-solid fa-medal"></i> 合作伙伴
 {% hashtag 方块茶话会 (群:1142349003) %}
@@ -53,6 +60,3 @@ breadcrumb: false
 <!-- {% hashtag 方块茶话会 https://b5e920.bk-free02.com/ %} -->
 <!-- {% hashtag 22届16班 https://16.thisis.host/ %} -->
 
-### 合作联系
-
-{% hashtag 纸鹿 (QQ:2399052066) %}

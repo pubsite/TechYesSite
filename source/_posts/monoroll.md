@@ -2,7 +2,7 @@
 title: 一卷图库使用文档
 categories: [项目]
 date: 2023-01-20
-permalink: monoroll.html
+permalink: monoroll/
 ---
 
 > 这是一卷图库的开发者文档/教程。一卷图库内的图片均采用[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</a>许可进行授权。

@@ -1,1 +1,3 @@
-document.getElementById("uptime").textContent = `${~~((new Date() - new Date("2020-02-02")) / 864E5)}天`
+let uptime = ~~((new Date() - new Date("2019-09-12")) / 864E5);
+let uptimeTags = Array.from(document.getElementsByTagName("uptime"));
+uptimeTags.forEach(ele => { ele.textContent = `${uptime}天` });

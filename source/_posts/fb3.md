@@ -1,10 +1,10 @@
 ---
 title: 他修电脑又遇到了我 - FB3
-categories: 日常
+categories: [日常]
 date: 2021-12-15
 ---
 
-> 作者：纸鹿本鹿，[查看原文](https://mp.weixin.qq.com/s/MT7HRrfd3hUfnC7zegFbQQ)
+> [查看原文](https://mp.weixin.qq.com/s/MT7HRrfd3hUfnC7zegFbQQ)
 
 　　两个月前的下午，文科五班的L找到了我。
 　　“纸鹿，我们班电脑出问题了，屏幕颜色特别亮，而且鼠标和触摸都失灵了。你能不能过来看一下？”

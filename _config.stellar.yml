@@ -1,23 +1,27 @@
 logo:
+  title: "[${config.title}](/blog)"
   subtitle: 开放互助 活跃创新|做优质的自发性技术协助组织
 
 menubar:
-  columns: 4
+  columns: 3
   items:
     - id: nav
-      title: 导航
+      title: <i class='fa-solid fa-compass'></i>导航
       url: /
     - id: post
-      title: 博客
+      title: <i class='fa-solid fa-newspaper'></i>博客
       url: /blog/
     - id: project
-      title: 项目
+      title: <i class='fa-solid fa-diagram-project'></i>项目
       url: /project/
-    # - id: link
-    #   title: 合作
-    #   url: /link/
+    - id: site
+      title: <i class='fa-solid fa-sitemap'></i>域名
+      url: /site/
+    - id: friend
+      title: <i class='fa-solid fa-medal'></i>伙伴
+      url: /friend/
     - id: about
-      title: 关于
+      title: <i class='fa-solid fa-circle-info'></i>关于
       url: /about/
 
 footer:
@@ -33,7 +37,7 @@ footer:
       - "[<i class='fa-brands fa-qq'></i>群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
       - "[<i class='fa-brands fa-telegram'></i>群: YesTech](https://t.me/yestech)"
     信息:
-      - "[<i class='fa-regular fa-calendar-check'></i><span class='font-sht'>野生技协</span>已成立<span id='uptime'></span>](/about#大事记)"
+      - "[<i class='fa-regular fa-calendar-check'></i><span class='font-sht'>野生技协</span>已成立<uptime></uptime>](/about#大事记)"
       - "[<i class='fa-brands fa-github'></i>pubsite/TechYesSite](https://github.com/pubsite/TechYesSite)"
       - "[<i class='fa-solid fa-palette'></i>Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
       - "[<i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"

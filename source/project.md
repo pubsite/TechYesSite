@@ -1,7 +1,7 @@
 ---
 menu_id: project
 title: 项目
-h1: <i class="fa-solid fa-diagram-project"></i><span class="font-sht">野生技协</span>项目
+h1: <i class="fa-solid fa-diagram-project"></i> <span class="font-sht">野生技协</span>项目
 breadcrumb: false
 ---
 
@@ -41,5 +41,5 @@ Star受到纸鹿的考试成绩表格的启发，利用VBA在Excel表格中进�
 
 2020年网课期间建立的电子课本站。
 <div class="alist">
-<a href="/ebook" data-sub="2020网课专用"><i class="fa-solid fa-globe"></i>访问网站</a>
+<a href="/ebook/" data-sub="2020网课专用"><i class="fa-solid fa-globe"></i>访问网站</a>
 </div>

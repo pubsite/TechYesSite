@@ -1,10 +1,10 @@
 ---
 title: 电脑是你修坏的吗 - FB1
-categories: 日常
+categories: [日常]
 date: 2021-04-06
 ---
 
-> 作者：纸鹿本鹿，[查看原文](https://mp.weixin.qq.com/s/-xGsB2wLOCO5m6hzUeQOfQ)
+> [查看原文](https://mp.weixin.qq.com/s/-xGsB2wLOCO5m6hzUeQOfQ)
 
 ## 01 你在检查
 

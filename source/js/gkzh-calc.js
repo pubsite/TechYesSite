@@ -1,8 +1,8 @@
 var arr1, arr2, phy, che, bio;
 var key = ["D", "D", "B", "C", "A", "C", "B", "D", "A", "C", "D", "C", "B", "C", "A", "C", "B", "BC", "AB", "AD", "BD"];
 function resolve() {
-    arr1 = document.getElementById("str1").value.split(",");
-    arr2 = document.getElementById("str2").value.split(",");
+    arr1 = document.getElementById("str1").textContent.split(",");
+    arr2 = document.getElementById("str2").textContent.split(",");
     phy = 0, che = 0, bio = 0;
     for (i = 0; i < 21; i++) {
         if (key[i] == arr1[i]) {
