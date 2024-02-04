@@ -1,0 +1,302 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>一卷图库使用文档 - 野生技协</title>
+
+  
+    <meta name="description" content="这是一卷图库的开发者文档&#x2F;教程。一卷图库内的图片均采用CC BY-NC-SA 4.0许可进行授权。     document.getElementById(&quot;MGInfo&quot;).textContent &#x3D; &#96;name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}&#96;  投稿QQ: 2399052066">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一卷图库使用文档">
+<meta property="og:url" content="https://blog.thisis.host/monoroll/index.html">
+<meta property="og:site_name" content="野生技协">
+<meta property="og:description" content="这是一卷图库的开发者文档&#x2F;教程。一卷图库内的图片均采用CC BY-NC-SA 4.0许可进行授权。     document.getElementById(&quot;MGInfo&quot;).textContent &#x3D; &#96;name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}&#96;  投稿QQ: 2399052066">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-04T09:43:19.968Z">
+<meta property="article:author" content="纸鹿">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+  <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="/css/font.css">
+</head>
+<body>
+
+
+
+<div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container sidebar-blur">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="http://p.qlogo.cn/gh/894656456/894656456/0/" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/blog"><div class="main" ff="title">野生技协</div><div class="sub normal cap">开放互助 活跃创新</div><div class="sub hover cap" style="opacity:0">做优质的自发性技术协助组织</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" class="icon search-icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" title="<i class='fa-solid fa-compass'></i>导航" href="/"><span><i class='fa-solid fa-compass'></i>导航</span></a><a class="nav-item active" title="<i class='fa-solid fa-newspaper'></i>博客" href="/blog/"><span><i class='fa-solid fa-newspaper'></i>博客</span></a><a class="nav-item" title="<i class='fa-solid fa-diagram-project'></i>项目" href="/project/"><span><i class='fa-solid fa-diagram-project'></i>项目</span></a><a class="nav-item" title="<i class='fa-solid fa-sitemap'></i>域名" href="/site/"><span><i class='fa-solid fa-sitemap'></i>域名</span></a><a class="nav-item" title="<i class='fa-solid fa-medal'></i>伙伴" href="/friend/"><span><i class='fa-solid fa-medal'></i>伙伴</span></a><a class="nav-item" title="<i class='fa-solid fa-circle-info'></i>关于" href="/about/"><span><i class='fa-solid fa-circle-info'></i>关于</span></a></nav>
+</div>
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-text">引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E8%A6%81%E5%BA%94%E7%94%A8%E8%83%8C%E6%99%AF%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">绑定要应用背景的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E8%A6%81%E8%BE%93%E5%87%BA%E5%9B%BE%E7%89%87%E4%BF%A1%E6%81%AF%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">绑定要输出图片信息的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">设置背景的几种方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%B4%A2%E5%BC%95%E4%BD%8D%E7%BD%AE%EF%BC%88%E6%95%B0%E7%BB%84%E4%B8%8B%E6%A0%87%EF%BC%89%E8%AE%BE%E7%BD%AE"><span class="toc-text">根据索引位置（数组下标）设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-text">随机设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BE%E7%89%87%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%88%E5%9B%BE%E7%89%87ID%EF%BC%89%E8%AE%BE%E7%BD%AE"><span class="toc-text">通过图片唯一标识符（图片ID）设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BE%E7%89%87%E6%9C%9F%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-text">通过图片期数设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82"><span class="toc-text">技术细节</span></a></li></ol></div></div></widget>
+
+
+
+
+
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/202402/contribute-needed/"><span class="title">博客升级说明&投稿征集公告</span></a><a class="item title active" href="/monoroll/"><span class="title">一卷图库使用文档</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/202105/virus-fakefolder/"><span class="title">假文件夹病毒真的会发作</span></a><a class="item title" href="/202101/pc-common/"><span class="title">班级电脑常见问题</span></a><a class="item title" href="/202003/app-owl-helper/"><span class="title">2020网课：猫头鹰助手APP</span></a><a class="item title" href="/202108/exam-info/"><span class="title">关于考试时钟</span></a><a class="item title" href="/202112/summary-2021/"><span class="title">野生技协2021总结海报</span></a><a class="item title" href="/202107/exam-notification/"><span class="title">考试时钟信息公示</span></a><a class="item title" href="/202401/device-upgrade/"><span class="title">宝鸡中学更新一体机使用相关说明</span></a><a class="item title" href="/202112/fb3/"><span class="title">他修电脑又遇到了我 - FB3</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/blog">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a></div>
+<div id="post-meta"><span class="author">本文由 <a href="/author/zhilu/index.html">纸鹿本鹿</a> 发布于：</span><span class="created"><time datetime="2023-01-19T16:00:00.000Z">2023-01-20</time></span><span class="updated">，更新于：<time datetime="2024-02-04T09:43:19.968Z">2024-02-04</time></span></div></div>
+</div>
+<article class="md-text content"><h1 class="article-title"><span>一卷图库使用文档</span></h1><blockquote>
+<p>这是一卷图库的开发者文档&#x2F;教程。一卷图库内的图片均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></a>许可进行授权。</p>
+</blockquote>
+<script src="./load.js" onload="console.log(MG)"></script>
+
+<pre id="MGInfo"></pre>
+<script>document.getElementById("MGInfo").textContent = `name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}`</script>
+
+<p>投稿QQ: 2399052066 (纸鹿)<br><a target="_blank" rel="noopener" href="https://img.tg/album/54wL">在线预览(由Imgtg托管)</a></p>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>在HTML中插入如下代码,随后便可以执行图库相关功能。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://thisis.host/monoroll/load.js&quot;</span> <span class="attr">onload</span>=<span class="string">&quot;//你的功能&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将需要执行的函数声明在<code>MGLoad()</code>中。</p>
+<h2 id="绑定要应用背景的元素"><a href="#绑定要应用背景的元素" class="headerlink" title="绑定要应用背景的元素"></a>绑定要应用背景的元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">bgBind</span>(ele)</span><br></pre></td></tr></table></figure>
+<p><code>ele</code>为DOM元素，如<code>document.documentElement、document.getElementById(&quot;main&quot;)</code>等。<br>绑定要应用背景的元素时，会自动给该元素设置背景居中、背景自适应缩放属性，如果不需要，请传入一个非真的值作为第二个参数，例如：<code>MG.bgBind(ele, false)</code>。</p>
+<h2 id="绑定要输出图片信息的元素"><a href="#绑定要输出图片信息的元素" class="headerlink" title="绑定要输出图片信息的元素"></a>绑定要输出图片信息的元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">infoBind</span>(ele)</span><br></pre></td></tr></table></figure>
+<p><code>ele</code>为DOM元素，如<code>document.getElementById(&quot;bgInfo&quot;)</code>等。被绑定的元素用于输出图片信息。</p>
+<h2 id="设置背景的几种方式"><a href="#设置背景的几种方式" class="headerlink" title="设置背景的几种方式"></a>设置背景的几种方式</h2><p>绑定应用背景的元素、要输出图片信息的元素后，就可以设置背景了。</p>
+<h3 id="根据索引位置（数组下标）设置"><a href="#根据索引位置（数组下标）设置" class="headerlink" title="根据索引位置（数组下标）设置"></a>根据索引位置（数组下标）设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBg</span>(index)</span><br></pre></td></tr></table></figure>
+<p>特别地，<code>index</code>为负时，索引会从末端倒数。</p>
+<h3 id="随机设置"><a href="#随机设置" class="headerlink" title="随机设置"></a>随机设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setRandBg</span>()</span><br></pre></td></tr></table></figure>
+<p>函数的唯一参数<code>alpha</code>默认为1，表示随机是均匀的。它应该是大于零的实数，推荐范围在0.1 ~ 2，值越小则越倾向于较小的索引（老图），反之则越倾向于较大的索引（新图）。</p>
+<h3 id="通过图片唯一标识符（图片ID）设置"><a href="#通过图片唯一标识符（图片ID）设置" class="headerlink" title="通过图片唯一标识符（图片ID）设置"></a>通过图片唯一标识符（图片ID）设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBgByPicId</span>(yyMMNN)</span><br></pre></td></tr></table></figure>
+<p>参数<code>yyMMNN</code>是格式为yyMMNN的图片唯一标识符（图片ID），其中yy为两位数的年份，MM为两位数的月份，NN为月份内图片索引。例如，<code>211101</code>指2021年11月的第1张图片。</p>
+<h3 id="通过图片期数设置"><a href="#通过图片期数设置" class="headerlink" title="通过图片期数设置"></a>通过图片期数设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBgByIssue</span>(yyMM)</span><br></pre></td></tr></table></figure>
+<p>参数<code>yyMM</code>是格式为yyMM的图片期数（即图片ID前四位，格式参见上一项），这样会随机设置此期内的一张图片作为背景。</p>
+<h2 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h2><pre id="MGTechDetails"><a onclick="this.parentElement.textContent=`\/\/ 压缩的gallery.json源文件索引0样例\n${JSON.stringify(Object.values(MG.pic[0]))}\n\/\/ load.js引入后MG.pic[0]样例\n${JSON.stringify(MG.pic[0])}`">点击加载样例</a></pre>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/202401/device-upgrade/">宝鸡中学更新一体机使用相关说明</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/202209/puzzle-22q3/">TECHYES 22Q3在线解密活动</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">探索</span><a href="/"><i class='fa-solid fa-compass'></i><span class='font-sht'>导航</span></a><a href="/blog"><i class='fa-solid fa-newspaper'></i>博客</a><a href="/project"><i class='fa-solid fa-diagram-project'></i>项目</a><a href="/about"><i class='fa-solid fa-circle-info'></i>关于</a></div><div class="sitemap-group"><span class="fs14">加入</span><a href="/friend"><i class='fa-solid fa-medal'></i><span class='font-sht'>技协</span>伙伴</a><a href="/site"><i class='fa-solid fa-sitemap'></i>域名公示</a><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=CRVRq4sD"><i class='fa-brands fa-qq'></i>群: 894656456</a><a target="_blank" rel="noopener" href="https://t.me/yestech"><i class='fa-brands fa-telegram'></i>群: YesTech</a></div><div class="sitemap-group"><span class="fs14">信息</span><a href="/about#%E5%A4%A7%E4%BA%8B%E8%AE%B0"><i class='fa-regular fa-calendar-check'></i><span class='font-sht'>野生技协</span>已成立<uptime></uptime></a><a target="_blank" rel="noopener" href="https://github.com/pubsite/TechYesSite"><i class='fa-brands fa-github'></i>pubsite/TechYesSite</a><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar"><i class='fa-solid fa-palette'></i>Stellar</a><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0</a></div></div><div class="text"><p>© 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.<br>如果你想部署网站&#x2F;提交链接&#x2F;对本页面提出建议，请联系QQ: 2399052066(纸鹿)。</p>
+</div></footer>
+<div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg t="1705412886951" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8331" width="200" height="200"><path d="M638.72 970.666667h-256c-118.186667 0-198.272-25.002667-251.946667-78.72S52.053333 758.186667 52.053333 640V384c0-118.186667 25.002667-198.272 78.72-251.946667S264.533333 53.333333 382.72 53.333333h256c118.186667 0 198.272 25.002667 251.946667 78.72S969.386667 265.813333 969.386667 384v256c0 118.186667-25.002667 198.272-78.72 251.946667S756.906667 970.666667 638.72 970.666667z m-256-853.333334c-100.096 0-165.802667 19.2-206.72 59.946667S116.053333 283.904 116.053333 384v256c0 100.096 19.072 165.802667 59.946667 206.72S282.624 906.666667 382.72 906.666667h256c100.096 0 165.802667-19.072 206.72-59.946667S905.386667 740.096 905.386667 640V384c0-100.096-19.072-165.802667-59.946667-206.72S738.816 117.333333 638.72 117.333333z" p-id="8332"></path><path d="M638.72 970.666667a32 32 0 0 1-32-32V85.333333a32 32 0 0 1 32-32 32 32 0 0 1 32 32v853.333334a32 32 0 0 1-32 32zM340.053333 653.226667a31.914667 31.914667 0 0 1-22.613333-9.386667 32 32 0 0 1 0-45.269333L404.053333 512 317.44 425.386667a32 32 0 0 1 0-45.226667 32 32 0 0 1 45.226667 0l109.226666 109.226667a32 32 0 0 1 0 45.269333L362.666667 643.84a31.914667 31.914667 0 0 1-22.613334 9.386667z" p-id="8333"></path></svg>
+  </button>
+</div>
+<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
+<script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.26.3';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js","marked":"/js/plugins/marked.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js","transition":"fade"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js","distance":"16px","duration":800,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":null});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied","toast":"复制成功"});
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.26.3" async></script>
+
+<!-- optional -->
+
+
+
+
+
+
+<!-- inject -->
+<script src="/js/uptime.js"></script>
+</div></body></html>

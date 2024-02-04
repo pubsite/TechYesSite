@@ -25,7 +25,7 @@
 }
 
 [data-sub]::after {
-  font-size: .8em;
+  font-size: max(.6em, .8rem);
   display: block;
   content: attr(data-sub);
   opacity: .6;
