@@ -1,7 +1,7 @@
 @font-face {
   font-family: AlimamaShuHeiTi;
   font-weight: 700;
-  src: url('/css/AlimamaShuHeiTi.woff2') format('woff2');
+  src: url('/static/AlimamaShuHeiTi.woff2') format('woff2');
   font-display: swap;
 }
 

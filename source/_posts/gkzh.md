@@ -36,4 +36,4 @@ permalink: gkzh/
 
 <p class="dim" id="typeInfo"></p> -->
 
-<script src="/js/gkzh-calc.js"></script>
+<script src="/static/gkzh-calc.js"></script>

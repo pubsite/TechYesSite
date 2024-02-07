@@ -6,6 +6,12 @@ description: 野生技协导航是野生技协(宝鸡中学)为宝中学子提�
 breadcrumb: false
 ---
 
+<style>@media(min-width: 667px){.only-in-mobile{display:none!important}}</style>
+
+<center class="only-in-mobile">
+<a href="/blog/">点击访问野生技协博客</a>
+</center>
+
 ### <i class="fa-solid fa-chalkboard-user"></i> 教学辅助
 
 <div class="alist">
