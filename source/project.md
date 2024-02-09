@@ -11,6 +11,7 @@ Hclass是一个班级综合工具，含有学号抽取、班历等实用功能�
 <div class="alist">
 <a href="https://hclass.thisis.host/" data-sub="hclass.thisis.host"><i class="fa-solid fa-globe"></i>访问网站</a>
 <a href="https://start.thisis.host/" data-sub="start.thisis.host"><i class="fa-solid fa-paper-plane"></i>起始页</a>
+<a href="/202402/hclass-introduction/" data-sub="Hclass的前世今生"><i class="fa-solid fa-circle-info"></i>介绍</a>
 <a href="https://github.com/tengkongJS-MC/HclassSite" data-sub="HclassSite"><i class="fa-brands fa-github"></i>仓库</a>
 </div>
 

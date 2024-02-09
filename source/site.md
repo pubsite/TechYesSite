@@ -48,7 +48,7 @@ breadcrumb: false
 |         元芳博客         |   {% hashtag yuanfang.thisis.host https://yuanfang.thisis.host %}   |        Netlify        |
 |       GuuGuai博客        |        {% hashtag gug.thisis.host https://gug.thisis.host %}        |        Netlify        |
 |    bingtangxh个人网站    | {% hashtag bingtangxh.thisis.host https://bingtangxh.thisis.host %} |   Cloudflare Pages    |
-|       btxh个人网站       |       {% hashtag btxh.thisis.host https://btxh.thisis.host %}       |      香港微软云       |
+|       btxh个人网站       |       {% hashtag btxh.thisis.host http://btxh.thisis.host %}        |      香港微软云       |
 |      FZZ:高考倒计时      |        {% hashtag fzz.thisis.host https://fzz.thisis.host %}        |        Netlify        |
 |      Trigger起始页       |    {% hashtag trigger.thisis.host https://trigger.thisis.host %}    |     GitHub Pages      |
 |   宝鸡一中19届荣耀三班   |          {% hashtag 3.thisis.host https://3.thisis.host %}          |        Netlify        |

@@ -1,6 +1,6 @@
 ---
 title: 考试时钟的升级打怪攻略
-categories: [日常]
+categories: [项目]
 date: 2021-10-01
 ---
 
@@ -14,7 +14,7 @@ date: 2021-10-01
 
 我没有JS基础，但我上路了。
 
-{% link https://exam.thisis.host %}
+{% link https://exam.thisis.host 考试时钟 icon:https://exam.thisis.host/favicon.ico %}
 
 ## 01 “沉着冷静 诚信考试”
 
