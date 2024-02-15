@@ -38,9 +38,10 @@ Star受到纸鹿的考试成绩表格的启发，利用VBA在Excel表格中进�
 <a href="https://jq.qq.com/?_wv=1027&k=CRVRq4sD" data-sub="群:894656456"><i class="fa-brands fa-qq"></i>入群下载</a>
 </div>
 
-## <i class="fa-solid fa-book"></i> 电子课本站 {% hashtag 停止维护 %}
+## <i class="fa-solid fa-images"></i> 一卷图库 {% hashtag 暂停更新 %}
 
-2020年网课期间建立的电子课本站。
+考试时钟背景图库，主要包含宝鸡中学校园风光。
 <div class="alist">
-<a href="/ebook/" data-sub="2020网课专用"><i class="fa-solid fa-globe"></i>访问网站</a>
+<a href="/monoroll/" data-sub="开发者文档/教程"><i class="fa-solid fa-book"></i>使用手册</a>
+<a href="https://img.tg/album/54wL" data-sub="由Imgtg托管"><i class="fa-solid fa-image"></i>在线预览</a>
 </div>

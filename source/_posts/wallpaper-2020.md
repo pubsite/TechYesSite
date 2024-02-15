@@ -1,6 +1,7 @@
 ---
 title: 2020新年壁纸
 categories: [项目]
+author: zhilu
 cover: https://7.isyangs.cn/24/65bf8378c9bdd-24.png
 date: 2020-01-01 00:20:00
 updated: 2020-01-11 20:12:04

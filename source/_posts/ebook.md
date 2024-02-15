@@ -1,6 +1,7 @@
 ---
 title: 2020网课：电子课本
 categories: [项目]
+author: zhilu
 date: 2020-02-06
 updated: 2020-08-21
 permalink: ebook/

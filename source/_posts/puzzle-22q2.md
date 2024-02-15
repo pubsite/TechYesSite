@@ -1,6 +1,7 @@
 ---
 title: 野生技协22Q2解密
 categories: [日常]
+author: zhilu
 date: 2022-03-17 20:39:00
 updated: 2022-04-01 19:45:00
 ---

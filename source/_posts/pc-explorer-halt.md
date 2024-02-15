@@ -1,6 +1,7 @@
 ---
 title: 开机黑屏？
 categories: [公告]
+author: zhilu
 date: 2020-09-09 07:11:00
 updated: 2020-09-09 07:11:00
 ---

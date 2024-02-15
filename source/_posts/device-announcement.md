@@ -1,7 +1,8 @@
 ---
 title: 野生技协交流群关于近期某些不稳定事件的说明
 categories: [公告]
-indent: true
+author: zhilu
+type: story
 date: 2021-10-28
 updated: 2021-10-28
 ---

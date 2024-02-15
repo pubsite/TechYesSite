@@ -1,7 +1,8 @@
 ---
 title: 关于考试时钟
 categories: [公告]
-indent: true
+author: zhilu
+type: story
 date: 2021-08-29 20:46:00
 ---
 

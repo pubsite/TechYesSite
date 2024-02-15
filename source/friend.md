@@ -21,6 +21,7 @@ breadcrumb: false
 <!-- {% hashtag 宝中24届群 (群:792851903) %} -->
 {% hashtag 宝中频道 (频道号:qxL848k6r0) %}
 {% hashtag 宝中万能墙 (QQ:2124089415) %}
+{% hashtag 图与裴（陕西）网络科技有限责任公司 %}
 
 ### <i class="fa-solid fa-user-group"></i> 友好社团
 {% hashtag 音幻宝中 (QQ:2017584253) %}

@@ -1,6 +1,7 @@
 ---
 title: 班级QQ友好备忘录
 categories: [项目]
+author: zhilu
 date: 2021-07-24
 ---
 

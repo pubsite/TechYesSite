@@ -1,6 +1,7 @@
 ---
 title: 电脑是你修坏的吗 - FB1
 categories: [日常]
+author: zhilu
 date: 2021-04-06
 ---
 

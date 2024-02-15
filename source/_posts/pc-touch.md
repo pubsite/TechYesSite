@@ -1,6 +1,7 @@
 ---
 title: 快速右键/拖动顽固窗口
 categories: [公告]
+author: zhilu
 date: 2020-07-26 17:41:00
 updated: 2020-07-26 17:41:00
 ---

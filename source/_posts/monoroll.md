@@ -1,6 +1,7 @@
 ---
-title: 一卷图库使用文档
+title: 一卷图库使用手册
 categories: [项目]
+author: zhilu
 date: 2023-01-20
 permalink: monoroll/
 ---

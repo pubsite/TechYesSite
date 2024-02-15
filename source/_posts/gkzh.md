@@ -1,6 +1,7 @@
 ---
 title: 2022高考理化生各科成绩计算器
 categories: [项目]
+author: zhilu
 date: 2022-06-24
 updated: 2022-06-24
 permalink: gkzh/

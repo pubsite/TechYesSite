@@ -1,3 +1,6 @@
+anonymous:
+  name: 热心群众
+  description: 向野生技协投稿的热心群众，作者信息在各文章开头。
 zhilu:
   name: 纸鹿本鹿
   avatar: https://cravatar.cn/avatar/13aa912754e6bb5e671f3e6654e4712d?s=100
@@ -9,6 +12,9 @@ tengkong:
   name: TengKong
   avatar: https://cravatar.cn/avatar/68ca4ecbb38806cecc6e593355029206
   description: 能做事的做事，能发声的发声
-信息化发展处:
+baozhong-it:
   name: 信息化发展处
-  description: 宝鸡中学信息化发展处
+  description: 宝鸡中学信息化发展处，是宝鸡中学各班电教委员的负责处室。
+baozhong:
+  name: 宝鸡中学
+  description: 陕西省宝鸡中学创建于1940年，是宝鸡市教育局直属的一所省级重点中学。学校以先进的办学理念，严格规范的管理措施，高水平的师资队伍和优异的教育教学成就享誉陕西省。

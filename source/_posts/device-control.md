@@ -1,6 +1,7 @@
 ---
 title: 关于一体机增加集控的公告
 categories: [公告]
+author: zhilu
 date: 2021-06-18 22:27:00
 updated: 2021-06-18 22:27:00
 ---

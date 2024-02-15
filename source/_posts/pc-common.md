@@ -1,6 +1,7 @@
 ---
 title: 班级电脑常见问题
 categories: [公告]
+author: zhilu
 date: 2021-01-30
 ---
 
