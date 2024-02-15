@@ -1,7 +1,7 @@
 ---
 menu_id: about
 title: 野生技协 - 开放互助 活跃创新
-h1: <span class="font-sht">野生技协</span>
+h1: <img src="/static/TECHYES_logo.svg">
 breadcrumb: false
 ---
 
