@@ -3,6 +3,7 @@ title: 野生技协公开信：关于宝中舆情、疫情。
 categories: [日常]
 author: zhilu
 date: 2022-03-11
+updated: 2022-03-11
 ---
 
 各位技协er：

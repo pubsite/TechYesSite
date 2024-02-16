@@ -2,8 +2,8 @@
 title: 考试时钟信息公示
 categories: [公告]
 author: zhilu
-date: 2021-07-24
-updated: 2021-07-24
+date: 2021-07-24 16:39:04
+updated: 2021-07-24 16:39:04
 ---
 
 ## 项目简介

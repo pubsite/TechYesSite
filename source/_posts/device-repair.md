@@ -3,6 +3,7 @@ title: 2021年9~10月维修需求记录
 categories: [公告]
 author: zhilu
 date: 2021-10-28
+updated: 2021-10-28
 ---
 
 | 日期        | 班级 | 问题                             | 结果                  |

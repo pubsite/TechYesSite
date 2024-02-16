@@ -3,6 +3,7 @@ title: 班级QQ友好备忘录
 categories: [项目]
 author: zhilu
 date: 2021-07-24
+updated: 2021-07-24
 ---
 
 > 由于众多因素，该项目已停止维护
