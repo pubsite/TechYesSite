@@ -1,5 +1,5 @@
 ---
-title: 浏览器主页劫持解决办法   
+title: 浏览器主页劫持解决办法
 categories: [公告]
 author: zhilu
 date: 2021-01-16 21:35:00
