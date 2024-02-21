@@ -29,6 +29,7 @@ breadcrumb: false
 | 腾空:技协起始页  |       {% hashtag start.thisis.host https://start.thisis.host %}       |     Netlify      |
 |  考试时钟时光局  |    {% hashtag examined.thisis.host https://examined.thisis.host %}    |     Netlify      |
 | 加零:新考试时钟  |           {% hashtag e.thisis.host https://e.thisis.host %}           |     Netlify      |
+|    方块茶话会    |         {% hashtag btr.thisis.host https://btr.thisis.host %}         |     Netlify      |
 |   宝中22届16班   |          {% hashtag 16.thisis.host https://16.thisis.host %}          |     Netlify      |
 | 宝中20级11班官网 |          {% hashtag 11.thisis.host https://11.thisis.host %}          |     Netlify      |
 

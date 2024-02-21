@@ -13,7 +13,7 @@ breadcrumb: false
 {% hashtag 纸鹿 (QQ:2399052066) %}
 
 ### <i class="fa-solid fa-medal"></i> 合作伙伴
-{% hashtag 方块茶话会 (群:1142349003) %}
+{% hashtag 方块茶话会 (群:1142349003) https://btr.thisis.host %}
 {% hashtag 冒险家协会 (群:1004048547) %}
 {% hashtag 宝中一群 (686939706) %}
 <!-- {% hashtag 宝中二群 (725051196) %} -->
@@ -58,6 +58,4 @@ breadcrumb: false
 {% hashtag 纸鹿博客 https://blog.zhilu.cyou/ %}
 {% hashtag 加零博客 https://www.cnblogs.com/addzero %}
 {% hashtag 古怪博客 https://gug.thisis.host/ %}
-<!-- {% hashtag 方块茶话会 https://b5e920.bk-free02.com/ %} -->
-<!-- {% hashtag 22届16班 https://16.thisis.host/ %} -->
-
+{% hashtag 方块茶话会 https://btr.thisis.host %}
