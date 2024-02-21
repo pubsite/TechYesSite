@@ -59,6 +59,8 @@ breadcrumb: false
 发布了根据成绩单生成各人成绩条的模板。
 <!-- node 2021年5月12日 -->
 社群正式更名为<span class="font-sht">野生技协</span>，人数迅猛增长，与学校十余个社团开展了广泛的合作。
+<!-- node 2021年8月8日 -->
+<span class="font-sht">野生技协</span>官网建立。
 <!-- node 2021年11月27日 -->
 班级课程表壁纸仍有广泛的需求。
 <!-- node 2021年12月26日 -->
@@ -71,6 +73,8 @@ breadcrumb: false
 举行了TECHYES 22Q3在线解密活动。
 <!-- node 2023年1月1日 -->
 Hclass班级实用工具、一九班历发布。
+<!-- node 2024年2月3日 -->
+<span class="font-sht">野生技协</span>官网升级为博客。
 <!-- node 今天 -->
 <span class="font-sht">野生技协</span>已成立<uptime></uptime>，我们持续活动并不断壮大，交流群活跃天数占比超过93%。
 {% endtimeline %}
