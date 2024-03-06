@@ -13,9 +13,18 @@
 .fa-regular,
 .fa-brands {
   font-size: 1em;
-  min-width: 1.5rem;
+  min-width: 1rem;
   width: 1.2em;
   text-align: center;
+}
+
+.nav-area .menu .nav-item {
+  flex-direction: row-reverse;
+  gap: .2em;
+}
+
+.nav-area .menu .nav-item::before {
+  content: attr(title);
 }
 
 [data-sub] {
