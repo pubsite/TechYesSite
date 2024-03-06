@@ -1,62 +1,88 @@
 logo:
-  title: "[${config.title}](/blog)"
+  title: "[{config.title}](/blog)"
   subtitle: 开放互助 活跃创新|做优质的自发性技术协助组织
 
 menubar:
   columns: 3
   items:
     - id: nav
-      title: <i class='fa-solid fa-compass'></i>导航
+      icon: <i class='fa-solid fa-compass'></i>
+      title: 导航
       url: /
     - id: post
-      title: <i class='fa-solid fa-newspaper'></i>博客
+      icon: <i class='fa-solid fa-newspaper'></i>
+      title: 博客
       url: /blog/
     - id: project
-      title: <i class='fa-solid fa-diagram-project'></i>项目
+      icon: <i class='fa-solid fa-diagram-project'></i>
+      title: 项目
       url: /project/
     - id: site
-      title: <i class='fa-solid fa-sitemap'></i>域名
+      icon: <i class='fa-solid fa-sitemap'></i>
+      title: 域名
       url: /site/
     - id: friend
-      title: <i class='fa-solid fa-medal'></i>伙伴
+      icon: <i class='fa-solid fa-medal'></i>
+      title: 伙伴
       url: /friend/
     - id: about
-      title: <i class='fa-solid fa-circle-info'></i>关于
+      icon: <i class='fa-solid fa-circle-info'></i>
+      title: 关于
       url: /about/
 
 footer:
   sitemap:
     探索:
-      - "[<i class='fa-solid fa-compass'></i><span class='font-sht'>导航</span>](/)"
-      - "[<i class='fa-solid fa-newspaper'></i>博客](/blog)"
-      - "[<i class='fa-solid fa-diagram-project'></i>项目](/project)"
-      - "[<i class='fa-solid fa-circle-info'></i>关于](/about)"
+      - "[<i class='fa-solid fa-compass'></i> <span class='font-sht'>导航</span>](/)"
+      - "[<i class='fa-solid fa-newspaper'></i> 博客](/blog)"
+      - "[<i class='fa-solid fa-diagram-project'></i> 项目](/project)"
+      - "[<i class='fa-solid fa-circle-info'></i> 关于](/about)"
     加入:
-      - "[<i class='fa-solid fa-medal'></i><span class='font-sht'>技协</span>伙伴](/friend)"
-      - "[<i class='fa-solid fa-sitemap'></i>域名公示](/site)"
-      - "[<i class='fa-brands fa-qq'></i>群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
-      - "[<i class='fa-brands fa-telegram'></i>群: YesTech](https://t.me/yestech)"
+      - "[<i class='fa-solid fa-medal'></i> <span class='font-sht'>技协</span>伙伴](/friend)"
+      - "[<i class='fa-solid fa-sitemap'></i> 域名公示](/site)"
+      - "[<i class='fa-brands fa-qq'></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
+      - "[<i class='fa-brands fa-telegram'></i> 群: YesTech](https://t.me/yestech)"
     信息:
-      - "[<i class='fa-regular fa-calendar-check'></i><span class='font-sht'>野生技协</span>已成立<uptime></uptime>](/about#大事记)"
-      - "[<i class='fa-brands fa-github'></i>pubsite/TechYesSite](https://github.com/pubsite/TechYesSite)"
-      - "[<i class='fa-solid fa-palette'></i>Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
-      - "[<i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)"
+      - "[<i class='fa-regular fa-calendar-check'></i> <span class='font-sht'>野生技协</span>已成立<uptime></uptime>](/about#大事记)"
+      - "[<i class='fa-brands fa-github'></i> pubsite/TechYesSite](https://github.com/pubsite/TechYesSite)"
+      - "[<i class='fa-solid fa-palette'></i> Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
+      - "[<i class='fa-brands fa-creative-commons'></i> BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)"
   content: |
     © 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.
     如果你想部署网站/投稿博客/对本页面提出建议，请联系QQ: 2399052066(纸鹿)。
 
-inject:
-  head:
-    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="/static/font.css">
-  script:
-    - <script src="/static/uptime.js"></script>
+article:
+  cover_ratio: 2
+  category_color:
+    公告: "#f83"
+    日常: "#3ba"
+    项目: "#3af"
+
+plugins:
+  copycode:
+    default_text: "复制"
+    success_text: "已复制"
 
 style:
   font-family:
-    logo: AlimamaShuHeiTi
-    body: HarmonyOS_Regular
-  sidebar:
-    background: "linear-gradient(60deg, #acd, #ced)"
+    logo: AlimamaShuHeiTi, sans-serif
+    body: HarmonyOS_Regular, sans-serif
+    code: Menlo, Monaco, Cascadia Code, Consolas, monospace, HarmonyOS_Regular, sans-serif
+    codeblock: Menlo, Monaco, Cascadia Code, Consolas, monospace, HarmonyOS_Regular, sans-serif
+  color:
+    theme: "hsl(160 50% 60%)"
+    accent: "hsl(160 60% 50%)"
+    link: "hsl(160 56% 44%)"
+    hover: "hsl(160 60% 50%)"
+  leftbar:
+    background-image: "linear-gradient(60deg, #7ab, #adb);"
+
+inject:
+  head:
+    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'">
+    # - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="/static/font.css">
+    - <link rel="stylesheet" href="/static/patch.css">
+  script:
+    - <script src="/static/uptime.js"></script>

@@ -45,9 +45,10 @@ breadcrumb: false
 
 |           名称           |                                域名                                 |        服务商         |
 | :----------------------: | :-----------------------------------------------------------------: | :-------------------: |
-|       JiaHuann博客       |   {% hashtag jiahuann.thisis.host https://jiahuann.thisis.host %}   | 东京微软云+Cloudflare |
-|         元芳博客         |   {% hashtag yuanfang.thisis.host https://yuanfang.thisis.host %}   |        Netlify        |
 |       GuuGuai博客        |        {% hashtag gug.thisis.host https://gug.thisis.host %}        |        Netlify        |
+|       JiaHuann博客       |   {% hashtag jiahuann.thisis.host https://jiahuann.thisis.host %}   | 东京微软云+Cloudflare |
+|       Yuanfang博客       |   {% hashtag yuanfang.thisis.host https://yuanfang.thisis.host %}   |        Netlify        |
+|        Future博客        |     {% hashtag future.thisis.host https://future.thisis.host %}     |   Cloudflare Pages    |
 |    bingtangxh个人网站    | {% hashtag bingtangxh.thisis.host https://bingtangxh.thisis.host %} |   Cloudflare Pages    |
 |       btxh个人网站       |       {% hashtag btxh.thisis.host http://btxh.thisis.host %}        |      香港微软云       |
 |      FZZ:高考倒计时      |        {% hashtag fzz.thisis.host https://fzz.thisis.host %}        |        Netlify        |

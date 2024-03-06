@@ -20,9 +20,9 @@
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.0.0",
-    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-marked": "^6.2.0",
+    "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-stellar": "^1.26.3"
+    "hexo-theme-stellar": "^1.27.0"
   }
 }
