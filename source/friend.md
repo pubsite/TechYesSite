@@ -43,7 +43,7 @@ breadcrumb: false
 {% hashtag 篮裁社 %}
 {% hashtag 魔术社 %}
 
-### <i class="fa-brands fa-github"></i>GitHub开发者/组织
+### <i class="fa-brands fa-github"></i> GitHub开发者/组织
 {% hashtag 纸鹿 https://github.com/L33Z22L11 %}
 {% hashtag 宝中校友会 https://github.com/baozhonger %}
 {% hashtag 技协网页发布 https://github.com/pubsite %}
@@ -52,7 +52,7 @@ breadcrumb: false
 {% hashtag bingtangxh https://github.com/bingtangxh %}
 {% hashtag 古怪 https://github.com/GuuGuai %}
 
-### <i class="fa-solid fa-link"></i>相关链接
+### <i class="fa-solid fa-link"></i> 相关链接
 {% hashtag 宝鸡中学 https://baozhong.30edu.com.cn/ %}
 {% hashtag 纸鹿小站 https://zhilu.cyou/ %}
 {% hashtag 纸鹿博客 https://blog.zhilu.cyou/ %}

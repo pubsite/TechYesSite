@@ -66,23 +66,23 @@ plugins:
 style:
   font-family:
     logo: AlimamaShuHeiTi, sans-serif
-    body: HarmonyOS_Regular, sans-serif
-    code: Menlo, Monaco, Cascadia Code, Consolas, monospace, HarmonyOS_Regular, sans-serif
-    codeblock: Menlo, Monaco, Cascadia Code, Consolas, monospace, HarmonyOS_Regular, sans-serif
+    body: HarmonyOS_Medium, HarmonyOS_Regular, sans-serif
+    code: SFMono-Regular, Menlo, Monaco, Fira Code, JetBrains Mono, Cascadia Code, Consolas, Hack, HarmonyOS_Medium, monospace
+    codeblock: SFMono-Regular, Menlo, Monaco, Fira Code, JetBrains Mono, Cascadia Code, Consolas, Hack, HarmonyOS_Medium, monospace
   color:
-    theme: "hsl(160 50% 60%)"
-    accent: "hsl(160 60% 50%)"
-    link: "hsl(160 56% 44%)"
-    hover: "hsl(160 60% 50%)"
+    theme: "#6ca"
+    accent: "#f89"
+    link: "#3a8"
+    hover: "#f83"
   leftbar:
-    background-image: "linear-gradient(60deg, #7ab, #adb);"
+    background-image: "linear-gradient(60deg, #7ab, #adb)"
 
 inject:
   head:
-    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'">
-    # - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
+    # - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="//blog.zhilu.cyou/static/patch.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="/static/font.css">
-    - <link rel="stylesheet" href="/static/patch.css">
   script:
     - <script src="/static/uptime.js"></script>
