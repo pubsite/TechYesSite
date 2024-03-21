@@ -4560,7 +4560,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_left {
   background-size: cover;
-  background-image: linear-gradient(60deg, #7ab, #adb);
+  background-image: linear-gradient(60deg, rgba(51,221,221,0.4), rgba(136,255,136,0.4));
 }
 .l_left .leftbar-container {
   height: 100%;
@@ -4568,15 +4568,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
-  --blur-px: 100px;
   --blur-bg: var(--alpha60);
-}
-@supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
-  .l_left .leftbar-container {
-    background: var(--blur-bg);
-    backdrop-filter: saturate(240%) blur(var(--blur-px));
-    -webkit-backdrop-filter: saturate(240%) blur(var(--blur-px));
-  }
 }
 .widget-body .linklist {
   display: grid;
