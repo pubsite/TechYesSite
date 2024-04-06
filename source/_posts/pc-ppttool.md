@@ -11,7 +11,6 @@ updated: 2020-08-23
 **必须在能启动PPT小工具的电脑上使用，不支持新版Office和部分WPS**，一键处理工具稍后上传群文件“PPT小工具修复”文件夹，没什么技术含量。
 
 ```bat PPT工具修复.bat
-@shift /0
 @echo off
 color 0c
 echo 　┌─┐　　╭┬　　┐　╭┌├──┐├────┐

@@ -65,10 +65,10 @@ plugins:
 
 style:
   font-family:
-    logo: AlimamaShuHeiTi, sans-serif
-    body: HarmonyOS_Medium, HarmonyOS_Regular, sans-serif
-    code: SFMono-Regular, Menlo, Monaco, Fira Code, JetBrains Mono, Cascadia Code, Consolas, Hack, HarmonyOS_Medium, monospace
-    codeblock: SFMono-Regular, Menlo, Monaco, Fira Code, JetBrains Mono, Cascadia Code, Consolas, Hack, HarmonyOS_Medium, monospace
+    logo: AlimamaShuHeiTi, system-ui, sans-serif
+    body: HarmonyOS_Medium, system-ui, sans-serif
+    code: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, HarmonyOS_Medium, monospace
+    codeblock: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, HarmonyOS_Medium, monospace
   color:
     theme: "#6ca"
     accent: "#f89"
