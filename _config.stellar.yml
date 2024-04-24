@@ -33,20 +33,19 @@ menubar:
 footer:
   sitemap:
     探索:
-      - "[<i class='fa-solid fa-compass'></i> <span class='font-sht'>导航</span>](/)"
+      - "[<i class='fa-solid fa-compass'></i> <span class='font-sht'>技协导航</span>](/)"
       - "[<i class='fa-solid fa-newspaper'></i> 博客](/blog)"
-      - "[<i class='fa-solid fa-diagram-project'></i> 项目](/project)"
-      - "[<i class='fa-solid fa-circle-info'></i> 关于](/about)"
+      - "[<i class='fa-solid fa-sitemap'></i> 域名服务](/site)"
+
     加入:
       - "[<i class='fa-solid fa-medal'></i> <span class='font-sht'>技协</span>伙伴](/friend)"
-      - "[<i class='fa-solid fa-sitemap'></i> 域名公示](/site)"
       - "[<i class='fa-brands fa-qq'></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
       - "[<i class='fa-brands fa-telegram'></i> 群: YesTech](https://t.me/yestech)"
     信息:
       - "[<i class='fa-regular fa-calendar-check'></i> <span class='font-sht'>野生技协</span>已成立<uptime></uptime>](/about#大事记)"
-      - "[<i class='fa-brands fa-github'></i> pubsite/TechYesSite](https://github.com/pubsite/TechYesSite)"
-      - "[<i class='fa-solid fa-palette'></i> Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
-      - "[<i class='fa-brands fa-creative-commons'></i> BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)"
+      - "[<i class='fa-brands fa-github'></i> 网站仓库](https://github.com/pubsite/TechYesSite)"
+      - "[<i class='fa-solid fa-palette'></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
+
   content: |
     © 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.
     如果你想部署网站/投稿博客/对本页面提出建议，请联系QQ: 2399052066(纸鹿)。

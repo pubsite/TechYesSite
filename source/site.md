@@ -35,24 +35,24 @@ breadcrumb: false
 
 ## DNS解析
 
-|    名称     |                  域名                  |     服务商     |
-| :---------: | :------------------------------------: | :------------: |
-|  localhost  | {% hashtag v4.thisis.host→127.0.0.1 %} |   localhost    |
-|  localhost  |   {% hashtag v6.thisis.host→[::1] %}   |   localhost    |
-| Shawn服务器 |    {% hashtag shawn.thisis.host %}     | 浙江杭州阿里云 |
+|     名称      |                  域名                  |   服务商   |
+| :-----------: | :------------------------------------: | :--------: |
+|   localhost   | {% hashtag v4.thisis.host→127.0.0.1 %} | localhost  |
+|   localhost   |   {% hashtag v6.thisis.host→[::1] %}   | localhost  |
+|  Shawn服务器  |    {% hashtag shawn.thisis.host %}     | 杭州阿里云 |
 
 ## 公共网站
 
-|           名称           |                                域名                                 |        服务商         |
-| :----------------------: | :-----------------------------------------------------------------: | :-------------------: |
-|       GuuGuai博客        |        {% hashtag gug.thisis.host https://gug.thisis.host %}        |        Netlify        |
-|       JiaHuann博客       |   {% hashtag jiahuann.thisis.host https://jiahuann.thisis.host %}   | 东京微软云+Cloudflare |
-|       Yuanfang博客       |   {% hashtag yuanfang.thisis.host https://yuanfang.thisis.host %}   |        Netlify        |
-|        Future博客        |     {% hashtag future.thisis.host https://future.thisis.host %}     |   Cloudflare Pages    |
-|    bingtangxh个人网站    | {% hashtag bingtangxh.thisis.host https://bingtangxh.thisis.host %} |   Cloudflare Pages    |
-|       btxh个人网站       |       {% hashtag btxh.thisis.host http://btxh.thisis.host %}        |      香港微软云       |
-|      FZZ:高考倒计时      |        {% hashtag fzz.thisis.host https://fzz.thisis.host %}        |        Netlify        |
-|      Trigger起始页       |    {% hashtag trigger.thisis.host https://trigger.thisis.host %}    |     GitHub Pages      |
-|   宝鸡一中19届荣耀三班   |          {% hashtag 3.thisis.host https://3.thisis.host %}          |        Netlify        |
-| 互联网+:民族文化法律保护 |       {% hashtag plan.thisis.host https://plan.thisis.host %}       |        Netlify        |
-|     互联网+:领养系统     |    {% hashtag adopter.thisis.host https://adopter.thisis.host %}    |        Netlify        |
+|           名称           |                                域名                                 |      服务商      |
+| :----------------------: | :-----------------------------------------------------------------: | :--------------: |
+|       GuuGuai博客        |        {% hashtag gug.thisis.host https://gug.thisis.host %}        |     Netlify      |
+|       JiaHuann博客       |   {% hashtag jiahuann.thisis.host https://jiahuann.thisis.host %}   | 东京微软云 + CF  |
+|       Yuanfang博客       |   {% hashtag yuanfang.thisis.host https://yuanfang.thisis.host %}   |     Netlify      |
+|        Future博客        |     {% hashtag future.thisis.host https://future.thisis.host %}     | Cloudflare Pages |
+|    bingtangxh个人网站    | {% hashtag bingtangxh.thisis.host https://bingtangxh.thisis.host %} | Cloudflare Pages |
+|       btxh个人网站       |       {% hashtag btxh.thisis.host http://btxh.thisis.host %}        |    香港微软云    |
+|      FZZ:高考倒计时      |        {% hashtag fzz.thisis.host https://fzz.thisis.host %}        |     Netlify      |
+|      Trigger起始页       |    {% hashtag trigger.thisis.host https://trigger.thisis.host %}    |   GitHub Pages   |
+|   宝鸡一中19届荣耀三班   |          {% hashtag 3.thisis.host https://3.thisis.host %}          |     Netlify      |
+| 互联网+:民族文化法律保护 |       {% hashtag plan.thisis.host https://plan.thisis.host %}       |     Netlify      |
+|     互联网+:领养系统     |    {% hashtag adopter.thisis.host https://adopter.thisis.host %}    |     Netlify      |
