@@ -3,10 +3,19 @@ title: 考试时钟 V7 升级公告 (2024)
 categories: [项目]
 author: zhilu
 date: 2024-04-06 22:22:55
-updated: 2024-04-06 23:28:42
+updated: 2024-05-09 09:43:02
 ---
 
 ## 更新内容
+
+### [7.3.2](https://github.com/L33Z22L11/ExamClock/commit/6a169a67e5914a94b06bdee0a9c967d6c1061b74)
+
+- 移除了彩蛋 {% post_link grade-2020-departure %} 的入口
+- 将 Font-Awesome 图标库由字节源5.0.0更新到360源6.5.1
+- 优化功能区的部分文案
+- 过场动画的 coverBadge 现在显示当日日期了
+- 修复了正常全屏时仍报错的问题
+- 启用/关闭了部分调试特性
 
 ### [7.3.1](https://github.com/L33Z22L11/ExamClock/commit/6dbb2fd55cc9ad6ffbe0c03cbff7a11705856021)
 
@@ -19,6 +28,7 @@ updated: 2024-04-06 23:28:42
   - 更新了背景数据结构格式
   - 增加了2023年12月的部分图片
 - 移除了全屏背景菜单功能
+- 移除了彩蛋 {% post_link grade-2020-departure %}
 - 移除了冗余代码
 - 更新了 `README.md`
 

@@ -7,7 +7,8 @@ date: 2023-06-04 03:01:41
 updated: 2023-06-04 03:01:41
 ---
 
-> 这是2023年6月4日，2020级（2023届）离校时考试时钟页面上的彩蛋。[查看考试时钟原commit记录](https://github.com/L33Z22L11/ExamClock/commit/1e9e39a6672bc0a9c8f8a97c67bcb537ad089793#diff-fdb1e09e7a1b99e9f2359b2319cbb2a5e61c9610a9b8e01e352b522493445490)
+> 这是2023年6月4日，2020级（2023届）离校时考试时钟页面上的彩蛋。
+> 查看考试时钟原commit记录：[添加](https://github.com/L33Z22L11/ExamClock/commit/1e9e39a6672bc0a9c8f8a97c67bcb537ad089793#diff-fdb1e09e7a1b99e9f2359b2319cbb2a5e61c9610a9b8e01e352b522493445490) [移除](https://github.com/L33Z22L11/ExamClock/commit/d1f85ef69a1c9c1f2eda1adbc6efce1538bea986#diff-27ba309ad6a18de48fc23fc28eacfc376a3a44eb81601a4f7dacb32e15f4e7e7)
 
 1025天前，2020年8月13日，我拿到了录取通知书。
 
