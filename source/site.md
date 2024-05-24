@@ -40,6 +40,7 @@ breadcrumb: false
 |   localhost   | {% hashtag v4.thisis.host→127.0.0.1 %} | localhost  |
 |   localhost   |   {% hashtag v6.thisis.host→[::1] %}   | localhost  |
 |  Shawn服务器  |    {% hashtag shawn.thisis.host %}     | 杭州阿里云 |
+| GuuGuai服务器 |     {% hashtag aws.thisis.host %}      | 新加坡 AWS |
 
 ## 公共网站
 
