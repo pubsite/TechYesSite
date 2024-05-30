@@ -1,6 +1,6 @@
 {
-  "name": "class16-site",
-  "version": "0.0.1",
+  "name": "techyes-site",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "hexo generate",
