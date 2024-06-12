@@ -12,23 +12,23 @@ menubar:
     - id: post
       icon: <i class='fa-solid fa-newspaper'></i>
       title: 博客
-      url: /blog/
+      url: /blog
     - id: project
       icon: <i class='fa-solid fa-diagram-project'></i>
       title: 项目
-      url: /project/
+      url: /project
     - id: site
       icon: <i class='fa-solid fa-sitemap'></i>
       title: 域名
-      url: /site/
+      url: /site
     - id: friend
       icon: <i class='fa-solid fa-medal'></i>
       title: 伙伴
-      url: /friend/
+      url: /friend
     - id: about
       icon: <i class='fa-solid fa-circle-info'></i>
       title: 关于
-      url: /about/
+      url: /about
 
 footer:
   sitemap:
