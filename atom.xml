@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>野生技协</title>
+  
+  <subtitle>野生技协TECHYES</subtitle>
+  <link href="https://blog.thisis.host/atom.xml" rel="self"/>
+  
+  <link href="https://blog.thisis.host/"/>
+  <updated>2024-05-30T06:08:44.000Z</updated>
+  <id>https://blog.thisis.host/</id>
+  
+  <author>
+    <name>纸鹿</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Surface RT 保姆级新手上路</title>
+    <link href="https://blog.thisis.host/202405/surface-rt-guide/"/>
+    <id>https://blog.thisis.host/202405/surface-rt-guide/</id>
+    <published>2024-05-28T09:52:26.000Z</published>
+    <updated>2024-05-30T06:08:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、准备工作和下载，下述一个都不能少"><a href="#一、准备工作和下载，下述一个都不能少" class="headerlink" title="一、准备工作和下载，下述一个都不能少"></a>一、准备工作和下载，下述一个都不能少</h2><ol><li>   另一台能够使用 Windows 和 Linux 的普通电脑</li><li>   一个集线器</li><li>   一个至少 16GB 的 microSD 卡，建议 64GB 为宜</li><li>   一个读卡器</li><li>   一个至少 16GB 的 U 盘（机械移动硬盘供电不够，不能用）</li><li>   一个 USB 键盘，哪怕是三键的键盘都行</li><li>   下载 <a href="https://jwa4.gitbook.io/windows/tools/surface-rt-and-surface-2-jailbreak-usb">Jail Break</a></li><li>   下载 <a href="https://files.open-rt.party/Linux/Distro/2023-10-10-raspios-bookworm-surface-rt-armhf-full.img.xz">特制的树莓派系统镜像</a>，约 2.8GB</li><li>   下载安装树莓派系统烧录器</li><li>   下载 <a href="https://github.com/makuhlmann/grub-2.04-nokeymod/releases">特制的 GNU GRUB</a> 和我给的 <code>grub.cfg</code> <details class="tag-plugin colorful folding" child="codeblock"><summary><span>grub.cfg</span></summary><div class="body"><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">insmod ext2</span><br><span class="line"></span><br><span class="line">search --no-floppy --<span class="built_in">set</span>=root --file /EFI/Microsoft/Boot/boutmgfw.efi</span><br><span class="line"></span><br><span class="line">insmod font</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> gfxmode=1366x768</span><br><span class="line"><span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">insmod efi_gop</span><br><span class="line">insmod efi_uga</span><br><span class="line">insmod gfxterm</span><br><span class="line">terminal_output gfxterm</span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;How about we explore the area ahead of us later?&quot;</span></span><br><span class="line"></span><br><span class="line">loadfont /unicode.pf2</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按音量键不会使GRUB2停止计时，你只有5秒钟。&quot;</span></span><br><span class="line"></span><br><span class="line">insmod png</span><br><span class="line"><span class="comment"># 这里就有一行注释掉的设置主题的指令，你取消注释直接用就行</span></span><br><span class="line"><span class="comment"># set theme=/theme/Manjaro/theme.txt</span></span><br><span class="line"><span class="built_in">export</span> theme</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> menu_color_normal=white/black</span><br><span class="line"><span class="built_in">set</span> menu_color_highlight=black/light-gray</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> <span class="built_in">timeout</span>=5</span><br><span class="line"><span class="built_in">set</span> default=3</span><br><span class="line"></span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p1）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p1 quiet rw rootwait console=tty0 cpuidle.off=1</span></span><br><span class="line">        linux /zImage root=/dev/mmcblk1p1 cpuidle.off=1</span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p2）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p2 quiet rw rootwait console=tty0 cpuidle.off=1</span></span><br><span class="line">        linux /zImage root=/dev/mmcblk1p2 cpuidle.off=1</span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p2,安静）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        linux /zImage root=/dev/mmcblk1p2 quiet rw rootwait console=tty0 cpuidle.off=1</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p2 cpuidle.off=1</span></span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Windows RT 8.1&quot;</span> &#123;</span><br><span class="line">        chainloader /EFI/Microsoft/Boot/boutmgfw.efi</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;重新启动&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;System rebooting...&quot;</span></span><br><span class="line">        reboot</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;关机&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;System shutting down...&quot;</span></span><br><span class="line">        halt</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;从下一个卷启动&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></details></li><li>   下载 Li_zip <a href="https://www.bilibili.com/video/bv1xs421w7ux">为 RT 打包整理的 appx</a> （可选的，如果不打算玩 RT 的应用就不要。通常要用这些软件，就要禁用 sppsvc，因为 sppsvc 会阻止运行侧载软件启动。而禁用 sppsvc 会导致 Windows 在此期间未激活，Office 也认为未激活。）<br>同时也要下载 <a href="https://www.123pan.com/s/nu9rvv-ttrch.html">Li_zip 提供的 Product Policy Editor 和 Windows App Boss</a></li><li>   下载 <a href="https://www.bilibili.com/read/cv17483017">Signtool 和 RT Jail Break</a>（可选的，与 Jail Break 不同，这个是一些桌面应用程序）</li><li>   一个能访问 archive.org 的环境或代理（可选，如果不需要额外下载 Windows 的开始屏幕等类似补丁，或者你的 Windows 系统当年已经安装这些更新，就不需要）</li><li>   Surface RT 的原厂镜像。访问 <a href="https://support.microsoft.com/zh-cn/surface-recovery-image">Surface 恢复映像下载</a>然后按照提示选择型号，输入序列号，下载原厂镜像。</li><li>   如果你发现你的 C 盘是带锁的，即启用了设备加密，那么请以管理员身份打开命令提示符，输入 <code>manage-bde -off C:</code><br>此期间不会有进度条，如果想查看进度，可以输入<code> manage-bde -status C:</code><br>注意这个加密百分比应该是从 100% 往 0% 递减的，因为你是在“反加密”。当已加密百分比是 0 的时候，就说明解密完毕了。<br>你如果暂时不打算将其解密，那就要导出恢复密钥，以防发生意外使得 TPM 自动解锁失效，导致你无法进入 Windows 系统。在资源管理器中右键C盘，选择管理 BitLocker，然后点击“备份恢复密钥”将其备份到U盘，将来如果进不去系统了就可以在恢复环境中输入密钥，然后用那里的命令提示符输入上述指令解密。</li></ol><h2 id="二、开始突破"><a href="#二、开始突破" class="headerlink" title="二、开始突破"></a>二、开始突破</h2><ol><li>   在正常电脑上操作：将 Jail Break 文件夹的所有文件都放到U盘里，让 <code>menu</code> 这个文件在 U 盘的根目录。</li><li>   你可以这个时候把下载好的树莓派镜像写入到 microSD 卡里，在此期间继续以下步骤，统筹安排节省时间。<br>先将下载的 xz 文件解压，得到 img 文件。然后打开安装好的树莓派镜像烧录器 Raspberry Pi Imager，左边 Device 选 NO FILTERING，中间“系统”选择菜单最下面的 Use Custom，然后选择 img 镜像文件，右边“储存卡”选择你要存放树莓派系统的 microSD 卡。开始写入。<br>写入完毕后还会自动进行校验。当整篇文章完成后，你可以删除 bootfs 分区，用其他分区软件（例如 DiskGenius 或 KDE 分区管理器）在未划给 rootfs 分区（ext4 文件系统）的空间上新建一个 FAT32 分区，用来存放你个人的媒体和文档。</li><li>   现在把集线器插到 RT 上，把实体键盘和U盘插到 RT 上。你的键盘必须有回车键。（RT 的自带键盘或者任何蓝牙键盘到时候都不能用）</li><li>   在 RT 上，打开 U 盘，以管理员身份运行 Jail Break 的主菜单，等待出现界面后，输入<code>1</code>（Install Yahallo），按 Enter。</li><li>   等待返回主界面，再按下<code>5</code>（set boot menu timeout），然后输入一个靠谱的数值，比如<code>10</code>，再按Enter。</li><li>   现在USB口只留下U盘和键盘，别的都拔掉，重启 RT。在黑屏后立即按住音量减键。Surface 会从 U 盘启动。</li><li>   看到出现 Windows Boot Manager 的黑白英文界面后，用键盘选择 install Golden Keys 。要求你同意协议，选 accept。你要是不同意的话你的目的达不成啊。（Golden Keys 的安装界面特殊适配，可以识别开始按钮，而启动菜单不行）注意，一旦正常进入 Windows 系统，那么 Golden Keys 很可能就会失效。对于此种情况（我就是），必须趁 Windows 没插手，立即再次长按音量减键，从 U 盘启动，然后用键盘选择 Install Yahallo，选了这个后 Surface 会不出现任何交互界面直接重启。这次会我用的 RT 还有一个逆天问题，长按音量减键进入 U 盘的界面时，它会检测到我按的音量减，于是焦点往下移动一格，然后默认倒计时停止。而这个界面你只有按音量键可以代替上和下方向键，开始按钮和电源按钮都起不到回车进入的作用，逆天吧！必须借助外接键盘，就为了按那么一个回车。而RT又只有一个 USB 口，所以得有集线器。</li><li>   现在可以进入 Windows 系统了，运行 <code>msinfo32</code>，看看“安全启动状态”是不是关闭了。</li><li>   如果已经关闭了安全启动，那就进行正式开始的步骤！<br>如果还是开着的，那只能清空内置硬盘重装系统了。先格式化 U 盘（U 盘必须格成 FAT32 文件系统），然后将之前下载的原厂镜像文件全部复制到 U 盘。将 Surface 从 U 盘启动，进入“疑难解答→高级选项→命令提示符”，依次输入：（<code>rem</code> 开头的是注释，无需输入）  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">diskpaRT</span><br><span class="line">list disk</span><br><span class="line"><span class="comment">rem （此时确认清楚哪个硬盘是内置硬盘，通常是0）</span></span><br><span class="line">sel disk <span class="number">0</span></span><br><span class="line">clean</span><br><span class="line"><span class="built_in">convert</span> gpt</span><br><span class="line">create par EFI size=<span class="number">500</span></span><br><span class="line"><span class="comment">rem （par和partition相同，sel和select相同）</span></span><br><span class="line"><span class="comment">rem （这里size的值应该不小于300）</span></span><br><span class="line">create par primary</span><br><span class="line">sel par <span class="number">2</span></span><br><span class="line">assign</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>现在 C 盘应该是未格式化的系统盘，试试输入 <code>c:</code> 按回车，如果提示“不包含可识别的文件系统”，那就输入 <code>format c: /q /fs:ntfs</code>。如果输入 <code>c:</code> 提示“系统找不到指定的驱动器。”就再试试别的盘符。<br>现在关掉命令提示符窗口，然后进入疑难解答，选择初始化电脑！<br>完了进 Windows RT 8.1 系统，设置完一切后，你需要从头开始再试一遍突破。</li></ol><h2 id="三、正式开始"><a href="#三、正式开始" class="headerlink" title="三、正式开始"></a>三、正式开始</h2><ol><li>   现在回到正常电脑，按照网络上<a href="https://openrt.gitbook.io/open-surfaceRT/surface-RT/linux/kernel/prebuilt-binaries">这篇文章</a>的方法处理 bootfs 分区中的文件。<br>你应该替换了下述文件：<ul><li><code>startup.nsh</code></li><li><code>zImage</code></li><li><code>acpiviewapp.efi</code></li><li><code>bootarm.efi</code><br>（不同的 <code>bootarm.efi</code> 可指向不同的启动项目，如树莓派系统，微软恢复环境，Yahallo 等，参见<a href="https://wiki.ubuntu.com/arm/surfaceRT">此处</a>）</li></ul></li><li>   打开 bootfs 分区，找到 <code>\EFI\boot\bootarm.efi</code>，把它改名，例如 <code>bootarm_raspi.efi</code>。</li><li>   把之前下载的 <code>grub.efi</code> 改名叫 <code>bootarm.efi</code>，放到上一步的 <code>\EFI\boot\bootarm.efi</code> 位置。</li><li>   把 <code>unicode.pf2</code> 和我给的 <code>grub.cfg</code> 放到 bootfs 分区的根目录中。</li><li>   如果你想个性化GRUB，可以先在bootfs新建一个叫 <code>theme</code> 的文件夹，然后去 <a href="https://www.gnome-look.org/browse?cat=109">Gnome-look</a><br>下载一个你喜欢的主题，将其解压，然后把包含 <code>theme.txt</code> 的文件夹（注意是包含的文件夹）放到 bootfs 的 <code>/theme</code> 目录里。然后用 VScode 等软件打开 <code>grub.cfg</code>，然后加一行  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> theme=/theme/wonder/theme.txt</span><br></pre></td></tr></table></figure>（<code>wonder</code> 为示例，具体看你下的主题）</li><li>   现在把存储卡插到 RT 上，以管理员身份打开命令提示符。</li><li>   再从这个命令提示符中输入 <code>start</code>，这样另开一个管理员的命令提示符，后续更方便。</li><li>   最好在这个命令提示符里输入以下指令重启资源管理器：  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im explorer.exe</span><br><span class="line">explorer</span><br></pre></td></tr></table></figure></li><li>   右键开始按钮，打开磁盘管理，看一下 EFI 分区是哪一个分区，从 1 开始数。</li><li>   再在这个命令提示符中输入： <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">sel disk <span class="number">0</span></span><br><span class="line">list par</span><br><span class="line">sel par <span class="number">1</span></span><br><span class="line"><span class="comment">rem （如果EFI分区是第二个就sel par 2）</span></span><br><span class="line">assign</span><br><span class="line"><span class="comment">rem （与之相反的指令就是remove）</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></li><li>   执行 <code>notepad</code>。</li><li>   然后点击“文件→打开”，在文件浏览窗口里看看 EFI ESP 分区是哪个盘符，比如F盘。</li><li>   关掉记事本。</li><li>   执行<code>ren F:\EFI\Boot\bootarm.efi bootarm_ms.efi</code></li><li>   执行<code>ren F:\EFI\Microsoft\Boot\bootmgfw.efi boutmgfw.efi</code><br>（<code>boutmgfw.efi</code> 这个名称是我起的，并且在 <code>grub.cfg</code> 中指定。如果不把这个文件重命名，那么 RT 开机就一定从这个文件启动，不加载我们要的GRUB）</li><li>   接下来最好不要断电或者重启！下一步没完成的期间你的 RT 不能从内置硬盘启动！</li><li>   把 bootfs 里所有的文件都复制到 EFIESP 分区里。可以在资源管理器里复制，也可以用命令复制。<div class="tag-plugin copy"><span>命令示例</span><input class="copy-area" id="copy_1" value="xcopy E:\* /E /-Y F:\"><button class="copy-btn" onclick="util.copy(&quot;copy_1&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>（例如你的 bootfs 分区是 E 盘，EFI 分区是 F 盘）</li><li>   大功告成！现在你的 RT 应该可以启动 GRUB，并且开机时出现启动菜单了！</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一、准备工作和下载，下述一个都不能少&quot;&gt;&lt;a href=&quot;#一、准备工作和下载，下述一个都不能少&quot; class=&quot;headerlink&quot; title=&quot;一、准备工作和下载，下述一个都不能少&quot;&gt;&lt;/a&gt;一、准备工作和下载，下述一个都不能少&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>五一不补课了</title>
+    <link href="https://blog.thisis.host/202405/extra-lessons-banned-again/"/>
+    <id>https://blog.thisis.host/202405/extra-lessons-banned-again/</id>
+    <published>2024-05-02T15:01:23.000Z</published>
+    <updated>2024-05-03T07:53:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2024年5月2日晚通知：</p><blockquote><p>尊敬的各位家长：按照上级指示和要求，为全面落实“双减”政策，学校决定，高一高二学生“五一”假期自主学习活动暂停，在校学生明天上午由家长接回，所有学生在家完成假期相关学习任务。请各位家长理解支持，顺祝节日快乐，全家幸福！</p></blockquote><p>不得不说，这届学生就是硬气，寒假补课干没了，五一补课也干没了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2024年5月2日晚通知：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;尊敬的各位家长：按照上级指示和要求，为全面落实“双减”政策，学校决定，高一高二学生“五一”假期自主学习活动暂停，在校学生明天上午由家长接回，所有学生在家完成假期相关学习任务。请各位家长理解支持，顺祝节日快乐</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>考试时钟 V7 升级公告 (2024)</title>
+    <link href="https://blog.thisis.host/202404/exam-update-2024/"/>
+    <id>https://blog.thisis.host/202404/exam-update-2024/</id>
+    <published>2024-04-06T14:22:55.000Z</published>
+    <updated>2024-05-09T01:43:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h2><h3 id="7-3-2"><a href="#7-3-2" class="headerlink" title="7.3.2"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/6a169a67e5914a94b06bdee0a9c967d6c1061b74">7.3.2</a></h3><ul><li>移除了彩蛋 <a href="/202306/grade-2020-departure/" title="20级学生要毕业了">20级学生要毕业了</a> 的入口</li><li>将 Font-Awesome 图标库由字节源5.0.0更新到360源6.5.1</li><li>优化功能区的部分文案</li><li>过场动画的 coverBadge 现在显示当日日期了</li><li>修复了正常全屏时仍报错的问题</li><li>启用&#x2F;关闭了部分调试特性</li></ul><h3 id="7-3-1"><a href="#7-3-1" class="headerlink" title="7.3.1"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/6dbb2fd55cc9ad6ffbe0c03cbff7a11705856021">7.3.1</a></h3><ul><li>修复了 IE 浏览器的报错提示</li><li>修复了不正确闭合的 HTML 标签</li></ul><h3 id="7-3-0"><a href="#7-3-0" class="headerlink" title="7.3.0"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/d1f85ef69a1c9c1f2eda1adbc6efce1538bea986">7.3.0</a></h3><ul><li>重构了背景相关功能<ul><li>更新了背景数据结构格式</li><li>增加了2023年12月的部分图片</li></ul></li><li>移除了全屏背景菜单功能</li><li>移除了彩蛋 <a href="/202306/grade-2020-departure/" title="20级学生要毕业了">20级学生要毕业了</a></li><li>移除了冗余代码</li><li>更新了 <code>README.md</code></li></ul><h3 id="7-2-0"><a href="#7-2-0" class="headerlink" title="7.2.0"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/d217229d64efae1bc916e67589fe478e1045491a">7.2.0</a></h3><ul><li>优化了“上次更新时间”的显示方式</li></ul><h3 id="7-1-0"><a href="#7-1-0" class="headerlink" title="7.1.0"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/c39344f3817f90bc1a4313ae813e765769e322c4">7.1.0</a></h3><ul><li>增加了科目调试功能的时间流速 URL 参数<ul><li>修复了科目调试功能的重演行为</li></ul></li><li>增加了“上次更新时间”</li></ul><h3 id="7-0-5"><a href="#7-0-5" class="headerlink" title="7.0.5"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/1918393dfdd9356341a4fb268c1f3a3efa446ec0">7.0.5</a></h3><ul><li>优化 Cover 动画界面的样式</li></ul><h3 id="7-0-4"><a href="#7-0-4" class="headerlink" title="7.0.4"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/f75bacc76a78565e03e6fe8131088aa6566ecda2">7.0.4</a></h3><ul><li>移除了中文字体</li><li>修复图床相册链接</li><li>移除一部分冗余代码</li></ul><h3 id="7-0-3"><a href="#7-0-3" class="headerlink" title="7.0.3"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/804f707bd98f1e80adae74151d759dab5755cdf9">7.0.3</a></h3><ul><li>重构科目部分的数据结构和代码</li><li>优化了 Cover 动画样式</li></ul><h3 id="7-0-2"><a href="#7-0-2" class="headerlink" title="7.0.2"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/d9a5c4ab51c16816bd944a6683c4d3664258a46e">7.0.2</a></h3><ul><li>提升了从 exams 获取考试类型的规范性</li><li>为 Cover 动画增加 Loading 效果</li><li>更换主题颜色</li></ul><h3 id="7-0-1"><a href="#7-0-1" class="headerlink" title="7.0.1"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/ca57f3f25aaff546bc8dcb8c159d420cbc778615">7.0.1</a></h3><ul><li>增加了初次启动的白屏动画</li></ul><h3 id="7-0-0"><a href="#7-0-0" class="headerlink" title="7.0.0"></a><a href="https://github.com/L33Z22L11/ExamClock/commit/74adecad0c893f97845f71e306dcbc4e4030da76">7.0.0</a></h3><ul><li>更换了切换考试类型的过渡动画样式</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;更新内容&quot;&gt;&lt;a href=&quot;#更新内容&quot; class=&quot;headerlink&quot; title=&quot;更新内容&quot;&gt;&lt;/a&gt;更新内容&lt;/h2&gt;&lt;h3 id=&quot;7-3-2&quot;&gt;&lt;a href=&quot;#7-3-2&quot; class=&quot;headerlink&quot; title=&quot;7.3.2&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://blog.thisis.host/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>舆情观察：关于抖音视频“大型纪录片《宝鸡中学传奇》”</title>
+    <link href="https://blog.thisis.host/202402/sentiment-early-lessons/"/>
+    <id>https://blog.thisis.host/202402/sentiment-early-lessons/</id>
+    <published>2024-02-14T12:39:00.000Z</published>
+    <updated>2024-02-16T06:18:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tag-plugin colorful note" color="error"><div class="title">免责声明</div><div class="body"><p>文章由技协评论员撰写，仅作舆情观察，并不对视频内容的真实性、准确性或合法性负责。视频评论区的观点属于其所属账号的个人立场，与其他个人或组织的立场无关。</p></div></div><h2 id="舆情概要"><a href="#舆情概要" class="headerlink" title="舆情概要"></a>舆情概要</h2><p>　　抖音用户<a href="https://www.douyin.com/user/MS4wLjABAAAA8m-t4AnvXDicWz5VeabN-D0jz-JHUvbUbiRWPyQm3kESGH0P-wJ5DQU2Ol--tRHT">鸡🐔</a>于<code>北京时间 2024年2月13日 17:21</code>发布了视频作品<a href="https://www.douyin.com/video/7335014077384641792">大型记录片《宝鸡中学传奇》</a>，技协评论员于<code>北京时间 2024年2月14日 15:38</code>注意到了该舆情，截至<code>北京时间 2024年2月14日 20:39</code>，视频的点赞量、评论量、转发量已经很高：</p><table><thead><tr><th align="center">浏览量</th><th align="center">点赞</th><th align="center">评论</th><th align="center">收藏数</th><th align="center">转发</th></tr></thead><tbody><tr><td align="center">未知</td><td align="center">1222次</td><td align="center">522条</td><td align="center">81</td><td align="center">1737次</td></tr></tbody></table><p>　　发稿时，该视频已经重新处于私密状态。可能和学生群体中传播的这份截图有关。</p><blockquote><p>微信群聊截图 班主任：<br>通知：<br>　　<strong>原定明天开始的自主学习安排因故暂停，后续安排等候学校通知！</strong></p></blockquote><p>　　<code>2024年2月15日</code>，由于“自主学习安排”暂停，<strong>高一年级</strong>通过各班家长群发布了9份政治寒假作业、9份英语寒假作业、9份物理寒假作业、9份寒假作业、5份化学强化训练（#4-6,#10,#12）、4份数学寒假作业、9份历史寒假作业（#4-12）、9份地理寒假作业、4份生物寒假作业，共计247张A4纸 <em>(也有传言说是400多张，此处存疑)</em> 。</p><blockquote><p>微信群聊截图 推测为<strong>高二年级</strong>的通知：<br>各位家长大家好：<br>　　由于不能进行<strong>素质拓展</strong>，孩子们的教育和学习就完全由家长负责监督。我们的原则是停课不停学，望你们一定要安排好孩子的学习和生活节奏。开学就到了3月份，5月水考在即，高考指日可待，弯道超车的道理大家都懂，我们的孩子应该知道在该奋斗的年龄一定要不负青春不负韶华，让明年的高考和自己的人生不留遗憾。<br>　　祝大家生活愉快。谢谢。</p></blockquote><div class="tag-plugin image"><div class="image-bg"><img src="https://gateway.pinata.cloud/ipfs/QmY822nTF6poRDAUr6xz63v2ScQieuyLn2DEChXu7FmLwW?filename=protest-poster.webp" alt="宝中教学楼内学生张贴的内容" data-fancybox="true"/></div><div class="image-meta"><span class="image-caption center">宝中教学楼内学生张贴的内容</span></div></div><h3 id="简要评论"><a href="#简要评论" class="headerlink" title="简要评论"></a>简要评论</h3><p>　　“大型&#x2F;传奇纪录片”是一种近年常见的视频体裁，通过创作者的巧妙剪辑和创意，将现有视频素材重新组合，形成一种戏谑、幽默、荒诞的效果。麦克阿瑟将军（实为美国演员詹姆斯·菲尔伯德）作为其中的“常驻评论员”，以其高调性格和金句频出成为网友们津津乐道的对象。</p><p>　　在得知有关“自愿参加自主学习”的消息后，鸡🐔借助这种幽默讽刺的视频体裁，在抖音上表达了自己的想法，并引发舆情传播。从账号情况来看，这位视频作者仅发布过1条视频，仅有1个关注，很有可能是为了避免被查到真实信息而创建的“小号”。视频评论区中有愤怒的家长，有各种流传出的聊天截图，有人表达出对作者的担心，也充斥着疯狂@朋友来“吃瓜看戏”的消息。但是，视频文字稿中出现了一些低级错误，<strong>如“河南省教育厅”写作“河南教育部”，“工夫”写作“功夫”，“慰藉”写作“慰籍”等</strong>，这表明视频在制作环节中仍有可以改进的地方。</p><p>　　各地中学借助各种理由，在假期开展“素质拓展”“自主学习”的现象已屡见不鲜，并常在互联网平台上引发舆情。比如B站视频《<a href="https://www.bilibili.com/video/BV1HA4m1V7Nv/">遥遥领先！河南高中初六开学</a>》反映河南一高中初六（2024年2月15日）开学，截至2月14日晚视频播放量达到了38万，具有1.8万次点赞、5560条评论、1610次转发，评论区投票“你们学校都开学了吗”已有36575人参与，其中有25%的参与者选择了“开了”。同时，评论区也充斥着各种微信群聊截图，学生们“群情激愤”，纷纷反映各自的省份的中学具有变相提前开学的情况，并被要求“禁止转发、外传”“禁止发朋友圈、抖音”，甚至有的学校还冠以“维护网络信息安全”的借口。<del>许多学校都悄悄变相提前开学，一些学校却非要“禁止转发”，真不知道这些学校校领导怎么想的。难道不转发就能不让有关部门得知情况吗？都睁一只眼闭一只眼罢了。越是声明“禁止转发”，越是遮遮掩掩，越会引起不满，造成舆情发酵。</del>讽刺的是，这个B站视频被其班主任看到了，并扬言“学校正在查这个抖音号”，这份聊天记录的截图又被传回了原视频的评论区。<del>查到了又如何，让学生删除视频，还是给学生“穿小鞋”？</del></p><p>　　对于舆情的预防，应是宜疏不宜堵，避免因行为不当产生“二次舆情”，进而导致“舆情次生灾害”。在当今网络时代，信息传播往往呈现出“先入为主”的趋势。发布权决定了话语权，而话语权则决定了主动权。因此，只有迅速、主动地公开信息，高效地回应社会关切，才能有效遏制舆情发酵恶化，从而为事件的处理创造一个良好的舆情环境。因此，学校要提升舆情预防能力，建设智慧舆情应对体系，提升管理水平，以更好地应对各类舆情事件。</p><p>　　在这次事件中，校方在发现了舆情后，及时采取应对措施，暂停了“自主学习安排”，有效从源头遏制了舆情发酵，避免了二次舆情的产生。同时，“自主学习安排”的学习资料也通过各班家长群传递给各位学生，减轻了教学进度的贻误。</p><h2 id="原视频以及评论区存档"><a href="#原视频以及评论区存档" class="headerlink" title="原视频以及评论区存档"></a>原视频以及评论区存档</h2><div class="tag-plugin colorful note" color="warning"><div class="title">内容提醒</div><div class="body"><p>视频内容具有争议，可能包含虚构演绎创作的内容。评论区可能存在争议或不实言论，请保持理性、尊重和友善的交流。</p></div></div><h3 id="视频源"><a href="#视频源" class="headerlink" title="视频源"></a>视频源</h3><p><a target="_blank" rel="noopener noreferrer" href="https://v3-web.douyinvod.com/da17931526f977274ac59b5bd36d2c4e/65ccc2d9/video/tos/cn/tos-cn-ve-15/oYb9QAQ3Sk2F7o4MD7BvI31Tgg8EAlAzyenDeD/">大型记录片《宝鸡中学传奇》(douyinvod:v3-web)</a><br><a target="_blank" rel="noopener noreferrer" href="https://v26-web.douyinvod.com/717d8262113d7f1faa4e60ba4a65e9ba/65ccc334/video/tos/cn/tos-cn-ve-15/oYb9QAQ3Sk2F7o4MD7BvI31Tgg8EAlAzyenDeD/">大型记录片《宝鸡中学传奇》(douyinvod:v26-web)</a><br><a href="https://www.bilibili.com/video/BV1w6421M7pF/"><i class="fa-brands fa-bilibili"></i>这，就是宝鸡中学(补档)</a></p><h3 id="文字稿"><a href="#文字稿" class="headerlink" title="文字稿"></a>文字稿</h3><p>背景音乐：<a href="https://music.163.com/#/song?id=1456677611">Zerky &#x2F; Liu - Temple（神殿）</a><br>配音：剪映 - 云泽音色配音（微软TTS提供支持）</p><blockquote><p>给它一次机会，它可以文化救国，成为宝鸡的招牌<br>再给它一次机会，它能在腊月二十六和二十九放假（口头无资料，初四与初六开学），为了学生的“刑腐”争取补课，甚至采取口头通知<br>是的，这就是大名鼎鼎的宝鸡中学</p><p>在21世纪的今天，它甚至可以举办跑操比赛<br>很难想象这种形式主义拉满的东西，是人类举办的<br>博尔特曾经评价过：我的世界纪录是9.58，恐怕宝中学生一步是9.58厘米</p><p>元旦本来就放28个小时，不知是哪位神仙才硬是搞到了两天半<br>去年的寒假是一周，暑假整整是寒假的三倍<br>恐怕河南教育部的毛杰厅长来了都得感叹<br>毕竟她给河南高中放的8天国庆假，比有些学校的寒假都长</p><p>四代火影波风水门都不禁评价到：<br>要是木叶村出了个宝鸡中学，恐怕这村子早已销声匿迹</p><p>著名舔狗沸羊羊曾说：<br>我要是在宝鸡中学上学，连和美羊羊说话的心思都没有</p><p>《英雄联盟》中青钢影曾经说过：<br>我的弟弟要是上了宝鸡中学，你姐我也不会变成半机器人，去拯救家族</p><p>我们的学校也很好<br>因为它的校庆真的很赞，还有过DJ版的校歌<br>在关键时候，它甚至在学校放上半个小时烟花<br>这样的学校，又还有多少</p><p>其实学生们不是不愿意学习<br>而是厌恶这毫无义的多余时间功夫</p><p>对此，五星上将麦克阿瑟评价到：<br>世上没有完美的事物，但我们可以不断完善它接近完美</p><p>最后想说的是：<br>学生不是机器，“它们”也想休息<br>多上几天课没什么质的变化，但多放几天假对学生的慰籍却极其大<br>也希望宝中越来越好，培养出更多真正意义上的，走向现代的中国人</p></blockquote><h3 id="评论区"><a href="#评论区" class="headerlink" title="评论区"></a>评论区</h3><p>由于作品权限原因，评论区截取自<code>北京时间 2024年2月14日 晚九点左右</code>，此处并未摘录大量@朋友的评论以及一些不适合展示的内容。</p><blockquote><p>崽崽哈士奇 · 4小时前<br>都上班了 bjzx居然放的比我还少[泣不成声]</p></blockquote><blockquote><p>🌈看海听风 · 6小时前<br>我们虽然放假的晚，但是上学早啊</p></blockquote><blockquote><p>张鱼哥 🐙 · 6小时前<br>就说过年咋还有学校上课</p><blockquote><p>[图片:校外视角,夜晚,宝中教学楼教室灯火通明]</p></blockquote></blockquote><blockquote><p>不辞水 · 5小时前<br>宝鸡中学老学长想进校园都没机会呢[流泪][流泪][流泪]</p></blockquote><blockquote><p>miraitowa. · 6小时前 · 重庆<br>长虎看了直摇头系列</p></blockquote><blockquote><p>💦💦<br>[宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机][宕机] · 5小时前</p><blockquote><p>附图 微信聊天记录：<br><strong>@**鑫 老师您好，能否给我大略讲一下这个“学校为同学提供自主学习的场所”的意思是让签署了自主学习申请书的学生自己自学不在课堂上听了吗？不懂才请教老师，理解错误请老师勿怪[抱拳]</strong></p></blockquote><blockquote><p>lemon. · 5小时前<br>老师怎么说 放了什么新鲜的屁[尬笑][比心]</p></blockquote><blockquote><p>💦💦 回复 lemon. · 3小时前<br>关机了[宕机]</p></blockquote></blockquote><blockquote><p>误以为 · 3小时前<br>哥 你必须火 我求你了[发怒][发怒][发怒][发怒][发怒]</p></blockquote><blockquote><p>FRGod · 7小时前</p><blockquote><p>附图 微信聊天记录：高二*班大家庭<br>班主任：<br>@所有人：各位家长，各位同学新年好，龙年吉祥如意。<br><strong>初步定于初六早晨9:00前返校，请家长提醒孩子逐步做好收心返校工作，认真完成寒假作业。年前班会已告知孩子们相关要求：寒假作业用黑笔或蓝笔完成，用红笔订正纠错，保证质量返校检查。</strong><br>再祝家长老师身心健康，工作顺利；祝同学们学业进步，茁壮成长。</p></blockquote></blockquote><blockquote><p>.2 · 4小时前<br><strong>@所有人 为解决家长管理孩子困难，从明天起，学校为学生免费提供自主学习场所，学生自主自愿参加。凡自愿参加的学生于明早9:30前返校。来校时必须持经家长签字同意的《自愿参加自主学习申请书》，返校途中注意交通安全。</strong></p></blockquote><blockquote><p>绵羊拉屎(减肥版) · 6小时前<br>当时高三腊月29中午放假，初二开学[比心]</p></blockquote><blockquote><p>kirsy. · 6小时前<br>以前我骂不绝口，现在我哈哈哈哈[微笑]</p></blockquote><blockquote><p>Be fame · 6小时前<br>毕业学长前来报喜[不失礼貌的微笑]</p></blockquote><blockquote><p>Cameilla🌹 · 5小时前<br>加油吧，我已经熬过来了[比心]</p></blockquote><blockquote><p>陈克 · 6小时前<br>可以了 想当年就放了三天假 三十放假 初三上课</p></blockquote><blockquote><p>Jane, · 3小时前<br>天才呀</p></blockquote><blockquote><p>面具的下面是吴彦祖 · 3小时前<br>太棒了，我双手支持[捂脸]</p></blockquote><blockquote><p>Thunder WÁNG（见过周杰伦版） · 3小时前<br>哈哈哈哈哈哈学弟牛逼</p></blockquote><blockquote><p>余生请你请教 · 5小时前<br>你无敌了孩子@kkkkkxy @寒冰射手🇨🇳 @←_← @6IOh5bCP5a+S</p></blockquote><blockquote><p>lemon. · 5小时前</p><blockquote><p>附图 微信聊天记录：<br><strong>@所有人 为解决家长管理孩子困难，从明天起，学校为学生免费提供自主学习场所，学生自主自愿参加。凡自愿参加的学生于明早9:30前返校，来校时必须持经家长签字同意的《自愿参加自主学习申请书》。返校途中注意交通安全。</strong></p></blockquote></blockquote><blockquote><p>风语 · 5小时前<br>幸好我几年前毕业了[看][看][看]</p></blockquote><blockquote><p>宝中万能墙☆ · 5小时前 (作者赞过)<br>支持[赞][赞][赞][鼓掌][鼓掌][鼓掌]</p></blockquote><blockquote><p>………？ · 5小时前<br><strong>后续来了，学校已读乱回</strong></p><blockquote><p>[图片丢失]</p></blockquote></blockquote><blockquote><p>娜可睿睿 · 5小时前<br>秒了</p><blockquote><p>[图片丢失]</p></blockquote></blockquote><blockquote><p>长白 · 5小时前<br>现在寒假怎么长了，咱那年放三天[尬笑]@鹿楠</p></blockquote><blockquote><p>鸡🐔 (作者) · 5小时前<br><strong>后续来了</strong></p><blockquote><p>[图片丢失]</p></blockquote></blockquote><blockquote><p>Dnbg · 5小时前<br>@宝鸡中学 我哥点你呢</p></blockquote><blockquote><p>秦.ㅤ · 6小时前<br>@Detainment. 宝一中学生发来贺电[九转大肠]</p></blockquote><blockquote><p>是夜在熬我 · 6小时前<br>@宝鸡中学 过来看，夸你呢</p></blockquote><blockquote><p>阿里嘎多翠花桑 · 6小时前<br>@十分之一 现在的宝中太离谱了[捂脸]</p></blockquote><blockquote><p>word妈鸭 · 7小时前<br>@Moonpie @别困了快起床！ @等，，，&#x3D; @373737 @王仔小牛奶 @榅梩 @莴苣脆脆公主 @Cnnnn. @Scolar @Joker @99分热爱 @Avecle coleil @对方正在输入… @赤子之心° @烧麦1 @外外 看学弟学妹们大型反击[强]</p></blockquote><blockquote><p>雄性红眼残翅果蝇 · 8小时前<br>哥只能帮你到这了我把我列表宝中的全给你摇来了</p><blockquote><p>[图片丢失]</p></blockquote></blockquote><blockquote><p>🌈看海听风 · 7小时前<br>我想冲抖加了@H₂O @也许可以 @阿曼达呀 .（回关按牌） @悸⒎ @土豆星人 @✨宝宝 @宝鸡男发大神付轩 @橙橙✨</p></blockquote><blockquote><p>………？ · 5小时前<br>@中国教育报 @中国教育新闻网 @陕西教育融媒体中心 @陕西教育发布</p></blockquote><blockquote><p>游 · 6小时前<br>@宝鸡中学</p></blockquote><blockquote><p>190腼腆男高 · 8小时前<br>@宝鸡日报</p></blockquote><blockquote><p>………？ · 5小时前<br><strong>宝鸡中学的“自愿”签字书</strong></p><blockquote><p>[图片丢失]</p></blockquote></blockquote><blockquote><p>筱禧 · 7小时前<br>20个粉丝整200万的活，真不怕沙头啊哥？[逞强落泪][逞强落泪][逞强落泪]</p></blockquote><blockquote><p>ilk12346789 · 6小时前<br>@用户385473 @肃芥. @臭狗红参人参偷我人生 @7chill妮♡千猫 @嘻嘻嘻之郎果冻 @Jwalkerz @吃不到烤冷面 玛德，元旦居然能放两天半[发怒]jyx把你的阿虎叫出来，我要质问他</p></blockquote><blockquote><p>snakeying · 22小时前<br><strong>你不想读书就在家睡，不要祸害其他孩子！！！</strong></p><blockquote><p>鸡🐔 (作者) · 11小时前<br>在家不等于不学习，在学校您家孩子也不一定一直在学[666]</p></blockquote></blockquote><blockquote><p>𝗕𝗿𝗶𝘁𝘁𝗻𝗲𝘆 · 7小时前<br>@Ro^ise 我靠你知道吗 昨天我从旁边经过 他们昨天还是前天都开学了</p></blockquote><blockquote><p>snakeying · 10小时前<br><strong>年级主任知道你的行为吗？你父母知道吗？</strong></p><blockquote><p>鸡🐔 (作者) · 10小时前<br>我的父母与时俱进 老师也有自己的家庭您不会觉得他们想上班吧[捂脸]</p></blockquote></blockquote><blockquote><p>苏菲强力贴身 · 7小时前<br>小心被学校逮了</p></blockquote><blockquote><p>190腼腆男高 · 8小时前<br>@宝鸡日报</p></blockquote><blockquote><p>later · 8小时前<br>哥们小心没了[捂脸]</p></blockquote><blockquote><p>发黑的化肥 · 6小时前<br>@讨厌下雨的good rain @霂 @呐呐呐~ @吃个瓜瓜瓜 [舔屏][舔屏][舔屏][舔屏][舔屏]就喜欢看学弟学妹们破防[舔屏][舔屏][舔屏][舔屏]</p></blockquote><blockquote><p>Baga · 6小时前<br>太黑暗力</p></blockquote><blockquote><p>Ayesha · 3小时前<br>我他妈不想上课[流泪]明天收假啊</p></blockquote><blockquote><p>zxxbn · 2小时前 · 美国<br>原来考985 211的孩子都这么努力，过年都不休息[微笑]</p></blockquote><blockquote><p>TENRYU · 2小时前<br>（DJ版的校歌）DJ在这里[看][看][看][左上]@🥯</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin colorful note&quot; color=&quot;error&quot;&gt;&lt;div class=&quot;title&quot;&gt;免责声明&lt;/div&gt;&lt;div class=&quot;body&quot;&gt;&lt;p&gt;文章由技协评论员撰写，仅作舆情观察，并不对视频内容的真实性、准确性或合法性负</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hclass 的前世今生</title>
+    <link href="https://blog.thisis.host/202402/hclass-introduction/"/>
+    <id>https://blog.thisis.host/202402/hclass-introduction/</id>
+    <published>2024-02-08T16:11:00.000Z</published>
+    <updated>2024-02-09T05:25:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="它有没有前身？"><a href="#它有没有前身？" class="headerlink" title="它有没有前身？"></a>它有没有前身？</h3><p>那它必然是有的啊，刚刚开始写的时候，它叫做ClassHelper，可以说是非常简陋了，连<strong>能用</strong>的程度都达不到。</p><h3 id="从什么时候开始正式开发的？"><a href="#从什么时候开始正式开发的？" class="headerlink" title="从什么时候开始正式开发的？"></a>从什么时候开始正式开发的？</h3><p>这个小东西的开发是从<strong>2022年03月17日</strong>开始的，那时候发布了第一个测试版<code>Betav20220317a</code>，那时候只有四个有用的功能，随机数生成，北京时间显示，中考倒计时之类的。<strong>致于为什么是这个时候</strong>，因为那个时候<del>在上网课</del>。<br>(小声：直到今天，Hclass<strong>随机叫人</strong>这个工具的代码还是两年前第一个测试版的代码)</p><h3 id="为什么叫作-Hclass-呢？"><a href="#为什么叫作-Hclass-呢？" class="headerlink" title="为什么叫作 Hclass 呢？"></a>为什么叫作 Hclass 呢？</h3><p>今天在这里可以把这个命名问题说明咯， Hclass 其实全称叫做 <strong>HFENG Class toolbox</strong>，其中的 HFENG 是来自于我初中的数学老师，他人很有意思，我们也都非常喜欢他，他的名字是海锋，这就很好理解了吧，我们当时也有一个小团队，搞搞黑板报之类的东西，那时候我开始写 Hclass 的，所以就用了 <strong>Haifeng</strong> 简易版：HFENG 来命名了，直到今天，简化为了 Hclass。而且 H 也可以取义<strong>更高更快乐</strong>，这也是我的初衷所在。</p><p>正如我<strong>两年前</strong>在 Hclass 的关于中写的：</p><blockquote><p>Hclass是一个大屏教学辅助软件，本意仅为方便课堂教学和使教学更丰富多彩。</p></blockquote><p>时隔两年，我想这个想法至今未曾改变。</p><h2 id="Hclass-的工具们"><a href="#Hclass-的工具们" class="headerlink" title="Hclass 的工具们"></a>Hclass 的工具们</h2><h3 id="随机叫人"><a href="#随机叫人" class="headerlink" title="随机叫人"></a>随机叫人</h3><blockquote><p>这是一个随机数生成器，您可以通过这个方式随机抽取学生的学号来回答问题</p></blockquote><p>它是 Hclass 全系工具里最古老的工具了，其实也只是来源于上课时候的一句调侃，老师说：“<strong>我随机叫人来回答问题</strong>” 这时候就会有人说：“<strong>哪里是随机？明明是随你。</strong>”于是这个工具就诞生了。</p><h3 id="投票系统"><a href="#投票系统" class="headerlink" title="投票系统"></a>投票系统</h3><blockquote><p>这是一个简单的投票系统，您可以使用它来替代在黑板上画正字</p></blockquote><p>这个东西可以说是我当时觉得写过的最<del>有技术含量</del>的东西了，那时候老师们都会在黑板上画正字来投票，但是这样计数又不方便，写起来又慢，灰尘又大，于是就写了这么一个东西给它代替掉了。<br>当时我自己研究了一个进度条，虽然现在知道有更好的解决办法了，但是想来还是很开心的。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(tiaoLength &lt;= basketLength) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;tiao&quot;</span>).<span class="property">style</span>.<span class="property">width</span> = tiaoLength + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">    tiaoLength = tiaoLength + <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// console.log(&quot;条长：&quot; + tiaoLength);console.log(&quot;框长：&quot; + basketLength);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><div class="tag-plugin link dis-select"><a class="link-card plain" title="Hclass投票系统" href="https://hclass.thisis.host/toupiao.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">Hclass投票系统</span><span class="cap link footnote">https://hclass.thisis.host/toupiao.html</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div><h3 id="展示屏幕"><a href="#展示屏幕" class="headerlink" title="展示屏幕"></a>展示屏幕</h3><blockquote><p>这是一个展示界面，您可以在班会课或上课时使用它来代替PPT</p></blockquote><p>灵感来源于极域电子教室的那个<strong>保持安静</strong>功能，我觉得不只能显示这四个字（</p><h3 id="一九班历"><a href="#一九班历" class="headerlink" title="一九班历"></a>一九班历</h3><blockquote><p>这是一个为班级开发的有许多有用功能和摸鱼功能的时钟和日历工具</p></blockquote><p>这个东西在发布的时候已经是<strong>2023年01月01日</strong>了。这个时候我的技术相较于之前已经有很大进步了，尤其是学会了<strong>flex</strong>布局和新的相对单位<strong>vh、vw</strong>之类的，让他最后出出来的效果也不算差。在开发这个比较大的东西的时候，我也面临着许多的问题，更学会了许多东西。<strong>在实践中不断进步！</strong></p><h2 id="日志里的小趣味"><a href="#日志里的小趣味" class="headerlink" title="日志里的小趣味"></a>日志里的小趣味</h2><p>在<strong>2022年12月10日</strong>的时候，v1.2</p><blockquote><p>由于不明原因，高考倒计时程序在学校白板上运行时间超过一定时间（挺短的时间）会导致崩溃，程序无响应，在家里测试则没有这种情况，正在努力修复，请大家暂停使用（虽然没人用）</p></blockquote><p>后来我发现，其实只是我不断让总功能函数自己调用自己。于是我把它独立了出来</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">stTime</span>(<span class="params">grade</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> intervals = <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">show</span>(grade)&#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>而这一天已经是<strong>2023年6月22日</strong>。<code>v1.3.3</code></p><blockquote><p>1、修复了上面提到过的高考倒计时卡电脑的bug</p></blockquote><p>一个小bug，修复了六个月（</p><h2 id="未来的展望？"><a href="#未来的展望？" class="headerlink" title="未来的展望？"></a>未来的展望？</h2><ol><li>统一Hclass全系工具的设计风格：<ol><li>大按钮，大显示，方便的大屏操作</li><li>下半部分是给老师点的，上半部分是给学生看的。</li><li>降低操作门槛</li></ol></li><li>这样的设计理念已经在Hclass大部分工具上采用了，只是他们很不统一，看起来不是一个时代的产物。你会发现，Hclass大部分的<strong>设置</strong>按钮都是在页面的<strong>中部</strong>或者<strong>下部</strong>（除了投票系统那个玩意儿），大家都能很轻松的点到，主题色 #FF5050 的<strong>大按钮</strong>贯穿了全系工具，在新加入的<strong>孟德尔豌豆实验</strong>工具中，这样的设计理念更为透彻，摆在页面上直接点，其他交给程序来，降低操作门槛，提升大屏使用体验。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;h3 id=&quot;它有没有前身？&quot;&gt;&lt;a href=&quot;#它有没有前身？&quot; class=&quot;headerlink&quot; title=&quot;它有没</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://blog.thisis.host/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客升级说明 &amp; 投稿征集公告</title>
+    <link href="https://blog.thisis.host/202402/contribute-wanted/"/>
+    <id>https://blog.thisis.host/202402/contribute-wanted/</id>
+    <published>2024-02-04T03:45:14.000Z</published>
+    <updated>2024-02-17T05:29:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2024年2月2日开始，纸鹿着手进行站点重建工作，野生技协博客功能上线。博客搭建之初，我们只找到了2021年的少数内容。后来，在Ar的帮助下，2019、2020年的古老内容才得以定稿。此次升级，使野生技协网站由原先的网页导航进化为博客，Hexo引擎减轻了后续开发维护的代码量，使我们可以专注于内容。</p><p><span class="font-sht">野生技协</span>博客目前仍然需要<strong>校园相关的生活&#x2F;学习&#x2F;技术内容</strong>，无论时间新旧，只要合规均可以联系<a class="tag-plugin colorful hashtag" color="orange"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>QQ:2399052066</span></a> <a class="tag-plugin colorful hashtag" color="yellow"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>L33Z22L11@qq.com</span></a>发布，我们会严格遵守<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"><i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0</a>协议使用这些内容。</p><details class="tag-plugin colorful folding" ><summary><span>投稿要求</span></summary><div class="body"><ol><li>内容<ul><li>投稿内容应与校园生活、学习或技术相关，我们欢迎各类主题，包括但不限于技术教程、学术分享、校园趣闻、个人经验等。</li><li>请确保您的作品是原创的，不侵犯他人的知识产权。如果您引用了其他人的内容，请务必注明出处。</li></ul></li><li>格式<ul><li>文章应具备良好的排版和格式，易于阅读，可以包含各级标题、代码块、链接等。</li><li>非必要不建议包含图片，若确需图片，请上传至图床（<a href="https://www.helloimg.com/">Hello图床</a>、<a href="https://smms.app/">SM图床</a>、<a href="https://imgse.com/">路过图床</a>等），再将图片链接放到文章中。</li><li>需注明作者、文章标题、撰写日期。</li></ul></li><li>您的投稿将遵循<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"><i class='fa-brands fa-creative-commons'></i>BY-NC-SA 4.0（署名-非商业性使用-相同方式共享）</a>协议发布。</li><li>如果您有合适的内容，欢迎投稿：<ul><li>联系QQ：2399052066，邮箱：<a href="mailto:&#76;&#51;&#x33;&#x5a;&#50;&#50;&#x4c;&#49;&#x31;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#109;">&#76;&#51;&#x33;&#x5a;&#50;&#50;&#x4c;&#49;&#x31;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#109;</a>。</li><li>如果您有Markdown基础，推荐使用Markdown发送文章，您也可以通过在线文档平台（<a href="https://docs.qq.com/desktop/">腾讯文档</a>、<a href="https://www.kdocs.cn/">金山文档</a>、Google文档）发送文章。</li></ul></li></ol></div></details><p>感谢大家对野生技协博客的关注和支持，期待各位的精彩投稿！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2024年2月2日开始，纸鹿着手进行站点重建工作，野生技协博客功能上线。博客搭建之初，我们只找到了2021年的少数内容。后来，在Ar的帮助下，2019、2020年的古老内容才得以定稿。此次升级，使野生技协网站由原先的网页导航进化为博客，Hexo引擎减轻了后续开发维护的代码量</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>宝鸡中学更新一体机使用相关说明</title>
+    <link href="https://blog.thisis.host/202401/device-upgrade/"/>
+    <id>https://blog.thisis.host/202401/device-upgrade/</id>
+    <published>2024-01-24T16:00:00.000Z</published>
+    <updated>2024-01-24T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>各位老师:</p><p>为进一步服务教学，学校近期对我校所有教室教学设备进行更换，为了更好服务教学，特提出以下几点说明!</p><ol><li>因为新设备不具备电视收看功能，因此学校电视直播全部采用网络直播，直播地址为: <a href="http://172.29.29.30/">http://172.29.29.30</a></li><li>为了方便使用，新设备安装了天翼云桌面，希沃EN5，WPS等相关软件，老师使用时，即可登录使用。对于天翼云桌面，希沃EN5也可采用扫码登陆</li><li>新设备安装了系统冰点还原软件，系统保护C和E盘，请班主任及相关老师积极引导学生不要安装与教学无关软件，以免对教学设备使用造成影响</li></ol><p>在设备使用过程中，若存在疑惑，请联系信息发展处。让我们大家互相学习，推进设备的使用，为教育教学发挥更大的作用</p><p>信息化发展处<br>2024年1月25日</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;各位老师:&lt;/p&gt;
+&lt;p&gt;为进一步服务教学，学校近期对我校所有教室教学设备进行更换，为了更好服务教学，特提出以下几点说明!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;因为新设备不具备电视收看功能，因此学校电视直播全部采用网络直播，直播地址为: &lt;a href=&quot;http://172.29.</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>20级学生要毕业了</title>
+    <link href="https://blog.thisis.host/202306/grade-2020-departure/"/>
+    <id>https://blog.thisis.host/202306/grade-2020-departure/</id>
+    <published>2023-06-03T19:01:41.000Z</published>
+    <updated>2023-06-03T19:01:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这是2023年6月4日，2020级（2023届）离校时考试时钟页面上的彩蛋。<br>查看考试时钟原commit记录：<a href="https://github.com/L33Z22L11/ExamClock/commit/1e9e39a6672bc0a9c8f8a97c67bcb537ad089793#diff-fdb1e09e7a1b99e9f2359b2319cbb2a5e61c9610a9b8e01e352b522493445490">添加</a> <a href="https://github.com/L33Z22L11/ExamClock/commit/d1f85ef69a1c9c1f2eda1adbc6efce1538bea986#diff-27ba309ad6a18de48fc23fc28eacfc376a3a44eb81601a4f7dacb32e15f4e7e7">移除</a></p></blockquote><p>1025天前，2020年8月13日，我拿到了录取通知书。</p><p>1016天前，2020年8月22日晚，我们坐在教室开了第一节班会。</p><p>1015天前，2020年8月23日中午，中午买饭的队伍好长，午睡醒来路上是兴奋的我们。</p><p>1014天前，2020年8月24日晚，在操场做队列训练。</p><p>969天前，2020年10月8日晚，学校80周年校庆真气派。</p><p>927天前，2020年11月29日，高二去春游了，羡慕。</p><p>614天前，2021年9月28日，运动会开幕式的《让我们荡起双桨》好有活力。</p><p>613天前，2021年9月29日晚，我要艺术节汉服社小哥哥的联系方式！</p><p>529天前，2021年12月22日，校门口人行横道被封了，难过。</p><p>451天前，2022年3月10日下午，我们和高一紧急离校上网课了。</p><p>365天前，2022年6月4日，高三走了，他们奔向了自己的前程。</p><p>247天前，2022年9月30日晚，DJ版校歌！</p><p>130天前，2023年1月25日晚，谁晚自习对着教学楼放烟花啊，可恶。</p><p>118天前，2023年2月6日晚，学校有元宵节烟花晚会欸！</p><p>96天前，2023年2月28日，成人礼！百日誓师！勇敢宝中人不怕困难！</p><p>43天前，2023年4月22日，三模了，我们之间话好像越来越少了。</p><p>3天前，2023年6月1日，高中生也要过六一！</p><p>1天前，2023年6月3日，做完了关门卷，今晚好像睡不着了。</p><p>今天是2023年6月4日，我们也即将要离开了。</p><p>我和宝中的故事，未完待续。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是2023年6月4日，2020级（2023届）离校时考试时钟页面上的彩蛋。&lt;br&gt;查看考试时钟原commit记录：&lt;a href=&quot;https://github.com/L33Z22L11/ExamClock/commit/1e9e39a6672</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一卷图库使用手册</title>
+    <link href="https://blog.thisis.host/monoroll/"/>
+    <id>https://blog.thisis.host/monoroll/</id>
+    <published>2023-01-20T08:48:01.000Z</published>
+    <updated>2023-01-31T00:45:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这是一卷图库的开发者文档&#x2F;教程。一卷图库内的图片均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></a>许可进行授权。</p></blockquote><script src="./load.js" onload="console.log(MG)"></script><pre id="MGInfo"></pre><script>document.getElementById("MGInfo").textContent = `name: ${MG.name}\ndescription: ${MG.description}\nlicense: ${MG.license}`</script><p>投稿QQ: 2399052066 (纸鹿)<br><a href="https://img.tg/album/54wL">在线预览(由Imgtg托管)</a></p><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>在HTML中插入如下代码,随后便可以执行图库相关功能。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://thisis.host/monoroll/load.js&quot;</span> <span class="attr">onload</span>=<span class="string">&quot;//你的功能&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>将需要执行的函数声明在<code>MGLoad()</code>中。</p><h2 id="绑定要应用背景的元素"><a href="#绑定要应用背景的元素" class="headerlink" title="绑定要应用背景的元素"></a>绑定要应用背景的元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">bgBind</span>(ele)</span><br></pre></td></tr></table></figure><p><code>ele</code>为DOM元素，如<code>document.documentElement、document.getElementById(&quot;main&quot;)</code>等。<br>绑定要应用背景的元素时，会自动给该元素设置背景居中、背景自适应缩放属性，如果不需要，请传入一个非真的值作为第二个参数，例如：<code>MG.bgBind(ele, false)</code>。</p><h2 id="绑定要输出图片信息的元素"><a href="#绑定要输出图片信息的元素" class="headerlink" title="绑定要输出图片信息的元素"></a>绑定要输出图片信息的元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">infoBind</span>(ele)</span><br></pre></td></tr></table></figure><p><code>ele</code>为DOM元素，如<code>document.getElementById(&quot;bgInfo&quot;)</code>等。被绑定的元素用于输出图片信息。</p><h2 id="设置背景的几种方式"><a href="#设置背景的几种方式" class="headerlink" title="设置背景的几种方式"></a>设置背景的几种方式</h2><p>绑定应用背景的元素、要输出图片信息的元素后，就可以设置背景了。</p><h3 id="根据索引位置（数组下标）设置"><a href="#根据索引位置（数组下标）设置" class="headerlink" title="根据索引位置（数组下标）设置"></a>根据索引位置（数组下标）设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBg</span>(index)</span><br></pre></td></tr></table></figure><p>特别地，<code>index</code>为负时，索引会从末端倒数。</p><h3 id="随机设置"><a href="#随机设置" class="headerlink" title="随机设置"></a>随机设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setRandBg</span>()</span><br></pre></td></tr></table></figure><p>函数的唯一参数<code>alpha</code>默认为1，表示随机是均匀的。它应该是大于零的实数，推荐范围在0.1 ~ 2，值越小则越倾向于较小的索引（老图），反之则越倾向于较大的索引（新图）。</p><h3 id="通过图片唯一标识符（图片ID）设置"><a href="#通过图片唯一标识符（图片ID）设置" class="headerlink" title="通过图片唯一标识符（图片ID）设置"></a>通过图片唯一标识符（图片ID）设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBgByPicId</span>(yyMMNN)</span><br></pre></td></tr></table></figure><p>参数<code>yyMMNN</code>是格式为yyMMNN的图片唯一标识符（图片ID），其中yy为两位数的年份，MM为两位数的月份，NN为月份内图片索引。例如，<code>211101</code>指2021年11月的第1张图片。</p><h3 id="通过图片期数设置"><a href="#通过图片期数设置" class="headerlink" title="通过图片期数设置"></a>通过图片期数设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">MG</span>.<span class="title function_">setBgByIssue</span>(yyMM)</span><br></pre></td></tr></table></figure><p>参数<code>yyMM</code>是格式为yyMM的图片期数（即图片ID前四位，格式参见上一项），这样会随机设置此期内的一张图片作为背景。</p><h2 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h2><pre id="MGTechDetails"><a onclick="this.parentElement.textContent=`\/\/ 压缩的gallery.json源文件索引0样例\n${JSON.stringify(Object.values(MG.pic[0]))}\n\/\/ load.js引入后MG.pic[0]样例\n${JSON.stringify(MG.pic[0])}`">点击加载样例</a></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是一卷图库的开发者文档&amp;#x2F;教程。一卷图库内的图片均采用&lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh&quot;&gt;CC BY-NC-SA 4.0&lt;/a&gt;&lt;/a&gt;许</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://blog.thisis.host/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TECHYES 22Q3在线解密活动</title>
+    <link href="https://blog.thisis.host/202209/puzzle-22q3/"/>
+    <id>https://blog.thisis.host/202209/puzzle-22q3/</id>
+    <published>2022-09-14T10:08:00.000Z</published>
+    <updated>2022-09-19T13:01:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>野生技协在线解密活动：TECHYES 22Q3已开启前瞻</p><p>上一季活动回顾：<a href="https://www.bilibili.com/video/BV1bT4y1U7gH">https://www.bilibili.com/video/BV1bT4y1U7gH</a><br>本次活动地址：████.thisis.host</p><p>本次活动已开启前半部分，不建议公开交流解题思路</p><blockquote><p>注意：此处的链接信息已经过期，相关页面可以去 <a href="https://demo.zhilu.cyou/22q3/">https://demo.zhilu.cyou/22q3/</a> 查看。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;野生技协在线解密活动：TECHYES 22Q3已开启前瞻&lt;/p&gt;
+&lt;p&gt;上一季活动回顾：&lt;a href=&quot;https://www.bilibili.com/video/BV1bT4y1U7gH&quot;&gt;https://www.bilibili.com/video/BV1bT4y1</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022高考理化生各科成绩计算器</title>
+    <link href="https://blog.thisis.host/gkzh/"/>
+    <id>https://blog.thisis.host/gkzh/</id>
+    <published>2022-06-23T16:00:00.000Z</published>
+    <updated>2022-06-23T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>仅适用于2022年陕西理科高考，请仔细核对信息。</p><p>我们不会存储任何个人信息，如有需要请联系QQ:2399052066(纸鹿)。</p></blockquote><p>请先到<a href="http://sneac.com/ksfw/lqcx.htm">陕西招生考试信息网</a>查询你的高考各科各题得分，然后填写以下信息：</p><!-- <select id="subjectType" onchange="setType(+this.value)" style="font-size:1em">  <option value="0">文科</option>  <option value="1">理科</option></select> --><h3 id="选择题答案序列"><a href="#选择题答案序列" class="headerlink" title="选择题答案序列"></a>选择题答案序列</h3><p>请在下面的文本框中输入你的选择题答案序列，使用英文逗号分隔各选项，例如：A,B,C,D,A,B,C,D,A,B,C,D。</p><p contenteditable id="str1" style="padding:.5em;border:1px solid #3af;border-radius:.5em"></p><h3 id="非选择题得分序列"><a href="#非选择题得分序列" class="headerlink" title="非选择题得分序列"></a>非选择题得分序列</h3><p>请在下面的文本框中输入你的非选择题得分序列，使用英文逗号分隔各题得分，例如：10.0,9.0,8.0,7.0,6.0,5.0。</p><p contenteditable id="str2" style="padding:.5em;border:1px solid #3af;border-radius:.5em"></p><h3 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h3><p><a href="javascript:resolve();"><i class="fa-solid fa-calculator"></i>点击计算各科得分</a></p><p><strong id="result"></strong></p><!-- ### 相关信息<p class="dim" id="typeInfo"></p> --><script src="/static/gkzh-calc.js"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;仅适用于2022年陕西理科高考，请仔细核对信息。&lt;/p&gt;
+&lt;p&gt;我们不会存储任何个人信息，如有需要请联系QQ:2399052066(纸鹿)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;请先到&lt;a href=&quot;http://sneac.com/ksf</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://blog.thisis.host/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>野生技协22Q2解密</title>
+    <link href="https://blog.thisis.host/202203/puzzle-22q2/"/>
+    <id>https://blog.thisis.host/202203/puzzle-22q2/</id>
+    <published>2022-03-17T12:39:00.000Z</published>
+    <updated>2022-04-01T11:45:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从考试时钟exam.cooo.site出发，在每个页面内寻找前往下一站的网址，根据userid生成的appkey，在给定页面提交最终的flag（基本不需要网安知识）。</p><p>预计用时：3 ~ 30min<br>活动时间：2022年3月17日19:45~4月1日19:45<br>复盘讲解：2022年4月1日19:45（内容简单，可以对比看看自己是否用了更高级的思路）</p><p><a href="https://www.bilibili.com/video/BV1bT4y1U7gH/">野生技协22Q2解密复盘 - 哔哩哔哩</a></p>    <div class="tag-plugin video" style="aspect-ratio:1.7777777777777777;max-width:100%;">    <iframe src="https://player.bilibili.com/player.html?bvid=BV1bT4y1U7gH&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">    </iframe>    </div>    <details class="tag-plugin colorful folding" ><summary><span>野生技协22Q2解密活动复盘</span></summary><div class="body"><p>0x00 exam.cooo.site 右下角提示“22q2.这是.主机”</p><p>0x01 22q2.thisis.host 按照提示操作，拿到搜索引擎查询字符串，打开第一个搜索结果</p><p>0x02 exam.thisis.host 右下角提示“事不过三”，点击三次“考试时钟按钮”，进入解密页面</p><p>0x03 exam.cooo.site&#x2F;?type&#x3D;sp-22q2 显示“科目3”，进入调试模式查找前两个科目</p><p>发现appkey入口(22q2.thisis.host&#x2F;whatsyourname)和flag入口(22q2.thisis.host&#x2F;heresurflag)</p><p>0x04 22q2.thisis.host&#x2F;whatsyourname 页面显示Base64编码，解密内容为“.&#x2F;generate.html”，打开</p><p>0x05 22q2.thisis.host&#x2F;whatsyourname&#x2F;generate.html 自己起一个userid(不支持中文)，拿到appkey</p><p>0x06 22q2.thisis.host&#x2F;heresurflag 按提示输入appkey，解答网页提出的数学计算题，拿到flag</p><p>注：由于调整电脑时间后无法访问https页面，所以另辟他径进入“去年愚人节这天的考试时钟”</p><p>0x07 exam.cooo.site&#x2F;?type&#x3D;2021-04-01 进入后点击“提交flag”，提交flag即完成22Q2解密活动</p></div></details><blockquote><p>注意：此处的链接信息已经过期，相关页面可以去 <a href="https://demo.zhilu.cyou/22q2/">https://demo.zhilu.cyou/22q2/</a> 查看。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;从考试时钟exam.cooo.site出发，在每个页面内寻找前往下一站的网址，根据userid生成的appkey，在给定页面提交最终的flag（基本不需要网安知识）。&lt;/p&gt;
+&lt;p&gt;预计用时：3 ~ 30min&lt;br&gt;活动时间：2022年3月17日19:45~4月1日19:</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>野生技协公开信：关于宝中舆情、疫情。</title>
+    <link href="https://blog.thisis.host/202203/open-letter-epidemic-2022/"/>
+    <id>https://blog.thisis.host/202203/open-letter-epidemic-2022/</id>
+    <published>2022-03-10T16:00:00.000Z</published>
+    <updated>2022-03-10T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>各位技协er：</p><p>　　外面有无数双眼睛盯着宝中。</p><p>　　3月10日，从中心广场一侧，有居民拍摄到了宝中学生不戴口罩踢毽子的画面。在我看来，外界所批评的是，在宝鸡疫情紧张时期，学生竟不戴口罩，且不保持“一米安全距离”，在人员密集的学校，很可能酿成危险。只怕他们若看到放学去食堂路上的人流，担忧会更重吧。</p><p>　　外界、学校、年级、老师、学生各有各的看法。</p><p>　　比如学校为了保证走读生的安全，曾要求在中午放学20分钟内离开学校。我曾听见年级主任与校方（学生发展处）通电话：“有的学生要在学校买午饭，排队都够呛！”几天后，学校通报了中午放学后20分钟后未出校的走读生名单，引发了学生的讨论。这是去年的事情，但知道细节的人不多。</p><p>　　老师在3月11日凌晨被通知搬进学校居住，收拾了约两个小时。他们按照防疫要求做出了牺牲，但在白天上课时看到学生上课进行照旧，没有一点改变，心里恐怕也不好受。</p><p>　　学生很少会考虑各方面的形势及产生原因，他们的感受是直接的，需要尽可能少的生活变动，以维持他们平日里形成的高效规律生活。任何要求都可能影响一部分学生的安排，引起议论是难免的事。</p><p>　　总之愿疫情早日过去，生活变得从容。</p><p>野生技协<br>2022年3月11日</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;各位技协er：&lt;/p&gt;
+&lt;p&gt;　　外面有无数双眼睛盯着宝中。&lt;/p&gt;
+&lt;p&gt;　　3月10日，从中心广场一侧，有居民拍摄到了宝中学生不戴口罩踢毽子的画面。在我看来，外界所批评的是，在宝鸡疫情紧张时期，学生竟不戴口罩，且不保持“一米安全距离”，在人员密集的学校，很可能酿成危险。</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>野生技协2021总结海报</title>
+    <link href="https://blog.thisis.host/202112/summary-2021/"/>
+    <id>https://blog.thisis.host/202112/summary-2021/</id>
+    <published>2021-12-26T04:24:49.000Z</published>
+    <updated>2021-12-26T04:24:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tag-plugin image"><div class="image-bg"><img src="https://7.isyangs.cn/24/65bd0acea8b85-24.png" data-fancybox="true"/></div></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin image&quot;&gt;&lt;div class=&quot;image-bg&quot;&gt;&lt;img src=&quot;https://7.isyangs.cn/24/65bd0acea8b85-24.png&quot; data-fancybox=&quot;true&quot;/&gt;&lt;/div&gt;&lt;/di</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>他修电脑又遇到了我 - FB3</title>
+    <link href="https://blog.thisis.host/202112/fb3/"/>
+    <id>https://blog.thisis.host/202112/fb3/</id>
+    <published>2021-12-05T03:03:00.000Z</published>
+    <updated>2024-02-16T07:52:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="https://mp.weixin.qq.com/s/MT7HRrfd3hUfnC7zegFbQQ">查看原文</a></p><p>得益于<span class="font-sht">野生技协</span>，各班电教委员提升了技术求助、解决问题的效率。问中提到的问题也不算是电脑问题吧，可能就是设备寿命到了，最终在2024年1月25日，教学一体机得以更换升级。</p></blockquote><p>两个月前的下午，文科五班的L找到了我。</p><p>“纸鹿，我们班电脑出问题了，屏幕颜色特别亮，而且鼠标和触摸都失灵了。你能不能过来看一下？”</p><p>不排除是系统问题，所以提着我的移动硬盘在自习课时去了。</p><p>进到五班，里面早已站着一个熟悉的人影。</p><p>“凤老师，好巧，在修电脑？”</p><p>上一次写了一篇传阅率很高的《<a href="/202104/fb1/">电脑是你修坏的吗</a>》，发到学校技术群以后，一片“哈哈哈”，气氛好不快活。因此这次见到老熟人，还是很愉快的。</p><p>简单看了一下电脑问题，一个是触摸一体机老化以后常见的配置偏移，改回一项设置就能恢复鼠标使用；另一个是一体机老化以后对电脑模块的识别异常，在这台机子上表现为画面轮廓不清晰，色彩过度饱和，可能需要整机返厂维修。</p><p>“凤老师，好了。鼠标和键盘现在能用了，至于画面图像，属于一体机问题，可能得返厂修。我给您演示，您看。”</p><p>“诶别急，现在装的是另一个电脑模块，不是他们班电脑。我问一体机客服呢，你等一下。”</p><p>当时，我眼睛里充满了大写的疑惑，并感到十分不理解。但想起先前的经历，再加上学校技术群的群友的讲述，我便释然了。</p><p>等到他反应过来，把五班原来的电脑模块装回一体机，我稍微整理了一下言辞，就开始倒水了：“老师，最近这种情况在咱学校还是很常见的，您在其他班可能已经遇到过，解决办法是……来到这个班，一眼就看出来是相同问题，更正这个设置就能解决。”</p><p>似戳到了他的痛处，头一抬，眼镜映着屏幕过分饱和的蓝色壁纸，放下手中和一体机客服的对话，顿了下：“你这么厉害，干脆不要学习了，就当一体机客服就行了！”</p><p>我觉察到自己先前的言语不对，没有继续说话。</p><p>五班的空气似乎能拧出沉默来。</p><p>“那就这样，屏幕图像色彩的问题就劳烦您继续检查了。沈老师（班主任）再见！”</p><p>我离开教室的那一秒，掌声和欢呼声窜出了教室，身后也许弥漫着阴沉。</p><p>……</p><p>几个月后，在见我好姐妹时，他们班一群人围住了我。“帅哥，你会调整一体机吗？上次他装卸电脑模块时动过一体机位置，上课时左边被黑板挡住，视角太差了！”</p><p>我试着搬了一下，挺沉，这次他们班得找凤老师了。</p><blockquote><p>后续：</p><p>不久之后，我又路过了高三五班教室，他们班的推拉式黑板内嵌的一体机位置依旧。由于在这之间我有了调整一体机位置的经验，所以我不算费力地把一体机搬到了黑板内的正中间。</p><p>呼——好事做到底了。(擦擦额头上并不存在的汗)</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/MT7HRrfd3hUfnC7zegFbQQ&quot;&gt;查看原文&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;得益于&lt;span class=&quot;font-sht&quot;&gt;野生技协&lt;/span&gt;，各班电教委员提升了技</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://blog.thisis.host/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>野生技协交流群关于近期某些不稳定事件的说明</title>
+    <link href="https://blog.thisis.host/202110/device-announcement/"/>
+    <id>https://blog.thisis.host/202110/device-announcement/</id>
+    <published>2021-10-27T16:00:00.000Z</published>
+    <updated>2021-10-27T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>野生技协是纸鹿创建的、长期在宝中活跃的技术交流群，我们关注技术动向，观察班级智能教学设备工作情况，并提出技术方案，至今发布了多个项目，如电子课本站、考试时钟、班牌PPT模板等。</p><p>我们近期注意到，有部分班级安装了非希沃官方的系统镜像，或使用一些手段脱离了学校集控系统，我们对此种行为表示反对和抵制。有部分班级通过一些方法关闭了希沃冰点还原，但保证集控系统正常运行，学校管理员能随时远程启用冰点还原，我们对此种行为持中立态度。</p><p>特别地，在交流群内，有成员发布了希沃管理员密码查看程序(上传不久后失效)，有成员公布了管理员密码“751222”、“00000”(密码已更改)，我们及时做了引导，给出了在开启冰点还原下保证系统满足日常使用的方法，防止反复、长时间解除冰点还原，而导致系统安全风险的增加。</p><p>我作为“野生技协”的群主，深刻地认识到许多事件的不可控性，本人从未在群内公布过学校管理员密码，从未在群内公布过我发布的希沃冰点还原操作工具的解冻关键字，从未在群里上传过希沃官方的免密解冻程序，从未使校内任何一台电脑脱离学校集控系统，本人从未支持任何成员使用非希沃官方的系统镜像，从未支持任何成员使一体机脱离集控系统。我所做的，只是发布一些常识、教程，引导成员规范、有序保证教学设备正常运行。</p><p>毕竟，“野生技协”里，只有少数人是部分班级的电教管理员。</p><p>另外，多台一体机内存条老化，会导致程序卡死、关机不正常，该换换了。</p><p>“野生技协”交流群　纸鹿<br>2021年10月28日</p><blockquote><p>2024年1月25日，终于具备更换新设备的条件了，参见<a href="/202401/device-upgrade.md">宝鸡中学更新一体机使用相关说明</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;野生技协是纸鹿创建的、长期在宝中活跃的技术交流群，我们关注技术动向，观察班级智能教学设备工作情况，并提出技术方案，至今发布了多个项目，如电子课本站、考试时钟、班牌PPT模板等。&lt;/p&gt;
+&lt;p&gt;我们近期注意到，有部分班级安装了非希沃官方的系统镜像，或使用一些手段脱离了学校集控</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021年9~10月维修需求记录</title>
+    <link href="https://blog.thisis.host/202110/device-repair/"/>
+    <id>https://blog.thisis.host/202110/device-repair/</id>
+    <published>2021-10-27T16:00:00.000Z</published>
+    <updated>2021-10-27T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>日期</th><th>班级</th><th>问题</th><th>结果</th></tr></thead><tbody><tr><td>9月17日 五</td><td>2230</td><td>前面板键鼠、触控失灵</td><td>修好部分，找凤斌</td></tr><tr><td>9月21日 二</td><td>2205</td><td>前面板键鼠、触控失灵</td><td>凤斌在场，已修好</td></tr><tr><td>9月25日 六</td><td>2407</td><td>缺必要软件，影响使用</td><td>已解冻</td></tr><tr><td>9月26日 日</td><td>2211</td><td>网络无法连接</td><td>网线问题，找吕超</td></tr><tr><td>10月2日 六</td><td>2226</td><td>前面板键鼠、触控失灵</td><td>修好部分，找凤斌</td></tr><tr><td>10月6日 三</td><td>2230</td><td>缺必要软件，影响使用</td><td>已解冻</td></tr><tr><td>10月8日 五</td><td>2221</td><td>WiFi无法使用</td><td>侧面天线断触，找吕超</td></tr><tr><td>10月12日 二</td><td>2217</td><td>WiFi无法使用</td><td>侧面天线松动，已拧好</td></tr><tr><td>10月14日 四</td><td>2222</td><td>机械硬盘+冰点还原卡顿，要求解冻</td><td>已解冻</td></tr><tr><td>10月14日 四</td><td>2308</td><td>缺必要软件，影响使用</td><td>已解冻</td></tr><tr><td>10月20日 三</td><td>2226</td><td>前面板键鼠、触控失灵</td><td>已修好</td></tr><tr><td>10月20日 三</td><td>2216</td><td>希沃白板、展台升级，快捷方式失效</td><td>解冻后设置</td></tr><tr><td>10月22日 五</td><td>2201</td><td>部分软件设置异常</td><td>解冻后设置</td></tr><tr><td>10月22日 五</td><td>2202</td><td>要求解冻</td><td>回绝</td></tr><tr><td>10月22日 五</td><td>2202</td><td>缺必要软件，要求解冻</td><td>已解冻</td></tr><tr><td>10月25日 一</td><td>2214</td><td>WiFi热点配置异常</td><td>解冻后配置</td></tr><tr><td>10月26日 二</td><td>2230</td><td>部分软件设置异常</td><td>解冻后设置</td></tr><tr><td>10月27日 三</td><td>2216</td><td>多个程序频繁卡死，无法结束</td><td>内存条问题，凤斌不在</td></tr><tr><td>10月28日 四</td><td>2219</td><td>缺必要软件，要求解冻</td><td>得知要装WPS，劝其慎重</td></tr></tbody></table><div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header">2021年8月</div><div class="body fs14"><p>有人传播“希沃密码破解工具”，有人传播密码“751222”和“000000”</p></div></div><div class="timenode" index="1"><div class="header">2021年9月中旬</div><div class="body fs14"><p>密码字段更改，破解工具失效，“冰点还原操作工具”的使用方法泄漏</p></div></div><div class="timenode" index="2"><div class="header">2021年10月中旬</div><div class="body fs14"><p>有人二次发现官方免密解冻程序并大量在无需求、无班主任授权下解冻</p></div></div></div><p>本人从未在野生技协群内公布管理员密码，“冰点还原操作工具”的解冻关键字、官方免密解冻程序。</p><p>操作解冻均为班主任直接或间接要求，且询问过原因，并告知其需要及时汇报给学校信息中心。</p><p>野生技协　纸鹿<br>2021年10月28日</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;班级&lt;/th&gt;
+&lt;th&gt;问题&lt;/th&gt;
+&lt;th&gt;结果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;9月17日 五&lt;/td&gt;
+&lt;td&gt;2230&lt;/td&gt;
+&lt;td&gt;前面板键鼠、触控失</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>考试时钟的升级打怪攻略 (2021)</title>
+    <link href="https://blog.thisis.host/202110/exam-update-2021/"/>
+    <id>https://blog.thisis.host/202110/exam-update-2021/</id>
+    <published>2021-09-30T16:00:00.000Z</published>
+    <updated>2021-09-30T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>文中图片较多，建议<a href="https://mp.weixin.qq.com/s/5yjgVwLOTYRhmXWOmBalOA">查看原文</a></p></blockquote><blockquote><p>考试时钟是宝鸡中学各年级相互借鉴学习的产物。2021年3月19日，为照顾看不清挂钟的学生，2020级要求在考试时在班级一体机上展示时间。2021年3月23日。2019级年级张主任询问我是否可以为考试制作科目倒计时。历经几天时间，考试时钟在2019级的大型考试上与大家见面了，随后它又经过了几次升级、界面变化，如2021年4月26日使用了卡片排版。2021年6月25日，考试时钟受到2020级几名电教管理员的推荐，开始在2020级大型考试上使用。2021年8月1日，考试时钟被外部机构“借用”一次。2021年9月18日，考试时钟支持手动添加一场科目。在这期间，我学到了许多知识，也十分感谢各位的支持。</p><p>野生技协TECHYES群公告</p></blockquote><p>（感谢田雨杉宝中分杉对本栏目的大力支持。）</p><p>我没有JS基础，但我上路了。</p><div class="tag-plugin link dis-select"><a class="link-card plain" title="考试时钟" href="https://exam.thisis.host" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">考试时钟</span><span class="cap link footnote">https://exam.thisis.host</span></div><div class="right"><div class="lazy img" data-bg="https://exam.thisis.host/favicon.ico"></div></div></a></div><h2 id="01-“沉着冷静-诚信考试”"><a href="#01-“沉着冷静-诚信考试”" class="headerlink" title="01 “沉着冷静 诚信考试”"></a>01 “沉着冷静 诚信考试”</h2><p>曾经有学生使用开发者工具修改了这行字。</p><p>当我得知这个消息时，很难说清楚是什么滋味。考试时钟剩下的主体部分都是自动更新的，使用一般的方法修改过也能自动恢复。</p><p>后来，我禁用了右键和键盘，勉强不让学生调出开发者工具。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">oncontextmenu = onkeydown = onselectstart = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="02-“高一”"><a href="#02-“高一”" class="headerlink" title="02 “高一”"></a>02 “高一”</h2><p>文理分科，同时考试，但是生物的考试时间减到了90分钟。原本我是使用两个网页的，但我还想把它们整合在一起。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片：下拉菜单中选择不同年级文/理科的考试</span><br></pre></td></tr></table></figure><p>对于我一个技术小白来说，需要一定的时间，后来索性高二高三文科理科全部都上了，反正功能写好，添加其他年级类型都是一行代码的事，造好轮子就能好好玩了。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">change</span>(<span class="params">totype</span>) &#123;</span><br><span class="line">    <span class="comment">// 切换类型时需要重新初始化的内容</span></span><br><span class="line">    now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    end = <span class="number">0</span>, progress = <span class="number">0</span>, order = <span class="number">0</span>;</span><br><span class="line">    today = <span class="title function_">fixDigit</span>(now.<span class="title function_">getMonth</span>() + <span class="number">1</span>) + <span class="string">&quot;-&quot;</span> + <span class="title function_">fixDigit</span>(now.<span class="title function_">getDate</span>());</span><br><span class="line"></span><br><span class="line">    type = totype;</span><br><span class="line">    <span class="comment">// console.log(type);</span></span><br><span class="line">    <span class="title function_">output</span>(<span class="string">&quot;type&quot;</span>, type);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 切换类型的对焦动画</span></span><br><span class="line">    eleMain.<span class="property">style</span>.<span class="property">filter</span> = <span class="string">&quot;blur(.5em)&quot;</span>;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        eleMain.<span class="property">style</span>.<span class="property">filter</span> = <span class="string">&quot;blur(0)&quot;</span>;</span><br><span class="line">        <span class="title function_">updateTime</span>();</span><br><span class="line">    &#125;, <span class="number">500</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当高一入学时，我去了一趟高一年级部，向他们推荐了这个作品。</p><p>他们的反应不很正常。先是问我是不是学生会的，又问我属于哪个社团，最后还问考试时钟的控制中心在哪。</p><p>从属？是那只有百来人的学校技术交流群，还是2019级年级直属？都和考试时钟不太相属。</p><p>在哪？是我那装有系统的移动硬盘里，或是大洋之外GitHub的机房里？听起来都很不合理。</p><p>高一年级主任来了，他问：“考试时为什么要用这个？”</p><p>我如实回答：“这是年级之间相互借鉴学习的产物，2020级最先安排考试时屏幕上展示时间，随后……”</p><p>说明白了，不就是内卷嘛。<br>切换到“高一”时，考试时钟上还是那行字，“高一暂未启用考试时钟”。</p><h2 id="03-“-临时”"><a href="#03-“-临时”" class="headerlink" title="03 “+ 临时”"></a>03 “+ 临时”</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片：网页操作，临时添加一门考试</span><br></pre></td></tr></table></figure><p>这个功能的出现，来源于8月份的一个需求。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Z:</span> <span class="string">您好，我这边有人想借用一下您的考试时钟（https://exam.thisis.host）做一个自我测验，想问一下您可以帮忙调试一下吗，或者给我说一下调试的方法，可以吗？谢谢</span></span><br><span class="line"><span class="string">我:</span> <span class="string">有无时间数据</span></span><br><span class="line"><span class="attr">Z:</span> <span class="string">稍等一下，我问问</span></span><br><span class="line"><span class="attr">Z:</span> <span class="string">物理，12:00~1:00</span></span><br><span class="line"><span class="attr">Z:</span> <span class="string">您看可以吗？</span></span><br><span class="line"><span class="string">我:</span> <span class="string">提前20分钟入场，提前10分钟发答题卡，提前5分钟发卷已经写死到程序里了，不影响吧</span></span><br><span class="line"><span class="attr">Z:</span> <span class="string">不影响，感谢</span></span><br><span class="line"><span class="string">我:</span> <span class="string">多刷新几次就好了</span></span><br></pre></td></tr></table></figure><p>调试的路已经被堵得差不多了，不好操作，当然我得亲自在后台添加科目了。</p><p>9月份，考试时钟终于支持添加临时科目了。这当然只是在尝试与学习技术而已。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">setTemp</span>(<span class="params">sh, sm, eh, em</span>) &#123;</span><br><span class="line">    sh = <span class="title function_">prompt</span>(<span class="string">&quot;考试开始时间所在的小时&quot;</span>, <span class="number">17</span>);</span><br><span class="line">    sm = <span class="title function_">prompt</span>(<span class="string">&quot;考试开始时间所在的分钟&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    eh = <span class="title function_">prompt</span>(<span class="string">&quot;考试结束时间所在的小时&quot;</span>, <span class="number">18</span>);</span><br><span class="line">    em = <span class="title function_">prompt</span>(<span class="string">&quot;考试结束时间所在的分钟&quot;</span>, <span class="number">0</span>);</span><br><span class="line">    $(<span class="title function_">prompt</span>(<span class="string">&quot;考试科目名称&quot;</span>, <span class="string">&quot;临时&quot;</span>),</span><br><span class="line">        today + <span class="string">&quot;T&quot;</span> + <span class="title function_">fixDigit</span>(sh) + <span class="string">&quot;:&quot;</span> + <span class="title function_">fixDigit</span>(sm),</span><br><span class="line">        today + <span class="string">&quot;T&quot;</span> + <span class="title function_">fixDigit</span>(eh) + <span class="string">&quot;:&quot;</span> + <span class="title function_">fixDigit</span>(em));</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;考试科目：&quot;</span> + subject + <span class="string">&quot;\n起止时间：&quot;</span></span><br><span class="line">        + <span class="title function_">getClock</span>(start) + <span class="string">&quot;~&quot;</span> + <span class="title function_">getClock</span>(end));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="04-“设置”"><a href="#04-“设置”" class="headerlink" title="04 “设置”"></a>04 “设置”</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片：文字缩放设置，文字亮度设置</span><br></pre></td></tr></table></figure><p>出于美观，时钟没有采用等宽字体，曾经出现过晚上“20:00”卡片膨胀到两行的情况；考试时有人觉得字体白色过于亮眼，有人喊反光看不清时间。最后也是为尝试与学习技术，做出了这个功能。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;bi bi-aspect-ratio-fill&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>缩放</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;selectbar&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">&quot;relStyle(&#x27;fontSize&#x27;,-0.05,&#x27;em&#x27;,0.75,1.25)&quot;</span>&gt;</span>－<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;fontSize&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">&quot;relStyle(&#x27;fontSize&#x27;,+0.05,&#x27;em&#x27;,0.75,1.25)&quot;</span>&gt;</span>＋<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;dim&quot;</span>&gt;</span>非必要情况请勿修改缩放<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;bi bi-circle-half&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>对比度</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;selectbar&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">&quot;relStyle(&#x27;opacity&#x27;,-0.05,&#x27;&#x27;,0.5,1)&quot;</span>&gt;</span>－<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;opacity&quot;</span>&gt;</span>0.75<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">&quot;relStyle(&#x27;opacity&#x27;,+0.05,&#x27;&#x27;,0.5,1)&quot;</span>&gt;</span>＋<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;dim&quot;</span>&gt;</span>减少光干扰，视环境光设置<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><p>你没有看错，一个function可以同时改变两种样式。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">relStyle</span>(<span class="params">prop, delta, unit, minVal, maxVal</span>) &#123;</span><br><span class="line">    propVal = <span class="title class_">Number</span>(eleMain.<span class="property">style</span>[prop].<span class="title function_">replace</span>(unit, <span class="string">&quot;&quot;</span>)) + delta;</span><br><span class="line">    propVal = <span class="title class_">Math</span>.<span class="title function_">max</span>(propVal, minVal);</span><br><span class="line">    propVal = <span class="title class_">Math</span>.<span class="title function_">min</span>(propVal, maxVal);</span><br><span class="line">    eleMain.<span class="property">style</span>[prop] = propVal + unit;</span><br><span class="line">    <span class="comment">// 保留两位小数</span></span><br><span class="line">    <span class="title function_">output</span>(prop, <span class="title class_">Math</span>.<span class="title function_">round</span>(propVal * <span class="number">1E2</span>) / <span class="number">1E2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="05-“调试”"><a href="#05-“调试”" class="headerlink" title="05 “调试”"></a>05 “调试”</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片：进入调试模式（时间加速以进行考试科目检查）的提醒</span><br></pre></td></tr></table></figure><p>只是为了测试考试时间轮换是否正常而写出来的功能。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="title class_">String</span>(location).<span class="title function_">indexOf</span>(<span class="string">&quot;debug&quot;</span>) == -<span class="number">1</span>) &#123;</span><br><span class="line">    updateTime = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        <span class="comment">// 铃声校准</span></span><br><span class="line">        <span class="comment">// now.setMinutes(now.getMinutes() + 1);</span></span><br><span class="line">        <span class="title function_">output</span>(<span class="string">&quot;clock&quot;</span>, <span class="title function_">getClock</span>(now));</span><br><span class="line">        <span class="title function_">updateExam</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">setInterval</span>(updateTime, <span class="number">2000</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;已进入调试模式，关闭本页面可返回正常模式。&quot;</span>)</span><br><span class="line">    <span class="comment">// 调试模式初始时间</span></span><br><span class="line">    now = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&quot;2021-09-18T15:00+08:00&quot;</span>);</span><br><span class="line">    updateTime = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 最晚结束时间</span></span><br><span class="line">        now &gt; <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&quot;2021-09-20T19:00+08:00&quot;</span>) ? <span class="title function_">change</span>(type) : <span class="literal">null</span>;</span><br><span class="line">        <span class="comment">// 调试模式跳过夜晚</span></span><br><span class="line">        <span class="keyword">if</span> (now.<span class="title function_">getHours</span>() == <span class="number">19</span>) &#123;</span><br><span class="line">            now.<span class="title function_">setHours</span>(<span class="number">31</span>);</span><br><span class="line">            today = <span class="title function_">fixDigit</span>(now.<span class="title function_">getMonth</span>() + <span class="number">1</span>)</span><br><span class="line">                + <span class="string">&quot;-&quot;</span> + <span class="title function_">fixDigit</span>(now.<span class="title function_">getDate</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 调试模式速度设置</span></span><br><span class="line">        <span class="comment">// now.setMinutes(now.getMinutes() + 1);</span></span><br><span class="line">        now.<span class="title function_">setSeconds</span>(now.<span class="title function_">getSeconds</span>() + <span class="number">30</span>);</span><br><span class="line">        <span class="title function_">output</span>(<span class="string">&quot;clock&quot;</span>, <span class="title function_">getClock</span>(now));</span><br><span class="line">        <span class="title function_">updateExam</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">setInterval</span>(updateTime, <span class="number">20</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">updateTime</span>();</span><br></pre></td></tr></table></figure><h2 id="06-“屏保预警已关闭”"><a href="#06-“屏保预警已关闭”" class="headerlink" title="06 “屏保预警已关闭”"></a>06 “屏保预警已关闭”</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片：提醒“希沃管家可能在 x 分钟后弹出屏保（含古诗词、政史知识）”，带有“点击暂时关闭45分钟”的按钮。</span><br></pre></td></tr></table></figure><p>屏保嘛，这种东西在考试时蹦出来让人很不舒服。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">onload = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 希沃屏保剩余时间</span></span><br><span class="line">    <span class="variable constant_">SCREENSAVER_TIME</span> = <span class="number">45</span>;</span><br><span class="line">    <span class="title class_">String</span>(location).<span class="title function_">indexOf</span>(<span class="string">&quot;noscreensaver&quot;</span>) == -<span class="number">1</span> ?</span><br><span class="line">        <span class="built_in">setInterval</span>(updateSST, <span class="number">60000</span>) : <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">onmousemove = onmousedown = onkeydown</span><br><span class="line">    = <span class="keyword">function</span> (<span class="params"></span>) &#123; <span class="variable constant_">SCREENSAVER_TIME</span> = <span class="number">45</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 希沃屏保预警，2021-09屏保已经更换内容且被信息中心关闭</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">updateSST</span>(<span class="params"></span>) &#123;</span><br><span class="line">    eleSST = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;SSTBubble&quot;</span>);</span><br><span class="line">    <span class="variable constant_">SCREENSAVER_TIME</span> -= <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable constant_">SCREENSAVER_TIME</span> &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        eleSST.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;rgba(255,255,255,.2)&quot;</span>;</span><br><span class="line">        <span class="title function_">output</span>(<span class="string">&quot;SST&quot;</span>, <span class="string">&quot;已经&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable constant_">SCREENSAVER_TIME</span> &lt; <span class="number">10</span>) &#123;</span><br><span class="line">        eleSST.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&quot;flex&quot;</span>;</span><br><span class="line">        eleSST.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;#f52&quot;</span>;</span><br><span class="line">        <span class="title function_">output</span>(<span class="string">&quot;SST&quot;</span>, <span class="string">&quot;在&quot;</span> + <span class="variable constant_">SCREENSAVER_TIME</span> + <span class="string">&quot;分钟后&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        eleSST.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="07-“帮助”"><a href="#07-“帮助”" class="headerlink" title="07 “帮助”"></a>07 “帮助”</h2><blockquote><p>……<br>（不需要加任何前后缀）<br>鬼才案例：某考场访问http&#x2F;&#x2F;exam.thisis.host(错误的协议头拼写)、<a href="http://www.exam.thisis.host(错误的主机名)显示网站无法访问，后用其他网站代替了考试>时钟。">www.exam.thisis.host(错误的主机名)显示网站无法访问，后用其他网站代替了考试&gt;时钟。</a><br>……<br>鬼才案例：某班下载了此网页的快照到本地，并向其他班推荐此方法，考试时离线打开了快照而不是真正的考试时钟，错过在线升级，导致几个考场发生时间显示错误的事故，该班电教负全责。（相当于使用几天前的天气预报截图查询今日天气）<br>……</p></blockquote><p>如图，遇到的一些意想不到的事情。</p><h2 id="08-鸣谢"><a href="#08-鸣谢" class="headerlink" title="08 鸣谢"></a>08 鸣谢</h2><blockquote><p>图片：页脚：<br>开发：纸鹿 × 野生技协<br>特邀合作：……<br>友好社团：……<br>GitHub项目：……</p></blockquote><p>在接下任务，学习技术的过程中，我也认识了很多朋友，与许多社团建立了沟通与联系，这大约是我高中十分宝贵的经历。</p><p>当然了，点击“阅读原文”，你也可以访问到它如今的模样。也许就在一个小时后，某个角落还有一场考试呢。</p><p><a href="https://exam.thisis.host/">原文章内的“阅读原文”按钮</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;文中图片较多，建议&lt;a href=&quot;https://mp.weixin.qq.com/s/5yjgVwLOTYRhmXWOmBalOA&quot;&gt;查看原文&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;考试时钟是宝鸡中学各年级</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://blog.thisis.host/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于考试时钟</title>
+    <link href="https://blog.thisis.host/202108/exam-info/"/>
+    <id>https://blog.thisis.host/202108/exam-info/</id>
+    <published>2021-08-29T12:46:00.000Z</published>
+    <updated>2021-08-29T12:46:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>考试时钟是年级之间相互借鉴经验的产物。20级考试使用了“在线北京时间”网站，随后，19级联系我制作了考试时钟并报销了考试时钟在腾讯云的费用。</p><p>考试时钟被推荐到了20级（未产生额外开销），但21级没有使用的打算。我在不断学习的过程中完善了考试时钟系统，也积累了许多宝贵的经验。这只是一个小项目，后期应该不会升级服务器，也可能不再产生费用。</p><p>最后，感谢各位对项目的支持。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;考试时钟是年级之间相互借鉴经验的产物。20级考试使用了“在线北京时间”网站，随后，19级联系我制作了考试时钟并报销了考试时钟在腾讯云的费用。&lt;/p&gt;
+&lt;p&gt;考试时钟被推荐到了20级（未产生额外开销），但21级没有使用的打算。我在不断学习的过程中完善了考试时钟系统，也积累了许</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>考试时钟信息公示</title>
+    <link href="https://blog.thisis.host/202107/exam-notification/"/>
+    <id>https://blog.thisis.host/202107/exam-notification/</id>
+    <published>2021-07-24T08:39:04.000Z</published>
+    <updated>2021-07-24T08:39:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p>2019级年级部提出了关于“考试时间屏幕”的需求，野生技协迅速响应，成立了考试时钟项目组。<br>成员：纸鹿（QQ：2399052066）<br>域名注册：腾讯云<br>域名解析：DNSPod<br>项目托管：GitHub<br>网站发布：Vercel</p><h2 id="访问方法"><a href="#访问方法" class="headerlink" title="访问方法"></a>访问方法</h2><p>在浏览器地址栏输入exam.thisis.host（不需要加任何前后缀）访问。</p><blockquote><p>鬼才案例：某考场访问http&#x2F;&#x2F;exam.thisis.host(错误的协议头拼写)、<a href="http://www.exam.thisis.host(错误的主机名)显示网站无法访问,后用其他网站代替了考试时钟./">www.exam.thisis.host(错误的主机名)显示网站无法访问，后用其他网站代替了考试时钟。</a></p></blockquote><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>推荐使用Chrome、Edge、Firefox访问。<br>IE 9&#x2F;10&#x2F;11、QQ浏览器内核落后，不建议使用；<br>IE 8（2009年）或更早的浏览器无法加载。</p><h2 id="桌面保存"><a href="#桌面保存" class="headerlink" title="桌面保存"></a>桌面保存</h2><p>通过网页下方“保存到本地”按钮来获得快捷方式。<br>野生技协提供安装桌面图标服务（无需关闭开机还原）。</p><blockquote><p>鬼才案例：某班下载了此网页的快照到本地，并向其他班推荐此方法，考试时离线打开了快照而不是真正的考试时钟，错过在线升级，导致几个考场发生时间显示错误的事故，该班电教负全责。（相当于使用几天前的天气预报截图查询今日天气）</p></blockquote><h2 id="关于野生技协"><a href="#关于野生技协" class="headerlink" title="关于野生技协"></a>关于野生技协</h2><p>野生技协成立于2020年抗疫网课期间，是一个自发性的技术协助组织，旨在信息分享、交流与公开。我们先后发布了宝中网课APP（中庆云），建立了电子课本资源站，分享了经优化的电子班牌模板，开发了考试时钟，并长期志愿协助各班教学一体机维护，为各位技术同好的发展提供交流平台。目前我组织即将突破百人，成员分布于各年级班级和众多社团，为公众所熟知。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;项目简介&quot;&gt;&lt;a href=&quot;#项目简介&quot; class=&quot;headerlink&quot; title=&quot;项目简介&quot;&gt;&lt;/a&gt;项目简介&lt;/h2&gt;&lt;p&gt;2019级年级部提出了关于“考试时间屏幕”的需求，野生技协迅速响应，成立了考试时钟项目组。&lt;br&gt;成员：纸鹿（QQ：2399</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://blog.thisis.host/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+  </entry>
+  
+</feed>

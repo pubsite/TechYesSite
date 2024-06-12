@@ -1,0 +1,550 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
+  
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  
+  <title>Surface RT 保姆级新手上路 - 野生技协</title>
+
+  
+    <meta name="description" content="一、准备工作和下载，下述一个都不能少    另一台能够使用 Windows 和 Linux 的普通电脑    一个集线器    一个至少 16GB 的 microSD 卡，建议 64GB 为宜    一个读卡器    一个至少 16GB 的 U 盘（机械移动硬盘供电不够，不能用）    一个 USB 键盘，哪怕是三键的键盘都行    下载 Jail Break    下载 特制的树莓派系统镜像，约">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Surface RT 保姆级新手上路">
+<meta property="og:url" content="https://blog.thisis.host/202405/surface-rt-guide/">
+<meta property="og:site_name" content="野生技协">
+<meta property="og:description" content="一、准备工作和下载，下述一个都不能少    另一台能够使用 Windows 和 Linux 的普通电脑    一个集线器    一个至少 16GB 的 microSD 卡，建议 64GB 为宜    一个读卡器    一个至少 16GB 的 U 盘（机械移动硬盘供电不够，不能用）    一个 USB 键盘，哪怕是三键的键盘都行    下载 Jail Break    下载 特制的树莓派系统镜像，约">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-28T09:52:26.000Z">
+<meta property="article:modified_time" content="2024-05-30T06:08:44.000Z">
+<meta property="article:author" content="纸鹿">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="野生技协" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
+
+  
+    <link rel="shortcut icon" href="/static/favicon.ico">
+  
+
+  
+
+  <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="//blog.zhilu.cyou/static/patch.css" media="none" onload="this.media='all'"><link rel="stylesheet" href="/static/font.css">
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://p.qlogo.cn/gh/894656456/894656456/0/" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/blog"><div class="main" ff="title">野生技协</div><div class="sub normal cap">开放互助 活跃创新</div><div class="sub hover cap" style="opacity:0">做优质的自发性技术协助组织</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" title="导航" href="/"><i class='fa-solid fa-compass'></i></a><a class="nav-item active" title="博客" href="/blog"><i class='fa-solid fa-newspaper'></i></a><a class="nav-item" title="项目" href="/project"><i class='fa-solid fa-diagram-project'></i></a><a class="nav-item" title="域名" href="/site"><i class='fa-solid fa-sitemap'></i></a><a class="nav-item" title="伙伴" href="/friend"><i class='fa-solid fa-medal'></i></a><a class="nav-item" title="关于" href="/about"><i class='fa-solid fa-circle-info'></i></a></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/202405/surface-rt-guide/"><span class="title">Surface RT 保姆级新手上路</span></a><a class="item title" href="/202404/exam-update-2024/"><span class="title">考试时钟 V7 升级公告 (2024)</span></a><a class="item title" href="/202405/extra-lessons-banned-again/"><span class="title">五一不补课了</span></a><a class="item title" href="/202402/contribute-wanted/"><span class="title">博客升级说明 & 投稿征集公告</span></a><a class="item title" href="/202112/fb3/"><span class="title">他修电脑又遇到了我 - FB3</span></a><a class="item title" href="/202107/fb2/"><span class="title">修监控 - FB2</span></a><a class="item title" href="/202104/fb1/"><span class="title">电脑是你修坏的吗 - FB1</span></a><a class="item title" href="/202402/sentiment-early-lessons/"><span class="title">舆情观察：关于抖音视频“大型纪录片《宝鸡中学传奇》”</span></a><a class="item title" href="/202402/hclass-introduction/"><span class="title">Hclass 的前世今生</span></a><a class="item title" href="/202401/device-upgrade/"><span class="title">宝鸡中学更新一体机使用相关说明</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/blog">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/bingtangxh/">冰糖xh</a><span class="sep"></span><span class="text created"><time datetime="2024-05-28T09:52:26.000Z">2024-05-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-05-30T06:08:44.000Z">2024-05-30</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Surface RT 保姆级新手上路</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="一、准备工作和下载，下述一个都不能少"><a href="#一、准备工作和下载，下述一个都不能少" class="headerlink" title="一、准备工作和下载，下述一个都不能少"></a>一、准备工作和下载，下述一个都不能少</h2><ol>
+<li>   另一台能够使用 Windows 和 Linux 的普通电脑</li>
+<li>   一个集线器</li>
+<li>   一个至少 16GB 的 microSD 卡，建议 64GB 为宜</li>
+<li>   一个读卡器</li>
+<li>   一个至少 16GB 的 U 盘（机械移动硬盘供电不够，不能用）</li>
+<li>   一个 USB 键盘，哪怕是三键的键盘都行</li>
+<li>   下载 <a target="_blank" rel="noopener" href="https://jwa4.gitbook.io/windows/tools/surface-rt-and-surface-2-jailbreak-usb">Jail Break</a></li>
+<li>   下载 <a target="_blank" rel="noopener" href="https://files.open-rt.party/Linux/Distro/2023-10-10-raspios-bookworm-surface-rt-armhf-full.img.xz">特制的树莓派系统镜像</a>，约 2.8GB</li>
+<li>   下载安装树莓派系统烧录器</li>
+<li>   下载 <a target="_blank" rel="noopener" href="https://github.com/makuhlmann/grub-2.04-nokeymod/releases">特制的 GNU GRUB</a> 和我给的 <code>grub.cfg</code> <details class="tag-plugin colorful folding" child="codeblock"><summary><span>grub.cfg</span></summary><div class="body"><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">insmod ext2</span><br><span class="line"></span><br><span class="line">search --no-floppy --<span class="built_in">set</span>=root --file /EFI/Microsoft/Boot/boutmgfw.efi</span><br><span class="line"></span><br><span class="line">insmod font</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> gfxmode=1366x768</span><br><span class="line"><span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">insmod efi_gop</span><br><span class="line">insmod efi_uga</span><br><span class="line">insmod gfxterm</span><br><span class="line">terminal_output gfxterm</span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;How about we explore the area ahead of us later?&quot;</span></span><br><span class="line"></span><br><span class="line">loadfont /unicode.pf2</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;按音量键不会使GRUB2停止计时，你只有5秒钟。&quot;</span></span><br><span class="line"></span><br><span class="line">insmod png</span><br><span class="line"><span class="comment"># 这里就有一行注释掉的设置主题的指令，你取消注释直接用就行</span></span><br><span class="line"><span class="comment"># set theme=/theme/Manjaro/theme.txt</span></span><br><span class="line"><span class="built_in">export</span> theme</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> menu_color_normal=white/black</span><br><span class="line"><span class="built_in">set</span> menu_color_highlight=black/light-gray</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> <span class="built_in">timeout</span>=5</span><br><span class="line"><span class="built_in">set</span> default=3</span><br><span class="line"></span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p1）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p1 quiet rw rootwait console=tty0 cpuidle.off=1</span></span><br><span class="line">        linux /zImage root=/dev/mmcblk1p1 cpuidle.off=1</span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p2）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p2 quiet rw rootwait console=tty0 cpuidle.off=1</span></span><br><span class="line">        linux /zImage root=/dev/mmcblk1p2 cpuidle.off=1</span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Raspberry Pi（需mmcblk1p2,安静）&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">set</span> gfxpayload=keep</span><br><span class="line">        linux /zImage root=/dev/mmcblk1p2 quiet rw rootwait console=tty0 cpuidle.off=1</span><br><span class="line">        <span class="comment"># linux /zImage root=/dev/mmcblk1p2 cpuidle.off=1</span></span><br><span class="line">        devicetree /tegra30-microsoft-surface-rt-efi.dtb</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;Windows RT 8.1&quot;</span> &#123;</span><br><span class="line">        chainloader /EFI/Microsoft/Boot/boutmgfw.efi</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;重新启动&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;System rebooting...&quot;</span></span><br><span class="line">        reboot</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;关机&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;System shutting down...&quot;</span></span><br><span class="line">        halt</span><br><span class="line">&#125;</span><br><span class="line">menuentry <span class="string">&quot;从下一个卷启动&quot;</span> &#123;</span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></details></li>
+<li>   下载 Li_zip <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/bv1xs421w7ux">为 RT 打包整理的 appx</a> （可选的，如果不打算玩 RT 的应用就不要。通常要用这些软件，就要禁用 sppsvc，因为 sppsvc 会阻止运行侧载软件启动。而禁用 sppsvc 会导致 Windows 在此期间未激活，Office 也认为未激活。）<br>同时也要下载 <a target="_blank" rel="noopener" href="https://www.123pan.com/s/nu9rvv-ttrch.html">Li_zip 提供的 Product Policy Editor 和 Windows App Boss</a></li>
+<li>   下载 <a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv17483017">Signtool 和 RT Jail Break</a>（可选的，与 Jail Break 不同，这个是一些桌面应用程序）</li>
+<li>   一个能访问 archive.org 的环境或代理（可选，如果不需要额外下载 Windows 的开始屏幕等类似补丁，或者你的 Windows 系统当年已经安装这些更新，就不需要）</li>
+<li>   Surface RT 的原厂镜像。访问 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/surface-recovery-image">Surface 恢复映像下载</a>然后按照提示选择型号，输入序列号，下载原厂镜像。</li>
+<li>   如果你发现你的 C 盘是带锁的，即启用了设备加密，那么请以管理员身份打开命令提示符，输入 <code>manage-bde -off C:</code><br>此期间不会有进度条，如果想查看进度，可以输入<code> manage-bde -status C:</code><br>注意这个加密百分比应该是从 100% 往 0% 递减的，因为你是在“反加密”。当已加密百分比是 0 的时候，就说明解密完毕了。<br>你如果暂时不打算将其解密，那就要导出恢复密钥，以防发生意外使得 TPM 自动解锁失效，导致你无法进入 Windows 系统。在资源管理器中右键C盘，选择管理 BitLocker，然后点击“备份恢复密钥”将其备份到U盘，将来如果进不去系统了就可以在恢复环境中输入密钥，然后用那里的命令提示符输入上述指令解密。</li>
+</ol>
+<h2 id="二、开始突破"><a href="#二、开始突破" class="headerlink" title="二、开始突破"></a>二、开始突破</h2><ol>
+<li>   在正常电脑上操作：将 Jail Break 文件夹的所有文件都放到U盘里，让 <code>menu</code> 这个文件在 U 盘的根目录。</li>
+<li>   你可以这个时候把下载好的树莓派镜像写入到 microSD 卡里，在此期间继续以下步骤，统筹安排节省时间。<br>先将下载的 xz 文件解压，得到 img 文件。然后打开安装好的树莓派镜像烧录器 Raspberry Pi Imager，左边 Device 选 NO FILTERING，中间“系统”选择菜单最下面的 Use Custom，然后选择 img 镜像文件，右边“储存卡”选择你要存放树莓派系统的 microSD 卡。开始写入。<br>写入完毕后还会自动进行校验。当整篇文章完成后，你可以删除 bootfs 分区，用其他分区软件（例如 DiskGenius 或 KDE 分区管理器）在未划给 rootfs 分区（ext4 文件系统）的空间上新建一个 FAT32 分区，用来存放你个人的媒体和文档。</li>
+<li>   现在把集线器插到 RT 上，把实体键盘和U盘插到 RT 上。你的键盘必须有回车键。（RT 的自带键盘或者任何蓝牙键盘到时候都不能用）</li>
+<li>   在 RT 上，打开 U 盘，以管理员身份运行 Jail Break 的主菜单，等待出现界面后，输入<code>1</code>（Install Yahallo），按 Enter。</li>
+<li>   等待返回主界面，再按下<code>5</code>（set boot menu timeout），然后输入一个靠谱的数值，比如<code>10</code>，再按Enter。</li>
+<li>   现在USB口只留下U盘和键盘，别的都拔掉，重启 RT。在黑屏后立即按住音量减键。Surface 会从 U 盘启动。</li>
+<li>   看到出现 Windows Boot Manager 的黑白英文界面后，用键盘选择 install Golden Keys 。要求你同意协议，选 accept。你要是不同意的话你的目的达不成啊。（Golden Keys 的安装界面特殊适配，可以识别开始按钮，而启动菜单不行）注意，一旦正常进入 Windows 系统，那么 Golden Keys 很可能就会失效。对于此种情况（我就是），必须趁 Windows 没插手，立即再次长按音量减键，从 U 盘启动，然后用键盘选择 Install Yahallo，选了这个后 Surface 会不出现任何交互界面直接重启。这次会我用的 RT 还有一个逆天问题，长按音量减键进入 U 盘的界面时，它会检测到我按的音量减，于是焦点往下移动一格，然后默认倒计时停止。而这个界面你只有按音量键可以代替上和下方向键，开始按钮和电源按钮都起不到回车进入的作用，逆天吧！必须借助外接键盘，就为了按那么一个回车。而RT又只有一个 USB 口，所以得有集线器。</li>
+<li>   现在可以进入 Windows 系统了，运行 <code>msinfo32</code>，看看“安全启动状态”是不是关闭了。</li>
+<li>   如果已经关闭了安全启动，那就进行正式开始的步骤！<br>如果还是开着的，那只能清空内置硬盘重装系统了。先格式化 U 盘（U 盘必须格成 FAT32 文件系统），然后将之前下载的原厂镜像文件全部复制到 U 盘。将 Surface 从 U 盘启动，进入“疑难解答→高级选项→命令提示符”，依次输入：（<code>rem</code> 开头的是注释，无需输入）  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">diskpaRT</span><br><span class="line">list disk</span><br><span class="line"><span class="comment">rem （此时确认清楚哪个硬盘是内置硬盘，通常是0）</span></span><br><span class="line">sel disk <span class="number">0</span></span><br><span class="line">clean</span><br><span class="line"><span class="built_in">convert</span> gpt</span><br><span class="line">create par EFI size=<span class="number">500</span></span><br><span class="line"><span class="comment">rem （par和partition相同，sel和select相同）</span></span><br><span class="line"><span class="comment">rem （这里size的值应该不小于300）</span></span><br><span class="line">create par primary</span><br><span class="line">sel par <span class="number">2</span></span><br><span class="line">assign</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+现在 C 盘应该是未格式化的系统盘，试试输入 <code>c:</code> 按回车，如果提示“不包含可识别的文件系统”，那就输入 <code>format c: /q /fs:ntfs</code>。如果输入 <code>c:</code> 提示“系统找不到指定的驱动器。”就再试试别的盘符。<br>现在关掉命令提示符窗口，然后进入疑难解答，选择初始化电脑！<br>完了进 Windows RT 8.1 系统，设置完一切后，你需要从头开始再试一遍突破。</li>
+</ol>
+<h2 id="三、正式开始"><a href="#三、正式开始" class="headerlink" title="三、正式开始"></a>三、正式开始</h2><ol>
+<li>   现在回到正常电脑，按照网络上<a target="_blank" rel="noopener" href="https://openrt.gitbook.io/open-surfaceRT/surface-RT/linux/kernel/prebuilt-binaries">这篇文章</a>的方法处理 bootfs 分区中的文件。<br>你应该替换了下述文件：<ul>
+<li><code>startup.nsh</code></li>
+<li><code>zImage</code></li>
+<li><code>acpiviewapp.efi</code></li>
+<li><code>bootarm.efi</code><br>（不同的 <code>bootarm.efi</code> 可指向不同的启动项目，如树莓派系统，微软恢复环境，Yahallo 等，参见<a target="_blank" rel="noopener" href="https://wiki.ubuntu.com/arm/surfaceRT">此处</a>）</li>
+</ul>
+</li>
+<li>   打开 bootfs 分区，找到 <code>\EFI\boot\bootarm.efi</code>，把它改名，例如 <code>bootarm_raspi.efi</code>。</li>
+<li>   把之前下载的 <code>grub.efi</code> 改名叫 <code>bootarm.efi</code>，放到上一步的 <code>\EFI\boot\bootarm.efi</code> 位置。</li>
+<li>   把 <code>unicode.pf2</code> 和我给的 <code>grub.cfg</code> 放到 bootfs 分区的根目录中。</li>
+<li>   如果你想个性化GRUB，可以先在bootfs新建一个叫 <code>theme</code> 的文件夹，然后去 <a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse?cat=109">Gnome-look</a><br>下载一个你喜欢的主题，将其解压，然后把包含 <code>theme.txt</code> 的文件夹（注意是包含的文件夹）放到 bootfs 的 <code>/theme</code> 目录里。然后用 VScode 等软件打开 <code>grub.cfg</code>，然后加一行  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> theme=/theme/wonder/theme.txt</span><br></pre></td></tr></table></figure>
+（<code>wonder</code> 为示例，具体看你下的主题）</li>
+<li>   现在把存储卡插到 RT 上，以管理员身份打开命令提示符。</li>
+<li>   再从这个命令提示符中输入 <code>start</code>，这样另开一个管理员的命令提示符，后续更方便。</li>
+<li>   最好在这个命令提示符里输入以下指令重启资源管理器：  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im explorer.exe</span><br><span class="line">explorer</span><br></pre></td></tr></table></figure></li>
+<li>   右键开始按钮，打开磁盘管理，看一下 EFI 分区是哪一个分区，从 1 开始数。</li>
+<li>   再在这个命令提示符中输入： <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">sel disk <span class="number">0</span></span><br><span class="line">list par</span><br><span class="line">sel par <span class="number">1</span></span><br><span class="line"><span class="comment">rem （如果EFI分区是第二个就sel par 2）</span></span><br><span class="line">assign</span><br><span class="line"><span class="comment">rem （与之相反的指令就是remove）</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></li>
+<li>   执行 <code>notepad</code>。</li>
+<li>   然后点击“文件→打开”，在文件浏览窗口里看看 EFI ESP 分区是哪个盘符，比如F盘。</li>
+<li>   关掉记事本。</li>
+<li>   执行<code>ren F:\EFI\Boot\bootarm.efi bootarm_ms.efi</code></li>
+<li>   执行<code>ren F:\EFI\Microsoft\Boot\bootmgfw.efi boutmgfw.efi</code><br>（<code>boutmgfw.efi</code> 这个名称是我起的，并且在 <code>grub.cfg</code> 中指定。如果不把这个文件重命名，那么 RT 开机就一定从这个文件启动，不加载我们要的GRUB）</li>
+<li>   接下来最好不要断电或者重启！下一步没完成的期间你的 RT 不能从内置硬盘启动！</li>
+<li>   把 bootfs 里所有的文件都复制到 EFIESP 分区里。可以在资源管理器里复制，也可以用命令复制。<div class="tag-plugin copy"><span>命令示例</span><input class="copy-area" id="copy_1" value="xcopy E:\* /E /-Y F:\"><button class="copy-btn" onclick="util.copy(&quot;copy_1&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button></div>
+（例如你的 bootfs 分区是 E 盘，EFI 分区是 F 盘）</li>
+<li>   大功告成！现在你的 RT 应该可以启动 GRUB，并且开机时出现启动菜单了！</li>
+</ol>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/202405/extra-lessons-banned-again/">五一不补课了</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">探索</span><a href="/"><i class='fa-solid fa-compass'></i> <span class='font-sht'>技协导航</span></a><a href="/blog"><i class='fa-solid fa-newspaper'></i> 博客</a><a href="/site"><i class='fa-solid fa-sitemap'></i> 域名服务</a></div><div class="sitemap-group"><span class="fs15">加入</span><a href="/friend"><i class='fa-solid fa-medal'></i> <span class='font-sht'>技协</span>伙伴</a><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=CRVRq4sD"><i class='fa-brands fa-qq'></i> 群: 894656456</a><a target="_blank" rel="noopener" href="https://t.me/yestech"><i class='fa-brands fa-telegram'></i> 群: YesTech</a></div><div class="sitemap-group"><span class="fs15">信息</span><a href="/about#%E5%A4%A7%E4%BA%8B%E8%AE%B0"><i class='fa-regular fa-calendar-check'></i> <span class='font-sht'>野生技协</span>已成立<uptime></uptime></a><a target="_blank" rel="noopener" href="https://github.com/pubsite/TechYesSite"><i class='fa-brands fa-github'></i> 网站仓库</a><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar"><i class='fa-solid fa-palette'></i> Hexo主题: Stellar</a></div></div><div class="text"><p>© 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.<br>如果你想部署网站&#x2F;投稿博客&#x2F;对本页面提出建议，请联系QQ: 2399052066(纸鹿)。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%E5%92%8C%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%B8%8B%E8%BF%B0%E4%B8%80%E4%B8%AA%E9%83%BD%E4%B8%8D%E8%83%BD%E5%B0%91"><span class="toc-text">一、准备工作和下载，下述一个都不能少</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%A7%8B%E7%AA%81%E7%A0%B4"><span class="toc-text">二、开始突破</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="toc-text">三、正式开始</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.28.1" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `复制`,
+        success_text: `已复制`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+<script src="/static/uptime.js"></script>
+</div></body></html>
