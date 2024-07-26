@@ -3,10 +3,26 @@ title: 考试时钟 V7 升级公告 (2024)
 categories: [项目]
 author: zhilu
 date: 2024-04-06 22:22:55
-updated: 2024-05-09 09:43:02
+updated: 2024-07-26 21:34:07
 ---
 
 ## 更新内容
+
+### [7.3.5](https://github.com/L33Z22L11/ExamClock/commit/8f62f1e4f3e6c42c1deddf9be69f8c7527ee400e)
+
+- 修复 [<i class="fa-brands fa-github"></i> Issue #5 编辑科目的样式问题](https://github.com/L33Z22L11/ExamClock/issues/5)
+- 移除 2021 级相关内容
+
+### [7.3.4](https://github.com/L33Z22L11/ExamClock/commit/3ab92fb17a18f54314ac99928dcd9ca08874db28)
+
+- 关闭部分调试工具
+- 风格化代码
+
+### [7.3.3](https://github.com/L33Z22L11/ExamClock/commit/6a169a67e5914a94b06bdee0a9c967d6c1061b74)
+
+- 修复正常全屏时仍然报错
+- 更新图标 CDN
+- 加载动画新特性：Bagde显示日期
 
 ### [7.3.2](https://github.com/L33Z22L11/ExamClock/commit/6a169a67e5914a94b06bdee0a9c967d6c1061b74)
 
