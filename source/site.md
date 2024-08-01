@@ -50,6 +50,8 @@ breadcrumb: false
 |      Future博客      |     {% hashtag future.thisis.host https://future.thisis.host %}     | Cloudflare Pages |
 |      Shawn博客       |      {% hashtag shawn.thisis.host https://shawn.thisis.host %}      | Cloudflare Pages |
 |     Magic462博客     |      {% hashtag magic.thisis.host https://magic.thisis.host %}      | Cloudflare Pages |
+|      Bi8bo博客       |        {% hashtag bbb.thisis.host https://bbb.thisis.host %}        |     Netlify      |
+|     Fault123博客     |      {% hashtag fault.thisis.host https://fault.thisis.host %}      |     Netlify      |
 | 宝鸡一中19届荣耀三班 |          {% hashtag 3.thisis.host https://3.thisis.host %}          |     Netlify      |
 |    FZZ:高考倒计时    |        {% hashtag fzz.thisis.host https://fzz.thisis.host %}        |     Netlify      |
 |  bingtangxh个人网站  | {% hashtag bingtangxh.thisis.host https://bingtangxh.thisis.host %} | Cloudflare Pages |

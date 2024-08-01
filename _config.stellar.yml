@@ -65,9 +65,6 @@ plugins:
 style:
   font-family:
     logo: AlimamaShuHeiTi, system-ui, sans-serif
-    body: HarmonyOS_Medium, system-ui, sans-serif
-    code: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, HarmonyOS_Medium, monospace
-    codeblock: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, HarmonyOS_Medium, monospace
   color:
     theme: "#6ca"
     accent: "#f89"
@@ -78,10 +75,9 @@ style:
 
 inject:
   head:
-    # - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="//blog.zhilu.cyou/static/patch.css" media="none" onload="this.media='all'">
+    # - <link rel="stylesheet" href="//blog.zhilu.cyou/static/patch-leftbar.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="/static/font.css">
   script:
     - <script src="/static/uptime.js"></script>
