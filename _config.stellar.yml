@@ -12,7 +12,7 @@ menubar:
     - id: post
       icon: <i class='fa-solid fa-newspaper'></i>
       title: 博客
-      url: /blog
+      url: /blog/
     - id: project
       icon: <i class='fa-solid fa-diagram-project'></i>
       title: 项目
