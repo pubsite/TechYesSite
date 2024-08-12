@@ -1,0 +1,109 @@
+/* hexo-theme-stellar-css-patch-twikoo-zhilu v240701
+ * 描述：对于 hexo-theme-stellar 的修补，优化 Twikoo 评论区样式。
+ * 作者：纸鹿/Zhilu (github.com/L33Z22L11)
+ * 协议：WTFPL
+ * 使用方式：请自行下载后，在配置文件中注入 CSS 文件。
+ */
+
+/* 主题色-超链接色 */
+.cmt-body.twikoo {
+    --twikoo-theme: var(--theme-link);
+}
+
+/* 评论框-颜色 */
+.twikoo .tk-submit {
+    background: none;
+    padding: 0;
+}
+
+/* 评论框-字体 */
+.tk-input .el-textarea__inner{
+    font-family: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, HarmonyOS_Medium, monospace;
+}
+
+/* 评论按钮-字色 */
+.twikoo .el-textarea .el-input__count {
+    opacity: .5;
+}
+
+/* 评论按钮-间距 */
+.tk-row.actions {
+    margin-block: .5rem;
+}
+
+/* 评论管理-全屏 */
+.tk-admin-container {
+    position: fixed;
+    z-index: 9;
+}
+
+/* 登录密码框-修复宽度 */
+.tk-login,
+.tk-regist {
+    width: auto;
+}
+
+/* 评论数-字号 */
+.twikoo .tk-comments-title .tk-comments-count span:nth-child(1) {
+    font-size: inherit;
+}
+
+/* 评论内容-字号 */
+.twikoo .tk-comment {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* 头像-圆角和阴影 */
+.tk-avatar.tk-has-avatar {
+    border-radius: .5em;
+    box-shadow: 0 0 2px rgb(0 0 0 / 4%), 0 0 8px rgb(0 0 0 / 4%);
+
+    .tk-avatar-img {
+        border-radius: unset;
+    }
+}
+
+/* 评论头像-上边距 */
+.tk-comments-container .tk-avatar {
+    margin-top: 4px;
+}
+
+/* 评论按钮-修复 */
+.tk-action-link.tk-liked {
+    color: var(--theme-link);
+
+    svg {
+        color: inherit;
+    }
+}
+
+/* 评论内容-上边距 */
+.tk-content {
+    margin-top: 0;
+}
+
+/* 评论内容-段间距 */
+.tk-content p {
+    margin: 0.2rem 0 0.5rem;
+    font-size: inherit;
+}
+
+/* 评论内容-代码块 */
+.tk-content pre {
+    overflow: auto;
+}
+
+/* 评论信息-弱化显示 */
+.tk-extra {
+    margin: 0 1em .5em 0;
+    opacity: .5;
+    font-size: .75rem;
+}
+
+/* 评论插件信息 */
+.tk-footer {
+    opacity: .5;
+}

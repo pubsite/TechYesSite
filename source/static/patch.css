@@ -1,0 +1,257 @@
+/* hexo-theme-stellar-css-patch-zhilu v240618
+ * 描述：对于 hexo-theme-stellar 的一些修补，优化了一些样式。
+ * 作者：纸鹿/Zhilu (github.com/L33Z22L11)
+ * 协议：WTFPL
+ * 使用方式：请自行下载后，在配置文件中注入 CSS 文件。
+ */
+
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-type-no-unknown */
+/* stylelint-disable media-feature-range-notation */
+
+/* 字体：禁用浏览器合成的粗体 */
+html {
+    font-synthesis: style;
+}
+
+/* 字体：为粗体使用荧光笔下划线效果，弥补禁用合成粗体的影响 */
+strong {
+    background: linear-gradient(var(--theme-link-opa), var(--theme-link-opa)) no-repeat center bottom / 100% 40%;
+}
+
+/* 选中文本：使用超链接高亮的背景色 */
+::selection {
+    background-color: var(--theme-link-opa);
+}
+
+/* 文章内标题：统一使用 Medium 字重 */
+.md-text.content h1,
+.md-text.content h2,
+.md-text.content h3,
+.md-text.content h4,
+.md-text.content h5,
+.md-text.content h6 {
+    font-weight: 500;
+}
+
+/* 文章内标题：缩进时使用样式 */
+.l_body[text-indent] .md-text.content h2,
+.l_body[text-indent] .md-text.content h3 {
+    position: relative;
+}
+
+.l_body[text-indent] .md-text.content h2::before {
+    position: absolute;
+    z-index: -1;
+    margin: -.4em 0 0 -.7em;
+    border-radius: 2.5em;
+    background-image: linear-gradient(var(--theme-link-opa), transparent);
+    width: 2.5em;
+    height: 2.5em;
+    content: '';
+}
+
+.l_body[text-indent] .md-text.content h3::after {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--theme-link-opa);
+    width: .4em;
+    height: .7em;
+    content: '';
+}
+
+/* 文章内链接：链接不使用文本颜色，下划线半透明 */
+table a:not([class]),
+li:not([class]) a:not([class]),
+p:not([class]) a:not([class]) {
+    background: linear-gradient(var(--theme-link-opa), var(--theme-link-opa)) no-repeat center bottom / 100% 2px;
+    color: var(--theme-link);
+}
+
+/* 密码标签：修改为模糊样式 */
+.md-text psw {
+    filter: blur(5px);
+    transition: filter .2s;
+    background: none;
+    color: inherit;
+}
+
+.md-text psw:hover {
+    filter: blur(0);
+}
+
+/* copy 标签：不使用粗体 */
+input.copy-area {
+    font-weight: inherit;
+}
+
+/* 侧栏 Markdown：修复链接样式 */
+.widget-wrapper.markdown .widget-body a:not([class]) {
+    border-bottom: none;
+}
+
+.widget-wrapper.markdown .widget-body a:not([class]):hover {
+    border-bottom: none;
+    color: var(--theme-link);
+}
+
+/* 浮动面板：按钮样式 */
+.float-panel button {
+    transition: all .2s;
+}
+
+.float-panel button:hover {
+    background-color: var(--alpha60);
+}
+
+/* 文章卡片：封面底部渐变样式 */
+.post-list .post-card .post-cover {
+    position: relative;
+    z-index: -1;
+    overflow: initial;
+}
+
+.post-list .post-card .post-cover::after {
+    position: absolute;
+    transition: inset .2s;
+    inset: 0;
+    background-image: linear-gradient(transparent 50%, var(--card));
+    content: '';
+}
+
+.post-list .post-card:hover .post-cover::after {
+    inset: 50% 0 0;
+}
+
+/* 文章卡片：封面图片样式 */
+.post-list.post .post-cover img {
+    transform: translateY(-.5px);
+    opacity: .8;
+}
+
+.post-list.post .post-card:hover img {
+    opacity: 1;
+    filter: none;
+}
+
+/* 文章卡片：限制海报最大高度 */
+.post-list .post-card.post.photo .cover img {
+    max-height: 256px;
+}
+
+/* 文章卡片：标题位置提高到封面图片渐变处 */
+.post-list .post-cover+.post-title {
+    margin-top: -2em;
+}
+
+/* 文章卡片：图片封面的文字阴影 */
+.post-list .md-text .post-cover~* {
+    text-shadow: 0 0 .5em var(--card), 0 0 1em var(--card);
+}
+
+@media (max-width: 910px) {
+    .l_main .post-list .post-title {
+        font-size: 19px;
+    }
+}
+
+/* 文章卡片：更改置顶图标颜色 */
+.post-list .post-card .meta.cap span.pin svg {
+    color: var(--theme-link);
+}
+
+/* 文章卡片：宽列表时封面居右 */
+@media (min-width: 500.1px) and (max-width: 667px),
+(min-width: 910px) {
+
+    /* 限制标题简介等宽度 */
+    .post-list .md-text .post-cover~* {
+        width: 60%;
+    }
+
+    /* 封面居右 */
+    .post-list .post-card .post-cover {
+        position: absolute;
+        right: 0;
+        margin-right: 0;
+        width: 320px;
+        max-width: 50%;
+        height: 100%;
+    }
+
+    .post-list .post-card .post-cover::after {
+        background-image: linear-gradient(to right, var(--card), transparent 50%);
+    }
+
+    .post-list .post-card:hover .post-cover::after {
+        inset: 0 50% 0 0;
+    }
+
+    .post-list.post .post-cover img {
+        transform: translateX(.5px);
+        height: 100%;
+    }
+
+    /* 文章标题位置修正 */
+    .l_main .post-list .post-title {
+        margin-top: .5rem;
+    }
+}
+
+/* 文章面包屑导航：始终显示修改时间 */
+.bread-nav div#post-meta span.updated {
+    visibility: initial;
+}
+
+@media (min-width: 768px) {
+    .article.banner:hover .bg+.content {
+        min-height: 280px;
+    }
+}
+
+/* 文章 Banner：增强可读性 */
+.article.banner .bg+.content>*,
+.tag-plugin.banner .bg+.content>* {
+    transition: all .2s;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 .5em rgb(0 0 0 / 50%), 0 0 1em rgb(0 0 0 / 50%);
+}
+
+/* 文章 Banner：鼠标 hover 时文字变淡 */
+.article.banner:hover .bg+.content {
+    opacity: .8;
+    backdrop-filter: none;
+    background-color: transparent;
+}
+
+.article.banner:hover .bg+.content>* {
+    background-size: 100% 0;
+    text-shadow: none;
+}
+
+/* 相关文章：卡片样式 */
+.related-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 8px;
+}
+
+.related-posts .item {
+    margin-top: 0;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--card);
+    padding: .6rem 1rem;
+}
+
+.related-posts .item .title {
+    display: inline-block;
+    margin-bottom: -.6rem;
+    border-bottom: none !important;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

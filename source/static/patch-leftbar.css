@@ -1,0 +1,61 @@
+/* hexo-theme-stellar-css-patch-leftbar-zhilu v240620
+ * 描述：对于 hexo-theme-stellar 的修补，左侧栏启用旧版透明样式。
+ * 作者：纸鹿/Zhilu (github.com/L33Z22L11)
+ * 协议：WTFPL
+ * 使用方式：请自行下载后，在配置文件中注入 CSS 文件。
+ */
+
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable media-feature-range-notation */
+
+.l_left {
+    background-image: none;
+}
+
+.l_left .leftbar-container {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: none;
+}
+
+@media screen and (max-width: 667px) {
+    .l_left .leftbar-container {
+        -webkit-backdrop-filter: brightness(1.2) saturate(240%) blur(48px);
+        backdrop-filter: brightness(1.2) saturate(240%) blur(48px);
+        background: var(--alpha50);
+    }
+}
+
+.social-wrap .social:hover,
+.search-wrapper #search-result li a:hover,
+.widget-wrapper.post-list .widget-body a:hover,
+.widgets .widget-wrapper .widget-header .cap-action:hover {
+    background: var(--block-hover);
+}
+
+.search-wrapper>.search-form,
+.widget-wrapper.markdown .widget-body {
+    background: var(--block);
+}
+
+.search-wrapper>.search-form:has(input:focus) {
+    box-shadow: 0 0 2px rgb(0 0 0 / 4%), 0 0 8px rgb(0 0 0 / 4%);
+}
+
+.nav-area .menu {
+    gap: 2px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background: var(--block);
+    padding: 2px;
+}
+
+.nav-area .menu .nav-item {
+    background: none;
+}
+
+.nav-area .menu .nav-item.active,
+.nav-area .menu .nav-item:hover {
+    box-shadow: 0 0 2px rgb(0 0 0 / 4%), 0 0 8px rgb(0 0 0 / 4%);
+    background: var(--card);
+}

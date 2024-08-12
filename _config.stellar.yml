@@ -76,8 +76,10 @@ style:
 inject:
   head:
     - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="//blog.zhilu.cyou/static/patch.css" media="none" onload="this.media='all'">
-    # - <link rel="stylesheet" href="//blog.zhilu.cyou/static/patch-leftbar.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="/static/patch.css" data-css-type="css-patch">
+    - <link rel="stylesheet" href="/static/patch-leftbar.css" data-css-type="css-patch">
+    - <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/font.css">
   script:
     - <script src="/static/uptime.js"></script>
+    - <script src="/static/console.js"></script>
