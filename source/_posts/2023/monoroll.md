@@ -4,6 +4,8 @@ categories: [项目]
 author: zhilu
 date: 2023-01-20 16:48:01
 updated: 2023-01-31 08:45:53
+cover: https://bu.dusays.com/2021/11/23/86f0354849ead.jpg
+banner: https://bu.dusays.com/2021/11/23/86f0354849ead.jpg
 permalink: monoroll/
 ---
 

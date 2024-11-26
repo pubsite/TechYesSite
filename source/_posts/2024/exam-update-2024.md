@@ -3,10 +3,16 @@ title: 考试时钟 V7 升级公告 (2024)
 categories: [项目]
 author: zhilu
 date: 2024-04-06 22:22:55
-updated: 2024-07-26 21:34:07
+updated: 2024-11-06 18:45:18
+cover: https://7.isyangs.cn/24/656ca7c42eb90-24.jpg
+banner: https://7.isyangs.cn/24/656ca7c42eb90-24.jpg
 ---
 
 ## 更新内容
+
+### [7.3.6](https://github.com/L33Z22L11/ExamClock/commit/c754357c4819d582e85abdd75bc87c850ac808cc)
+
+- 恢复旧域名来源提醒
 
 ### [7.3.5](https://github.com/L33Z22L11/ExamClock/commit/8f62f1e4f3e6c42c1deddf9be69f8c7527ee400e)
 
@@ -26,7 +32,7 @@ updated: 2024-07-26 21:34:07
 
 ### [7.3.2](https://github.com/L33Z22L11/ExamClock/commit/6a169a67e5914a94b06bdee0a9c967d6c1061b74)
 
-- 移除了彩蛋 {% post_link grade-2020-departure %} 的入口
+- 移除了彩蛋 {% post_link 2023/grade-2020-departure %} 的入口
 - 将 Font-Awesome 图标库由字节源5.0.0更新到360源6.5.1
 - 优化功能区的部分文案
 - 过场动画的 coverBadge 现在显示当日日期了
@@ -44,7 +50,7 @@ updated: 2024-07-26 21:34:07
   - 更新了背景数据结构格式
   - 增加了2023年12月的部分图片
 - 移除了全屏背景菜单功能
-- 移除了彩蛋 {% post_link grade-2020-departure %}
+- 移除了彩蛋 {% post_link 2023/grade-2020-departure %}
 - 移除了冗余代码
 - 更新了 `README.md`
 
