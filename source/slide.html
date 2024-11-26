@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://exam.thisis.host/css/main.css">
-  <link rel="stylesheet" href="https://exam.thisis.host/css/cp.css">
   <base target="_blank">
   <title>一键PPT | 野生技协导航</title>
+  <style>
+    span[contenteditable] {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,15 +27,20 @@
       </div>
       <div class="sub space-between space">
         <a href=".." class="fa-solid fa-house-chimney" data-sub="主页"></a>
-        <a class="fa-solid fa-shuffle" onclick="bg()" data-sub="换背景"></a>
+        <div class="dropdown">
+          <a class="fa-solid fa-shuffle" onclick="bg()" data-sub="换背景"></a>
+          <div style="right:-2em;min-width:12em;">
+            <div class="shieldlist" id="bgVolList"></div>
+          </div>
+        </div>
         <a onclick="fullscreen()" class="fa-solid fa-expand" id="fullscreen" data-sub="全屏"></a>
       </div>
     </nav>
 
     <div style="text-align: center;">
-      <h1 id="subject" contenteditable>开放互助 活跃创新</h1>
-      <h3 id="duration" contenteditable><br>野生技协</h3>
-      <p class="dim" contenteditable><br>2022年<br><br></p>
+      <h1 id="subject"><span contenteditable>开放互助 活跃创新</span></h1>
+      <h3 id="duration"><span contenteditable><br>野生技协</span></h3>
+      <p class="dim"><span contenteditable><br>2022年<br><br></span></p>
     </div>
 
     <footer class="space-between">
@@ -62,9 +71,9 @@
         <a onclick="bg(-1)"><i class="fa-regular fa-square-minus fa-space fa-space"></i>恢复默认</a>
       </div>
     </div>
-
   </div>
 
+  <script>function playCover(fn) { fn(); } </script>
   <script src="https://exam.thisis.host/js/msg.js"></script>
   <script src="https://exam.thisis.host/js/interact.js" msg></script>
   <script src="https://exam.thisis.host/js/gallery.js" msg interact></script>

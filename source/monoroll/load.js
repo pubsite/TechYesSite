@@ -7,25 +7,28 @@ let MG = {
 };
 
 console.time("Fetch");
-import("./gallery.json", { assert: { type: 'json' } }).then(res => res.default).then(arr => {
-    MG.pic = [];
-    MG.index = {};
-    for (each in arr) {
-        MG.pic[each] = {
-            id: arr[each][0],
-            author: arr[each][1],
-            name: arr[each][2],
-            src: `https://ooo.0x0.ooo/202${arr[each][3]}.jpg`,
-        };
-        let issue = ~~(arr[each][0] / 100);
-        if (!MG.index[issue]) MG.index[issue] = [];
-        MG.index[issue].push(each);
-    }
-    console.group(MG.name + "\n" + MG.description);
-    console.timeEnd("Fetch");
-    console.log(MG.pic.length + " pics loaded.");
-    console.groupEnd();
-});
+fetch("./gallery.json")
+    .then(res => res.text())
+    .then(str => JSON.parse(str))
+    .then(arr => {
+        MG.pic = [];
+        MG.index = {};
+        for (each in arr) {
+            MG.pic[each] = {
+                id: arr[each][0],
+                author: arr[each][1],
+                name: arr[each][2],
+                src: `https://ooo.0x0.ooo/202${arr[each][3]}.jpg`,
+            };
+            let issue = ~~(arr[each][0] / 100);
+            if (!MG.index[issue]) MG.index[issue] = [];
+            MG.index[issue].push(each);
+        }
+        console.group(MG.name + "\n" + MG.description);
+        console.timeEnd("Fetch");
+        console.log(MG.pic.length + " pics loaded.");
+        console.groupEnd();
+    });
 
 MG.bgBind = (ele, needFit = true) => {
     MG.eleBg = ele;
