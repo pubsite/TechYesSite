@@ -1,11 +1,11 @@
 {
   "name": "techyes-site",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "dev": "hexo clean && hexo server",
     "server": "hexo server"
   },
   "hexo": {

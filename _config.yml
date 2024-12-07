@@ -4,8 +4,8 @@
 
 # Site
 title: 野生技协
-subtitle: 野生技协TECHYES
-description: 野生技协TECHYES是一个活跃于宝鸡中学的技术团体。
+subtitle: TECHYES
+description: 野生技协（TECHYES）是一个活跃于宝鸡中学的技术团体。
 favicon: /static/favicon.ico
 avatar: https://p.qlogo.cn/gh/894656456/894656456/0/
 keywords:
@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.thisis.host/
+url: https://thisis.host/
 permalink: :year:month/:name/
 permalink_defaults:
 pretty_urls:
@@ -103,7 +103,13 @@ theme: stellar
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: "git"
-  repo: https://github.com/pubsite/TechYesSite.git
+  type: git
+  repo: # https://github.com/pubsite/TechYesSite.git
   branch: pages
   message: "Site updated: {{ now('DD HH:mm:ss') }}"
+
+# 插件
+feed:
+  limit: false
+  content: false
+  order_by: -updated

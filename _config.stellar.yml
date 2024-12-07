@@ -6,45 +6,45 @@ menubar:
   columns: 3
   items:
     - id: nav
-      icon: <i class='fa-solid fa-compass'></i>
+      icon: <i class="fa-solid fa-compass"></i>
       title: 导航
       url: /
     - id: post
-      icon: <i class='fa-solid fa-newspaper'></i>
+      icon: <i class="fa-solid fa-newspaper"></i>
       title: 博客
       url: /blog/
     - id: project
-      icon: <i class='fa-solid fa-diagram-project'></i>
+      icon: <i class="fa-solid fa-diagram-project"></i>
       title: 项目
       url: /project
     - id: site
-      icon: <i class='fa-solid fa-sitemap'></i>
+      icon: <i class="fa-solid fa-sitemap"></i>
       title: 域名
       url: /site
     - id: friend
-      icon: <i class='fa-solid fa-medal'></i>
+      icon: <i class="fa-solid fa-medal"></i>
       title: 伙伴
       url: /friend
     - id: about
-      icon: <i class='fa-solid fa-circle-info'></i>
+      icon: <i class="fa-solid fa-circle-info"></i>
       title: 关于
       url: /about
 
 footer:
   sitemap:
     探索:
-      - "[<i class='fa-solid fa-compass'></i> <span class='font-sht'>技协导航</span>](/)"
-      - "[<i class='fa-solid fa-newspaper'></i> 博客](/blog)"
-      - "[<i class='fa-solid fa-sitemap'></i> 域名服务](/site)"
+      - '[<i class="fa-solid fa-compass"></i> <span class="font-sht">技协导航</span>](/)'
+      - '[<i class="fa-solid fa-newspaper"></i> 博客](/blog)'
+      - '[<i class="fa-solid fa-sitemap"></i> 域名服务](/site)'
 
     加入:
-      - "[<i class='fa-solid fa-medal'></i> <span class='font-sht'>技协</span>伙伴](/friend)"
-      - "[<i class='fa-brands fa-qq'></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)"
-      - "[<i class='fa-brands fa-telegram'></i> 群: YesTech](https://t.me/yestech)"
+      - '[<i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴](/friend)'
+      - '[<i class="fa-brands fa-qq"></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)'
+      - '[<i class="fa-brands fa-telegram"></i> 群: YesTech](https://t.me/yestech)'
     信息:
-      - "[<i class='fa-regular fa-calendar-check'></i> <span class='font-sht'>野生技协</span>已成立<uptime></uptime>](/about#大事记)"
-      - "[<i class='fa-brands fa-github'></i> 网站仓库](https://github.com/pubsite/TechYesSite)"
-      - "[<i class='fa-solid fa-palette'></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)"
+      - '[<i class="fa-regular fa-calendar-check"></i> <span class="font-sht">野生技协</span>已成立<uptime></uptime>](/about#大事记)'
+      - '[<i class="fa-brands fa-github"></i> 网站仓库](https://github.com/pubsite/TechYesSite)'
+      - '[<i class="fa-solid fa-palette"></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)'
 
   content: |
     © 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.
@@ -57,14 +57,27 @@ article:
     日常: "#3ba"
     项目: "#3af"
 
+search:
+  local_search:
+    field: post
+
+comments:
+  service: # twikoo
+  comment_title: 评论区
+  twikoo:
+    js: https://gcore.jsdelivr.net/npm/twikoo@1.6.40/dist/twikoo.all.min.js
+    envId: https://twikoo.zhilu.cyou/
+
 plugins:
   copycode:
-    default_text: "复制"
-    success_text: "已复制"
+    default_text: 复制
+    success_text: 已复制
 
 style:
   font-family:
     logo: AlimamaShuHeiTi, system-ui, sans-serif
+    code: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
+    codeblock: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
   color:
     theme: "#6ca"
     accent: "#f89"
@@ -75,7 +88,7 @@ style:
 
 inject:
   head:
-    - <link rel="stylesheet" href="//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="/static/patch.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/patch-leftbar.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
