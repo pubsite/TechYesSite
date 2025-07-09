@@ -32,22 +32,24 @@ menubar:
 
 footer:
   sitemap:
-    探索:
-      - '[<i class="fa-solid fa-compass"></i> <span class="font-sht">技协导航</span>](/)'
-      - '[<i class="fa-solid fa-newspaper"></i> 博客](/blog)'
-      - '[<i class="fa-solid fa-sitemap"></i> 域名服务](/site)'
-
-    加入:
-      - '[<i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴](/friend)'
-      - '[<i class="fa-brands fa-qq"></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)'
-      - '[<i class="fa-brands fa-telegram"></i> 群: YesTech](https://t.me/yestech)'
-    信息:
-      - '[<i class="fa-regular fa-calendar-check"></i> <span class="font-sht">野生技协</span>已成立<uptime></uptime>](/about#大事记)'
-      - '[<i class="fa-brands fa-github"></i> 网站仓库](https://github.com/pubsite/TechYesSite)'
-      - '[<i class="fa-solid fa-palette"></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)'
+    - title: 探索
+      items:
+        - '[<i class="fa-solid fa-compass"></i> <span class="font-sht">技协导航</span>](/)'
+        - '[<i class="fa-solid fa-newspaper"></i> 博客](/blog)'
+        - '[<i class="fa-solid fa-sitemap"></i> 域名服务](/site)'
+    - title: 加入
+      items:
+        - '[<i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴](/friend)'
+        - '[<i class="fa-brands fa-qq"></i> 群: 894656456](https://jq.qq.com/?_wv=1027&k=CRVRq4sD)'
+        - '[<i class="fa-brands fa-telegram"></i> 群: YesTech](https://t.me/yestech)'
+    - title: 信息
+      items:
+        - '[<i class="fa-solid fa-address-card"></i> 陕ICP备2025072742号-2](https://beian.miit.gov.cn/)'
+        - '[<i class="fa-brands fa-github"></i> 网站仓库](https://github.com/pubsite/TechYesSite)'
+        - '[<i class="fa-solid fa-palette"></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)'
 
   content: |
-    © 2020-2024 <span class="font-sht">野生技协</span>(TECHYES). All rights reserved.
+    © 2020-2025 <span class="font-sht">野生技协</span>(TECHYES). 已成立<uptime></uptime>。
     如果你想部署网站/投稿博客/对本页面提出建议，请联系QQ: 2399052066(纸鹿)。
 
 article:
@@ -60,13 +62,6 @@ article:
 search:
   local_search:
     field: post
-
-comments:
-  service: # twikoo
-  comment_title: 评论区
-  twikoo:
-    js: https://gcore.jsdelivr.net/npm/twikoo@1.6.40/dist/twikoo.all.min.js
-    envId: https://twikoo.zhilu.cyou/
 
 plugins:
   copycode:
@@ -89,8 +84,8 @@ style:
 inject:
   head:
     - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="/static/patch.css" data-css-type="css-patch">
-    - <link rel="stylesheet" href="/static/patch-leftbar.css" data-css-type="css-patch">
+    - <link rel="stylesheet" href="/static/patch-v2.css" data-css-type="css-patch">
+    - <link rel="stylesheet" href="/static/patch-leftbar-v2.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/font.css">
   script:

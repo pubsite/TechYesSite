@@ -13,14 +13,13 @@ pnpm i
 ### 更新依赖
 
 ```sh
-pnpm update --save
+pnpm update
 ```
 
 ### 启动
 
 ```sh
-hexo clean
-hexo serve --draft
+pnpm dev
 ```
 
 ### 部署

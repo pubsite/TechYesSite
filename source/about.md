@@ -4,7 +4,8 @@ title: 野生技协 - 开放互助 活跃创新
 h1: ''
 breadcrumb: false
 ---
-<img src="/static/TECHYES_logo.svg">
+
+![野生技协 Logo](/static/TECHYES_logo.svg)
 
 ## 介绍
 
@@ -22,24 +23,25 @@ breadcrumb: false
 {% endgrid %}
 
 ### 加入我们
-{% hashtag QQ群:894656456 https://jq.qq.com/?_wv=1027&k=CRVRq4sD %}
-{% hashtag TG群:YesTech https://t.me/yestech %}
+{% hashtag QQ群：894656456 https://jq.qq.com/?_wv=1027&k=CRVRq4sD %}
+{% hashtag TG群：YesTech https://t.me/yestech %}
 
 ### 负责人
 
 #### 氢化脱氰氰酸（2021.12-）
-{% hashtag QQ:2081339792 %}
-{% hashtag 哔哩哔哩:氢化脱氰氰酸 https://space.bilibili.com/11002395 %}
+{% hashtag QQ：2081339792 %}
+{% hashtag 哔哩哔哩：氢化脱氰氰酸 https://space.bilibili.com/11002395 %}
 
 #### 纸鹿/Zhilu（2019.9-2021.12）
-{% hashtag QQ:2399052066 %}
-{% hashtag 微信:zhilubenlu %}
-{% hashtag GitHub:L33Z22L11 https://github.com/L33Z22L11 %}
+{% hashtag QQ：2399052066 %}
+{% hashtag GitHub：L33Z22L11 https://github.com/L33Z22L11 %}
 
 ## 大事记
 {% timeline %}
 <!-- node 今天 -->
 <span class="font-sht">野生技协</span>已成立<uptime></uptime>，我们持续活动并不断壮大，交流群活跃天数占比超过93%。
+<!-- node 2025年7月9日 -->
+`thisis.host`域名获得ICP备案。
 <!-- node 2024年2月3日 -->
 <span class="font-sht">野生技协</span>官网升级为博客。
 <!-- node 2023年1月1日 -->

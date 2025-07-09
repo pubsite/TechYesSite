@@ -13,7 +13,8 @@ breadcrumb: false
 |  注册时间  | 2021-06-05 18:51:04 (UTC+8) |
 |  到期时间  | 2031-06-06 07:59:59 (UTC+8) |
 |   注册商   |           帝思普            |
-| DNS服务商  |         Cloudflare          |
+| DNS服务商  |           DNSPod            |
+|   备案号   |    陕ICP备2025072742号-2    |
 
 如果你想部署网站，请联系{% hashtag QQ:2399052066 %}。
 
@@ -21,9 +22,9 @@ breadcrumb: false
 
 |       名称       |                                 域名                                  |      服务商      |
 | :--------------: | :-------------------------------------------------------------------: | :--------------: |
-|     野生技协     |                 {% hashtag thisis.host thisis.host %}                 | Cloudflare Pages |
-|     野生技协     |   {% hashtag www.thisis.host→thisis.host https://www.thisis.host %}   | Cloudflare Pages |
-|   野生技协官网   | {% hashtag hi.thisis.host→thisis.host/about https://hi.thisis.host %} |    Cloudflare    |
+|     野生技协     |     {% hashtag thisis.host→www.thisis.host https://thisis.host %}     |      DNSPod      |
+|     野生技协     |         {% hashtag www.thisis.host https://www.thisis.host %}         | Cloudflare Pages |
+|   野生技协官网   | {% hashtag hi.thisis.host→thisis.host/about https://hi.thisis.host %} |      DNSPod      |
 |     考试时钟     |        {% hashtag exam.thisis.host https://exam.thisis.host %}        |     Netlify      |
 |  Hclass班级工具  |      {% hashtag hclass.thisis.host https://hclass.thisis.host %}      |     Netlify      |
 | 腾空:技协起始页  |       {% hashtag start.thisis.host https://start.thisis.host %}       |     Netlify      |

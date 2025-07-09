@@ -3,6 +3,7 @@ menu_id: nav
 title: 野生技协导航
 h1: <i class="fa-solid fa-compass"></i> <span class="font-sht">导航</span>
 description: 野生技协导航是野生技协(宝鸡中学)为宝中学子提供的网址导航服务，内有考试时钟、一卷图库、高考倒计时等实用服务。
+permalink: /
 breadcrumb: false
 ---
 

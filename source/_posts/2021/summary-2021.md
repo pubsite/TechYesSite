@@ -7,4 +7,4 @@ date: 2021-12-26 12:24:49
 updated: 2021-12-26 12:24:49
 ---
 
-{% image https://7.isyangs.cn/24/65bd0acea8b85-24.png fancybox:true %}
+{% image https://7.isyangs.cn/24/65bd0acea8b85-24.png fancybox:true ratio:2016/2688 %}
