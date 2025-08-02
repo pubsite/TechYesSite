@@ -5,7 +5,8 @@
   font-display: swap;
 }
 
-.font-sht {
+.font-sht,
+.logo-wrap a.title .main {
   font-family: AlimamaShuHeiTi, HarmonyOS_Regular, PingFang SC, Helvetica, sans-serif;
 }
 

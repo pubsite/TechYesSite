@@ -70,7 +70,6 @@ plugins:
 
 style:
   font-family:
-    logo: AlimamaShuHeiTi, system-ui, sans-serif
     code: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
     codeblock: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
   color:
@@ -83,7 +82,7 @@ style:
 
 inject:
   head:
-    - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/7.0.0/css/all.min.css" media="none" onload="this.media='all'">
     - <link rel="stylesheet" href="/static/patch-v2.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/patch-leftbar-v2.css" data-css-type="css-patch">
     - <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
