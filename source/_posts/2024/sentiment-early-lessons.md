@@ -4,6 +4,7 @@ categories: [日常]
 author: anonymous
 date: 2024-02-14 20:39:00
 updated: 2024-02-16 14:18:16
+cover: https://campus.assets.zhilu.cyou/techyes/240214-protest-poster.jpg
 ---
 
 {% note 免责声明 color:error
@@ -28,7 +29,7 @@ updated: 2024-02-16 14:18:16
 > 　　由于不能进行**素质拓展**，孩子们的教育和学习就完全由家长负责监督。我们的原则是停课不停学，望你们一定要安排好孩子的学习和生活节奏。开学就到了3月份，5月水考在即，高考指日可待，弯道超车的道理大家都懂，我们的孩子应该知道在该奋斗的年龄一定要不负青春不负韶华，让明年的高考和自己的人生不留遗憾。
 > 　　祝大家生活愉快。谢谢。
 
-{% image https://gateway.pinata.cloud/ipfs/QmY822nTF6poRDAUr6xz63v2ScQieuyLn2DEChXu7FmLwW?filename=protest-poster.webp 宝中教学楼内学生张贴的内容 fancybox:true %}
+{% image https://campus.assets.zhilu.cyou/techyes/240214-protest-poster.jpg 宝中教学楼内学生张贴的内容 fancybox:true %}
 
 ### 简要评论
 　　“大型/传奇纪录片”是一种近年常见的视频体裁，通过创作者的巧妙剪辑和创意，将现有视频素材重新组合，形成一种戏谑、幽默、荒诞的效果。麦克阿瑟将军（实为美国演员詹姆斯·菲尔伯德）作为其中的“常驻评论员”，以其高调性格和金句频出成为网友们津津乐道的对象。
@@ -48,7 +49,6 @@ updated: 2024-02-16 14:18:16
 
 ### 视频源
 <a target="_blank" rel="noopener noreferrer" href="https://v3-web.douyinvod.com/da17931526f977274ac59b5bd36d2c4e/65ccc2d9/video/tos/cn/tos-cn-ve-15/oYb9QAQ3Sk2F7o4MD7BvI31Tgg8EAlAzyenDeD/">大型记录片《宝鸡中学传奇》(douyinvod:v3-web)</a>
-<a target="_blank" rel="noopener noreferrer" href="https://v26-web.douyinvod.com/717d8262113d7f1faa4e60ba4a65e9ba/65ccc334/video/tos/cn/tos-cn-ve-15/oYb9QAQ3Sk2F7o4MD7BvI31Tgg8EAlAzyenDeD/">大型记录片《宝鸡中学传奇》(douyinvod:v26-web)</a>
 [<i class="fa-brands fa-bilibili"></i>这，就是宝鸡中学(补档)](https://www.bilibili.com/video/BV1w6421M7pF/)
 
 ### 文字稿

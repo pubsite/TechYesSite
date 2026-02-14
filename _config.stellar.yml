@@ -70,8 +70,8 @@ plugins:
 
 style:
   font-family:
-    code: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
-    codeblock: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, system-ui, monospace
+    code: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace
+    codeblock: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace
   color:
     theme: "#6ca"
     accent: "#f89"

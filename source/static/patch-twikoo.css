@@ -17,8 +17,8 @@
 }
 
 /* 评论框-字体 */
-.tk-input .el-textarea__inner{
-    font-family: SFMono-Regular, Fira Code, JetBrains Mono, Cascadia Code, Monaco, Noto Sans Mono, Consolas, Droid Sans Mono, HarmonyOS_Medium, monospace;
+.tk-input .el-textarea__inner {
+    font-family: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace;
 }
 
 /* 评论按钮-字色 */
