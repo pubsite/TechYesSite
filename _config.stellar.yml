@@ -44,7 +44,7 @@ footer:
         - '[<i class="fa-brands fa-telegram"></i> 群: YesTech](https://t.me/yestech)'
     - title: 信息
       items:
-        - '[<i class="fa-solid fa-address-card"></i> 陕ICP备2025072742号-2](https://beian.miit.gov.cn/)'
+        - '[<i class="fa-regular fa-calendar-check"></i> <span class="font-sht">野生技协</span>已成立<uptime></uptime>](/about#大事记)'
         - '[<i class="fa-brands fa-github"></i> 网站仓库](https://github.com/pubsite/TechYesSite)'
         - '[<i class="fa-solid fa-palette"></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)'
 
