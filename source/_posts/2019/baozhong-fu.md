@@ -1,6 +1,6 @@
 ---
 title: 宝中赋
-categories: [日常]
+categories: [材料]
 author: baozhong
 type: story
 date: 2019-12-11 14:27:23

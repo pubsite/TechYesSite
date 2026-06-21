@@ -1,0 +1,6 @@
+allowBuilds:
+  hexo-util: true
+
+lockfile: false
+
+shamefullyHoist: true
