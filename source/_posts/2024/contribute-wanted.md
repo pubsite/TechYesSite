@@ -1,11 +1,13 @@
 ---
 title: 博客升级说明 & 投稿征集公告
 categories: [公告]
-author: zhilu
 date: 2024-02-04 11:45:14
 updated: 2024-02-17 13:29:56
-type: story
-sticky: 1
+listing:
+  priority: 1
+article:
+  author: zhilu
+  style: story
 ---
 
 2024年2月2日开始，纸鹿着手进行站点重建工作，野生技协博客功能上线。博客搭建之初，我们只找到了2021年的少数内容。后来，在Archnedy的帮助下，2019、2020年的古老内容才得以定稿。此次升级，使野生技协网站由原先的网页导航进化为博客，Hexo引擎减轻了后续开发维护的代码量，使我们可以专注于内容。

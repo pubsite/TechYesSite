@@ -1,5 +1,6 @@
 allowBuilds:
   hexo-util: true
+  sharp: true
 
 lockfile: false
 

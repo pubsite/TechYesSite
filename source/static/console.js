@@ -114,19 +114,18 @@ log.info('Proudly using', 'console.js', lines(
 // if (typeof log === 'undefined') log = console;
 
 log.primary('野生技协', 'thisis.host');
-const cssTags = document.querySelectorAll('[data-css-type=css-patch]');
+const cssTags = Array.from(document.querySelectorAll('[data-css-type=css-patch]'));
 const toggleThemePatch = () => {
+    if (!cssTags.length) return;
     // '' 启用，'none' 停用
     const toMedia = cssTags[0].media === '' ? 'none' : '';
     const logType = toMedia === '' ? 'success' : 'danger';
     const logText = toMedia === '' ? '启用' : '停用';
     cssTags.forEach(cssTag => (cssTag.media = toMedia));
-    log[logType]('主题修补', logText, lines(cssTags[0].href, cssTags[1].href, cssTags[2].href));
+    log[logType]('主题修补', logText, lines(...cssTags.map(cssTag => cssTag.href)));
 };
 
-log.info('主题修补', 'patch.css', lines(
+log.info('主题修补', 'patch-v3.css', lines(
     '💡 试试用 toggleThemePatch() 预览 Patch 的启停效果',
-    `🎨 封面/文章样式：${cssTags[0].href}`,
-    `🎨 侧边栏样式：${cssTags[1].href}`,
-    `🎨 Twikoo 评论区样式：${cssTags[2].href}`,
+    ...cssTags.map(cssTag => `🎨 ${cssTag.href}`),
 ));

@@ -1,11 +1,11 @@
 ---
 title: 考试时钟 V7 升级公告 (2024)
 categories: [项目]
-author: zhilu
 date: 2024-04-06 22:22:55
 updated: 2024-11-06 18:45:18
 cover: https://campus.assets.zhilu.cyou/exam/cover_231204.jpg
-banner: https://campus.assets.zhilu.cyou/exam/cover_231204.jpg
+article:
+  author: zhilu
 ---
 
 ## 更新内容

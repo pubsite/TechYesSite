@@ -7,7 +7,7 @@
 
 /* 主题色-超链接色 */
 .cmt-body.twikoo {
-    --twikoo-theme: var(--theme-link);
+    --twikoo-theme: var(--theme-link, var(--link));
 }
 
 /* 评论框-颜色 */
@@ -73,7 +73,7 @@
 
 /* 评论按钮-修复 */
 .tk-action-link.tk-liked {
-    color: var(--theme-link);
+    color: var(--theme-link, var(--link));
 
     svg {
         color: inherit;

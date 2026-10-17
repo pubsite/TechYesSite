@@ -1,9 +1,10 @@
 ---
 title: Hclass 的前世今生
 categories: [项目]
-author: tengkong
 date: 2024-02-09 00:11:00
 updated: 2024-02-09 13:25:42
+article:
+  author: tengkong
 ---
 
 ## 写在前面

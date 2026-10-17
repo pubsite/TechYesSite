@@ -1,9 +1,10 @@
 ---
 title: Surface RT 保姆级新手上路
 categories: [日常]
-author: bingtangxh
 date: 2024-05-28 17:52:26
 updated: 2024-05-30 14:08:44
+article:
+  author: bingtangxh
 ---
 
 ## 一、准备工作和下载，下述一个都不能少

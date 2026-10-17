@@ -1,10 +1,11 @@
 ---
 title: 舆情观察：关于抖音视频“大型纪录片《宝鸡中学传奇》”
 categories: [日常]
-author: anonymous
 date: 2024-02-14 20:39:00
 updated: 2024-02-16 14:18:16
 cover: https://campus.assets.zhilu.cyou/techyes/240214-protest-poster.jpg
+article:
+  author: anonymous
 ---
 
 {% note 免责声明 color:error

@@ -1,9 +1,10 @@
 ---
 title: 快速右键/拖动顽固窗口
 categories: [公告]
-author: zhilu
 date: 2020-07-26 17:41:00
 updated: 2020-07-26 17:41:00
+article:
+  author: zhilu
 ---
 
 ## 快速右键方法（不支持不可用手拖动的窗口）

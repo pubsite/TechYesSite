@@ -6,7 +6,7 @@
 }
 
 .font-sht,
-.logo-wrap a.title .main {
+.brand-name {
   font-family: AlimamaShuHeiTi, HarmonyOS_Regular, PingFang SC, Helvetica, sans-serif;
 }
 
@@ -19,13 +19,8 @@
   text-align: center;
 }
 
-.nav-area .menu .nav-item {
-  flex-direction: row-reverse;
-  gap: .2em;
-}
-
-.nav-area .menu .nav-item::before {
-  content: attr(title);
+.site-region--leftbar .brand-title .brand-tagline {
+  white-space: normal;
 }
 
 [data-sub] {

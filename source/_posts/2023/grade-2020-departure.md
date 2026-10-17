@@ -1,10 +1,11 @@
 ---
 title: 20级学生要毕业了
 categories: [日常]
-author: zhilu
-type: story
 date: 2023-06-04 03:01:41
 updated: 2023-06-04 03:01:41
+article:
+  author: zhilu
+  style: story
 ---
 
 > 这是2023年6月4日，2020级（2023届）离校时考试时钟页面上的彩蛋。

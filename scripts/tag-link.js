@@ -17,7 +17,8 @@ const parseInput = (args, content) => {
     const match = line.match(pattern);
     if (match) {
       const [_, text, link, subText = ''] = match;
-      links.push(`<a href="${link}" data-sub="${subText}">${text}</a>`);
+      // 标记为自定义组件，避免主题将其作为普通正文链接再添加 Link 图标。
+      links.push(`<a class="multi-link" href="${link}" data-sub="${subText}">${text}</a>`);
     }
   });
 

@@ -1,7 +1,8 @@
 ---
-menu_id: site
+active_menu: site
 title: 域名公示
-h1: <i class="fa-solid fa-sitemap"></i> <span class="font-sht">野生技协</span>域名使用情况（下挂站点）
+banner:
+  headline: <i class="fa-solid fa-sitemap"></i> <span class="font-sht">野生技协</span>域名使用情况（下挂站点）
 breadcrumb: false
 ---
 

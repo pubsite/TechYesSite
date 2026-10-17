@@ -1,7 +1,8 @@
 ---
-menu_id: friend
+active_menu: friend
 title: 合作
-h1: <i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴
+banner:
+  headline: <i class="fa-solid fa-medal"></i> <span class="font-sht">技协</span>伙伴
 breadcrumb: false
 ---
 

@@ -1,10 +1,13 @@
-logo:
-  title: "[{config.title}](/blog)"
-  subtitle: 开放互助 活跃创新|做优质的自发性技术协助组织
-
-menubar:
-  columns: 3
-  items:
+leftbar:
+  brand:
+    image:
+      src: "{config.avatar}"
+      variant: avatar
+    name: 野生技协
+    tagline: 开放互助 活跃创新｜做优质的自发性技术协助组织
+    href: /blog/
+  menu_columns: 3
+  menu:
     - id: nav
       icon: <i class="fa-solid fa-compass"></i>
       title: 导航
@@ -29,7 +32,6 @@ menubar:
       icon: <i class="fa-solid fa-circle-info"></i>
       title: 关于
       url: /about
-
 footer:
   sitemap:
     - title: 探索
@@ -47,46 +49,67 @@ footer:
         - '[<i class="fa-regular fa-calendar-check"></i> <span class="font-sht">野生技协</span>已成立<uptime></uptime>](/about#大事记)'
         - '[<i class="fa-brands fa-github"></i> 网站仓库](https://github.com/pubsite/TechYesSite)'
         - '[<i class="fa-solid fa-palette"></i> Hexo主题: Stellar](https://github.com/xaoxuu/hexo-theme-stellar)'
-
   content: |
     © 2020-2025 <span class="font-sht">野生技协</span>(TECHYES). 已成立<uptime></uptime>。
     如果你想部署网站/投稿博客/对本页面提出建议，请联系QQ: 2399052066(纸鹿)。
-
+profiles:
+  blog_index:
+    path: /blog/
 article:
-  cover_ratio: 2
-  category_color:
+  listing:
+    cover_ratio: 2
+    card_layout: classic
+    pinned_layout: flat
+  category_colors:
     公告: "#f83"
     日常: "#3ba"
     项目: "#3af"
-
 search:
-  local_search:
-    field: post
-
-plugins:
-  copycode:
-    default_text: 复制
-    success_text: 已复制
-
-style:
-  font-family:
-    code: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace
-    codeblock: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace
-  color:
-    theme: "#6ca"
+  provider: local
+  local:
+    scope: post
+appearance:
+  preset: glass
+  colors:
+    primary: "#6ca"
     accent: "#f89"
     link: "#3a8"
-    hover: "#f83"
-  leftbar:
-    background-image: "linear-gradient(60deg, #7ab, #adb)"
-
+  typography:
+    # Windows 微软雅黑的 600 会匹配 Bold；界面半粗体改用 500，保留 700 强调。
+    font_weight:
+      600: 500
+    font_family:
+      code: JetBrains Mono, Cascadia Code, Monaco, Consolas, "monospace", "Noto Sans SC", system-ui, monospace
+  backgrounds:
+    leftbar:
+      type: gradient
+      gradient:
+        light:
+          - "#7ab"
+          - "#adb"
+          - "#adb"
+          - "#7ab"
+        dark:
+          - "#38565e"
+          - "#49675e"
+          - "#49675e"
+          - "#38565e"
+features:
+  color_scheme_switch:
+    enabled: true
+  # 独立页面脚本需要在每次进入页面时初始化，沿用完整页面导航。
+  partial_navigation:
+    enabled: false
+  image_optimization:
+    # 保持构建不依赖远程图床，浏览器仍正常加载原图。
+    enabled: false
 inject:
-  head:
-    - <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/7.0.0/css/all.min.css" media="none" onload="this.media='all'">
-    - <link rel="stylesheet" href="/static/patch-v2.css" data-css-type="css-patch">
-    - <link rel="stylesheet" href="/static/patch-leftbar-v2.css" data-css-type="css-patch">
-    - <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
-    - <link rel="stylesheet" href="/static/font.css">
-  script:
-    - <script src="/static/uptime.js"></script>
-    - <script src="/static/console.js"></script>
+  head_end: |
+    <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/7.0.0/css/all.min.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="/static/patch-v3.css" data-css-type="css-patch">
+    <link rel="stylesheet" href="/static/patch-leftbar-v3.css" data-css-type="css-patch">
+    <link rel="stylesheet" href="/static/patch-twikoo.css" data-css-type="css-patch">
+    <link rel="stylesheet" href="/static/font.css">
+  body_end: |
+    <script src="/static/uptime.js"></script>
+    <script src="/static/console.js"></script>

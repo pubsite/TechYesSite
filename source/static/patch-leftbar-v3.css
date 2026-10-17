@@ -1,0 +1,33 @@
+/* hexo-theme-stellar-css-patch-leftbar-zhilu v3-261017
+ * 描述：调整 Stellar 2 的侧栏透明背景、菜单文字及间距。
+ * 作者：纸鹿/Zhilu (github.com/L33Z22L11)
+ * 协议：WTFPL
+ * 使用方式：在主题配置中注入本文件。
+ */
+
+/* 去掉整块侧栏的装饰背景；展开的移动端抽屉保留原生玻璃表面。 */
+.site-region--leftbar .site-region__decoration {
+    display: none;
+}
+
+.site-shell:not([data-drawer="leftbar"]) .site-region--leftbar .site-region__surface::before,
+.site-shell:not([data-drawer="leftbar"]) .site-region--leftbar .site-region__surface::after {
+    content: none;
+}
+
+/* 展开的侧栏和移动端抽屉显示菜单文字；折叠窄栏仍只显示图标。 */
+html:not([data-leftbar-state="collapsed"]) .site-region--leftbar .widget-instance--menu .ui-collection[data-variant="icon"] .ui-collection__content,
+.site-shell[data-drawer="leftbar"] .site-region--leftbar .widget-instance--menu .ui-collection[data-variant="icon"] .ui-collection__content {
+    display: flex;
+}
+
+.site-region--leftbar .widget-instance--menu .ui-collection__item {
+    gap: 4px;
+    /* 原生 hover / active 文字色与图标共用菜单项主题色。 */
+    --ui-item-title: var(--item-theme, var(--theme));
+}
+
+/* 主题只为键盘聚焦图标着色，文字也复用同一状态变量。 */
+.site-region--leftbar .widget-instance--menu .ui-collection__item:focus-visible {
+    color: var(--ui-item-title);
+}

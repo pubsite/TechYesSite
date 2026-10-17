@@ -1,7 +1,8 @@
 ---
-menu_id: about
+active_menu: about
 title: 野生技协 - 开放互助 活跃创新
-h1: ''
+banner:
+  headline: ''
 breadcrumb: false
 ---
 
@@ -40,6 +41,8 @@ breadcrumb: false
 {% timeline %}
 <!-- node 今天 -->
 <span class="font-sht">野生技协</span>已成立<uptime></uptime>，我们持续活动并不断壮大。
+<!-- node 2026年10月17日 -->
+官网升级 Stellar 2，一卷图库支持按批次浏览、缩略图与灯箱预览，考试时钟时光局同步更新。[查看更新日志](/202610/site-update-2026/)。
 <!-- node 2026年2月14日 -->
 网站更新Hexo依赖版本，修复图片加载。
 <!-- node 2025年8月30日 -->

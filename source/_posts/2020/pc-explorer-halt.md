@@ -1,9 +1,10 @@
 ---
 title: 开机黑屏？
 categories: [公告]
-author: zhilu
 date: 2020-09-09 07:11:00
 updated: 2020-09-09 07:11:00
+article:
+  author: zhilu
 ---
 
 教学电脑启动显示“Windows资源管理器”停止运行，无桌面壁纸，操作卡顿的解决办法：

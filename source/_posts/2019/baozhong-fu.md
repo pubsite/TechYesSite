@@ -1,12 +1,14 @@
 ---
 title: 宝中赋
 categories: [材料]
-author: baozhong
-type: story
 date: 2019-12-11 14:27:23
 updated: 2024-09-13 23:09:08
-references:
-  - "[宝鸡中学官方宣传片-宝中赋](https://www.ixigua.com/6769064493470188036)"
+footer:
+  references:
+    - "[宝鸡中学官方宣传片-宝中赋](https://www.ixigua.com/6769064493470188036)"
+article:
+  author: baozhong
+  style: story
 ---
 
 姜炎故里，雍州福地；文王懿德，有风来仪。周礼制而雅韵起，石鼓出而雄文贻。崇礼尚文，重庠序之教；珠流璧转，锲不舍之功。遂有斯校之所成。

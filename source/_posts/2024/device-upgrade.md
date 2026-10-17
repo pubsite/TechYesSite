@@ -1,9 +1,10 @@
 ---
 title: 宝鸡中学更新一体机使用相关说明
 categories: [公告]
-author: baozhong-it
 date: 2024-01-25
 updated: 2024-01-25
+article:
+  author: baozhong-it
 ---
 
 各位老师:

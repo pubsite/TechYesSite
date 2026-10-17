@@ -1,7 +1,8 @@
 ---
-menu_id: project
+active_menu: project
 title: 项目
-h1: <i class="fa-solid fa-diagram-project"></i> <span class="font-sht">野生技协</span>项目
+banner:
+  headline: <i class="fa-solid fa-diagram-project"></i> <span class="font-sht">野生技协</span>项目
 breadcrumb: false
 ---
 

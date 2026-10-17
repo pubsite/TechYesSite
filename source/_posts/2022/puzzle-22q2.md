@@ -1,9 +1,10 @@
 ---
 title: 野生技协22Q2解密
 categories: [日常]
-author: zhilu
 date: 2022-03-17 20:39:00
 updated: 2022-04-01 19:45:00
+article:
+  author: zhilu
 ---
 
 从考试时钟exam.cooo.site出发，在每个页面内寻找前往下一站的网址，根据userid生成的appkey，在给定页面提交最终的flag（基本不需要网安知识）。

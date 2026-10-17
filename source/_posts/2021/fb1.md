@@ -1,10 +1,11 @@
 ---
 title: 电脑是你修坏的吗 - FB1
 categories: [日常]
-author: zhilu
-type: story
 date: 2021-04-06
 updated: 2024-02-16 15:30:34
+article:
+  author: zhilu
+  style: story
 ---
 
 > [查看原文](https://mp.weixin.qq.com/s/-xGsB2wLOCO5m6hzUeQOfQ)

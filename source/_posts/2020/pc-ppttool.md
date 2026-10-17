@@ -1,9 +1,10 @@
 ---
 title: PPT小工具失效解决办法
 categories: [项目]
-author: zhilu
 date: 2020-07-19 17:17:00
 updated: 2020-08-23
+article:
+  author: zhilu
 ---
 
 在任务管理器中结束"PPTService.exe""PowerPNT.exe""wps.exe""wpp.exe"等进程，启动C:\Program Files(x86)\Seewo\PPTService\PPTService.exe，再打开PPT放映即可。

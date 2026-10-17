@@ -1,10 +1,11 @@
 ---
 title: 五一不补课了
 categories: [日常]
-author: zhilu
-type: story
 date: 2024-05-02 23:01:23
 updated: 2024-05-03 15:53:42
+article:
+  author: zhilu
+  style: story
 ---
 
 2024年5月2日晚通知：

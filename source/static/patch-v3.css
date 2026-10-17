@@ -1,0 +1,206 @@
+/* hexo-theme-stellar-css-patch-zhilu v3-261017
+ * 描述：适配 Stellar 2，延续 V2 的字体、封面叠图和文章样式。
+ * 作者：纸鹿/Zhilu (github.com/L33Z22L11)
+ * 协议：WTFPL
+ * 使用方式：在主题配置中注入本文件；侧栏使用主题原生界面，Twikoo 使用独立补丁。
+ */
+
+/* 字体与正文 */
+html {
+    font-synthesis: style;
+}
+
+/* Stellar 2 的 Glass 嵌套媒体查询误把抽屉材质写到根元素，导致滚动条区域露白。
+ * 上游修复 glass-material() 的选择器后可移除这段覆盖。
+ */
+@media screen and (max-width: 1180px) and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        background: var(--background);
+        box-shadow: none;
+    }
+}
+
+strong {
+    background: linear-gradient(var(--link-a20), var(--link-a20)) no-repeat center bottom / 100% 40%;
+}
+
+::selection {
+    background-color: var(--link-a20);
+}
+
+.md-text.content :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 500;
+}
+
+.md-text psw {
+    filter: blur(5px);
+    transition: filter .2s;
+    background: none;
+    color: inherit;
+}
+
+.md-text psw:hover {
+    filter: blur(0);
+}
+
+input.copy-area {
+    font-weight: inherit;
+}
+
+/* 卡片宽度决定封面布局，兼容侧栏展开、折叠和移动端。 */
+.post-list .post-card.post {
+    container-type: inline-size;
+    container-name: post-card;
+}
+
+/* 窄卡片：标题叠在封面底部的渐变区域。图片、遮罩、文字依次叠放。 */
+.post-list .post-card .post-cover {
+    position: relative;
+    z-index: 0;
+    overflow: visible;
+}
+
+.post-list .post-card .post-cover::after {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(transparent 50%, var(--card));
+    transition: inset .2s;
+    pointer-events: none;
+    content: '';
+}
+
+.post-list .post-card:hover .post-cover::after {
+    inset: 50% 0 0;
+}
+
+.post-list .post-card .post-cover img {
+    display: block;
+    transform: translateY(-.5px);
+    opacity: .8;
+}
+
+.post-list .post-card:hover .post-cover img {
+    opacity: 1;
+    filter: none;
+}
+
+.post-list .post-card.post.photo .cover img {
+    max-height: 256px;
+}
+
+.site-main .post-list .post-cover + .post-title {
+    margin-top: -2em;
+}
+
+.post-list .md-text .post-cover ~ * {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 .5em var(--card), 0 0 1em var(--card);
+}
+
+@media (max-width: 910px) {
+    .site-main .post-list .post-title {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 500px) {
+    .post-list .post-card .post-cover {
+        margin-top: -.5rem;
+    }
+}
+
+.post-list .post-card .meta.cap span.pin svg {
+    color: var(--link);
+}
+
+/* 宽卡片：封面居右，左侧渐变融入文字区域。 */
+@container post-card (min-width: 500px) {
+    .post-list .md-text .post-cover ~ * {
+        width: 60%;
+    }
+
+    .post-list .post-card .post-cover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        width: 320px;
+        max-width: 50%;
+        height: 100%;
+    }
+
+    .post-list .post-card .post-cover::after {
+        background-image: linear-gradient(to right, var(--card), transparent 50%);
+    }
+
+    .post-list .post-card:hover .post-cover::after {
+        inset: 0 50% 0 0;
+    }
+
+    .post-list .post-card .post-cover img {
+        transform: translateX(.5px);
+        height: 100%;
+    }
+
+    .site-main .post-list .post-cover + .post-title {
+        margin-top: .5rem;
+    }
+}
+
+/* 文章信息与横幅 */
+.bread-nav div#post-meta span.updated {
+    visibility: visible;
+}
+
+@media (min-width: 768px) {
+    .article.banner:hover .bg + .content {
+        min-height: 280px;
+    }
+}
+
+.article.banner .bg + .content > :is(.top, .bottom),
+.tag-plugin.banner .bg + .content > * {
+    transition: all .2s;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 .5em rgb(0 0 0 / 50%), 0 0 1em rgb(0 0 0 / 50%);
+}
+
+.article.banner:hover .bg + .content {
+    opacity: .8;
+    backdrop-filter: none;
+    background-color: transparent;
+}
+
+.article.banner:hover .bg + .content > :is(.top, .bottom) {
+    background-size: 100% 0;
+    text-shadow: none;
+}
+
+/* 相关文章 */
+.related-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 8px;
+}
+
+.related-posts .item {
+    min-width: 0;
+    margin-top: 0;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    background-color: var(--card);
+    padding: .6rem 1rem;
+}
+
+.related-posts .item .title {
+    display: inline-block;
+    margin-bottom: -.6rem;
+    border-bottom: none !important;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

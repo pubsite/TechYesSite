@@ -1,10 +1,11 @@
 ---
 title: 2022高考理化生各科成绩计算器
 categories: [项目]
-author: zhilu
 date: 2022-06-24
 updated: 2022-06-24
 permalink: gkzh/
+article:
+  author: zhilu
 ---
 
 > 仅适用于2022年陕西理科高考，请仔细核对信息。

@@ -1,0 +1,125 @@
+.monoroll-demo {
+  margin-block: 1.5rem;
+  background: var(--card);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.monoroll-cover { position: relative; }
+.monoroll-demo #monoroll-original { position: relative; display: block; isolation: isolate; }
+.monoroll-demo #monoroll-preview {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+}
+.monoroll-demo #monoroll-credit {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  z-index: 1;
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(transparent, rgb(0 0 0 / 80%));
+  color: #fff;
+}
+.monoroll-demo :is(#monoroll-credit, .gallery-caption) > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.monoroll-demo :is(#monoroll-credit, .gallery-caption) > small { flex: none; white-space: nowrap; opacity: .7; font-weight: 400; }
+
+.monoroll-demo button,
+#monoroll-batches .gallery-image {
+  border: 0;
+  border-radius: .5rem;
+  background: var(--block);
+  padding: .5rem .75rem;
+  color: inherit;
+  font: inherit;
+}
+
+.monoroll-demo button:enabled:hover,
+#monoroll-batches .gallery-image:hover { background: var(--link-a20); }
+.monoroll-demo button { cursor: pointer; }
+.monoroll-demo button:disabled { cursor: wait; opacity: .6; }
+.monoroll-demo #monoroll-next {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  background: rgb(0 0 0 / 50%);
+  color: #fff;
+}
+.monoroll-demo #monoroll-next:enabled:hover { background: rgb(0 0 0 / 70%); }
+.monoroll-demo :focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.monoroll-demo #monoroll-status {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: 1rem;
+  background: rgb(0 0 0 / 35%);
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
+}
+.monoroll-demo #monoroll-status:empty { display: none; }
+
+#monoroll-batches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+  align-items: start;
+  gap: .5rem;
+  padding: 1rem;
+}
+
+#monoroll-batches details { min-width: 0; border-radius: .5rem; background: var(--block); padding: .5rem; }
+#monoroll-batches details[open] { grid-column: 1 / -1; }
+#monoroll-batches summary { cursor: pointer; }
+#monoroll-batches summary button { float: right; padding: .1em .5em; font-size: .8em; }
+#monoroll-batches .gallery-count { vertical-align: middle; margin-left: .5em; padding: .1em .5em; border-radius: 1em; background: var(--block); font-size: .75em; color: var(--text-p2); }
+#monoroll-batches details[open] > summary { margin-bottom: .5rem; }
+#monoroll-batches .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+  gap: .5rem;
+  margin-top: .5rem;
+}
+#monoroll-batches .gallery-image {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+#monoroll-batches .gallery-images img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+}
+#monoroll-batches .gallery-caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  z-index: 1;
+  padding: 1.5rem .5rem .5rem;
+  background: linear-gradient(transparent, rgb(0 0 0 / 80%));
+  color: #fff;
+  line-height: 1.4;
+}

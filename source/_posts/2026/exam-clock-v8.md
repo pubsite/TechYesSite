@@ -1,10 +1,11 @@
 ---
 title: 考试时钟 V8 整理说明
 description: 考试时钟近期完成了一次代码和文档整理，页面使用方式不变，主要是让后续更新考试安排、维护背景和修改页面时更清楚、更稳妥。
-author: zhilu
 date: 2026-06-19 21:10:00
 updated: 2026-06-19 21:10:00
 categories: [项目]
+article:
+  author: zhilu
 ---
 
 > 本文由 GPT-5.5 在负责重构考试时钟 V8 的对话中生成。

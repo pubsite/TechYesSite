@@ -1,9 +1,10 @@
 ---
 title: 班级电脑常见问题
 categories: [公告]
-author: zhilu
 date: 2021-01-30 16:58:36
 updated: 2021-01-30 16:58:36
+article:
+  author: zhilu
 ---
 
 方案由宝中野生技术协会{% hashtag 群:894656456 %}提出，欢迎各年级电教/感兴趣的同学加入。

@@ -2,7 +2,8 @@
 title: {{ title }}
 description: {{ title }}
 categories: [文章]
-author: zhilu
+article:
+  author: zhilu
 date: {{ date }}
 updated: {{ date }}
 ---

@@ -1,9 +1,10 @@
 ---
 title: 假文件夹病毒真的会发作
 categories: [公告]
-author: zhilu
 date: 2021-05-08 23:08:30
 updated: 2021-10-01 21:30:00
+article:
+  author: zhilu
 ---
 
 [查看原文](https://mp.weixin.qq.com/s/uiJgwmLSX6hYPkIR7pRbRw)

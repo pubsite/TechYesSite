@@ -1,10 +1,11 @@
 ---
 title: 野生技协交流群关于近期某些不稳定事件的说明
 categories: [公告]
-author: zhilu
-type: story
 date: 2021-10-28
 updated: 2021-10-28
+article:
+  author: zhilu
+  style: story
 ---
 
 野生技协是纸鹿创建的、长期在宝中活跃的技术交流群，我们关注技术动向，观察班级智能教学设备工作情况，并提出技术方案，至今发布了多个项目，如电子课本站、考试时钟、班牌PPT模板等。

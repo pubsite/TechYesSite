@@ -1,10 +1,11 @@
 ---
 title: 修监控 - FB2
 categories: [日常]
-author: guuguai
-type: story
 date: 2021-07-09
 updated: 2024-02-16 15:48:52
+article:
+  author: guuguai
+  style: story
 ---
 
 > 纸鹿：
